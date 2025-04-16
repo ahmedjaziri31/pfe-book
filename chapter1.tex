@@ -1,0 +1,213 @@
+\chapter{Project Context}
+
+\section{Introduction}
+
+The aim of this chapter is to present the general framework of the Korpor project, a solution dedicated to real estate investment. In this section, we'll discuss successively:
+
+\begin{itemize}
+    \item The presentation of the host organization.
+    \item The context and challenges of the real estate sector.
+    \item Analysis of existing solutions and identification of their limitations.
+    \item Definition of functional and non-functional needs of the mobile application and web back office.
+\end{itemize}
+
+\section{Project Context}
+
+This work is part of the end-of-study project for the national diploma of Applied Bachelor's degree in Computer Science from the Higher Institute of Computer Science and Mathematics of Monastir (ISIMM) for the year 2024/2025. I had the opportunity to do my end-of-study internship at the company
+``KZ IT Services'', under the supervision of Mr. Khalil Zouari.
+
+\section{Hosting Company}
+
+The purpose of this section is to present the company within which I developed my project.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.2\textwidth]{images/company-logo.png}
+    \caption{Hosting Company ``KZ IT Services''}
+    \label{fig:hosting-company}
+\end{figure}
+
+\subsection{Hosting Company}
+
+\textbf{\textcolor{primary}{KZ IT Service}} is a dynamic software company dedicated to delivering innovative IT solutions tailored to modern business needs. We specialize in designing and developing robust, scalable applications that drive efficiency and digital transformation. Our experienced team leverages cutting-edge technology to create customized software that exceeds client expectations. With a strong commitment to quality and continuous improvement, we build lasting partnerships based on trust and excellence. At ``KZ IT Service'', innovation is at the core of everything we do, empowering our clients to achieve sustainable growth and success.
+
+\section{Preliminary Study}
+
+This preliminary study provides a review of some existing investment and asset management platforms. Further, the next section identifies some key concepts that will lead to further understanding of the domain in question.
+
+\subsection{Existing Solutions Study}
+
+For understanding the present scenario and to clearly demarcate our goals, some renowned investment platform analyses offering similar features, including ``Aseel'' and ``Stake'', are performed.
+\newpage
+\thispagestyle{empty}
+\newpage
+
+\subsection{Available solutions and analysis}
+
+\subsubsection{The Aseel Platform}
+
+\textbf{\textcolor{primary}{Aseel}} is a portal through which users can invest in different real estate projects with ease. The interface allows the clients to surf various investment opportunities, view the details of the properties, and then make an informed decision. Aseel introduces transparency in the investment process by offering financial data, updates regarding projects, and returns that are estimated. This platform comes with an easy-to-use dashboard through which one tracks their investments and manages their assets without any hassle.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/Interface-of-the Aseel Platform.png}
+    \caption{Interface of ``The Aseel Platform''}
+    \label{fig:aseel-platform}
+\end{figure}
+
+\begin{center}
+    \vspace{0.5em}
+    \begin{tikzpicture}
+        \draw[primary, line width=1pt] (0,0) -- (0.3\textwidth,0);
+        \draw[accent, line width=0.7pt] (0.1\textwidth,-0.07) -- (0.4\textwidth,0.07);
+        \fill[primary] (0,0) circle (2pt);
+        \fill[accent] (0.3\textwidth,0) circle (2pt);
+    \end{tikzpicture}
+    \vspace{0.5em}
+\end{center}
+
+\subsubsection{The Stake Platform}
+
+\textbf{\textcolor{primary}{Stake}} is an online investment platform that deals with real estate crowdfunding. It provides the opportunity to invest in fractions of property ownership, hence diversifying a portfolio without huge capital. On Stake, there are AI-powered recommendations based on user preferences, seamless payment integration, and a secure environment for investment. Besides, liquidity is guaranteed by enabling exit options for investors who may want to sell their shares in ongoing projects.
+
+\newpage
+\thispagestyle{empty}
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/Interface-of-the Stake Platform.png}
+    \caption{Interface of ``The Stake Platform''}
+    \label{fig:stake-platform}
+\end{figure}
+
+\subsection{Comparative and Critical Analysis}
+
+We can summarize all that comes from our analysis based on a number of criteria used for the evaluation of these applications.
+
+\begin{itemize}
+    \item \textbf{Speed (C1)}: The platform should obtain value for the user as fast as possible and effectively, anticipating their proliferating expectations.
+    \item \textbf{Costs (C2)}: With minimum software development costs, it is important to keep the pricing predictable and acceptable.
+    \item \textbf{Quality (C3)}: Since the market expects quality, any kind of error might affect brand reputation. Improvement of the platform should be regular.
+    \item \textbf{Reliability (C4)}: Since modern-day investment platforms need to make sure of minimum downtime and maximum availability of services, this factor is critical.
+    \item \textbf{Security (C5)}: Such an investment platform enforces access rights, roles, and contribution rights through a powerful security system.
+    \item \textbf{Performance (C6)}: Crucial features include AI-powered recommendations going through seamlessly, easy transaction tracking, and investment monitoring.
+    \item \textbf{Stability (C7)}: The platform should have a proven track record, regular updates, and a large user base to ensure its longevity.
+    \item \textbf{Resilience (C8)}: In order to prevent data loss and guarantee a smooth experience for investors, it must be able to restore lost functionalities should issues occur.
+    \item \textbf{User Experience (C9)}: The interface should be intuitive and user-friendly, hence allowing investors to move with ease through it, thus making wiser decisions.
+\end{itemize}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Evaluation Table}
+    \label{tab:evaluation}
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|>{\columncolor{background}}c|*{9}{>{\centering\arraybackslash}p{0.7cm}|}}
+        \hline
+        \rowcolor{primary!15}
+        \textcolor{primary}{\textbf{Solution}} & 
+        \textcolor{primary}{\textbf{C1}} & 
+        \textcolor{primary}{\textbf{C2}} & 
+        \textcolor{primary}{\textbf{C3}} & 
+        \textcolor{primary}{\textbf{C4}} & 
+        \textcolor{primary}{\textbf{C5}} & 
+        \textcolor{primary}{\textbf{C6}} & 
+        \textcolor{primary}{\textbf{C7}} & 
+        \textcolor{primary}{\textbf{C8}} & 
+        \textcolor{primary}{\textbf{C9}} \\
+        \hline
+        \textbf{Stake} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & $\times$ & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} \\
+        \hline
+        \rowcolor{background!50}
+        \textbf{Aseel} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & \textcolor{primary}{\checkmark} & $\times$ & \textcolor{primary}{\checkmark} & $\times$ & \textcolor{primary}{\checkmark} & $\times$ & \textcolor{primary}{\checkmark} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Proposed Solution}
+
+Having studied the already working platforms for investments, we found strengths and weaknesses that could define what was required from the project. Our proposed solution will look at:
+
+\begin{itemize}
+    \item Developing an efficient mobile application for investment management.
+    \item Increasing the level of users' engagement with recommendations using the power of AI.
+    \item Ensuring responsive and user-friendly interaction with the interface.
+    \item Gaining the trust of investors by ensuring transparency and security in the investing platform.
+    \item Enhancing the security of data and following all the financial regulations.
+\end{itemize}
+
+The \textbf{\textcolor{primary}{Korpor}} platform will be offering the following features:
+
+\begin{itemize}
+    \item A directory of investment opportunities with deep financial insights into those opportunities.
+    \item AI-driven recommendations of investments as per users' preferences.
+    \item Smooth funding and payout mechanisms.
+    \item Real-time portfolio performance tracking on a single screen/dashboard.
+    \item Forum for interactive discussions on strategy and market trends among its users.
+    \item Referral and Rewards System: An engaging system for rewarding users via referral.
+\end{itemize}
+
+\section{Development methodology}
+
+The completion of the project on its delivery date is the main problem of every software development team. One of the most common problems encountered in the production of software is insufficient technical specifications, poor time management in the face of the use of emerging technology, and sudden changes in needs. In order to avoid these critical issues, we follow an agile methodology for project management.
+
+\subsection{SCRUM}
+
+\textbf{\textcolor{primary}{Scrum}} is an agile development approach that is used to create software using incremental and iterative methods. Scrum is a quick, flexible, and efficient agile methodology that is intended to provide value to the client at every stage of the project's development. Scrum's main goal is to meet customer needs by fostering an atmosphere of open communication, group accountability, and constant improvement. The development process begins with a broad concept of what must be constructed, developing a list of features that the product owner desires, and arranging them according to priority (product backlog).
+
+\subsection{Agile Scrum roles and responsibilities}
+
+\subsubsection{The Product Owner}
+
+Understands the customer and business requirements, then creates and manages the product backlog based on those requirements.
+
+\textbf{Responsibilities:}
+\begin{itemize}
+    \item Managing the scrum backlog
+    \item Release management
+    \item Stakeholder management
+\end{itemize}
+
+\subsubsection{Developers}
+
+In Scrum, the term developer or team member refers to anyone who plays a role in the development and support of the product and can include researchers, architects, designers, programmers, etc.
+
+\textbf{Responsibilities:}
+\begin{itemize}
+    \item Delivering the work through the sprint
+    \item To ensure transparency during the sprint, they meet daily at the daily scrum
+\end{itemize}
+
+\subsubsection{Scrum Master}
+
+The role responsible for gluing everything together and ensuring that scrum is being done well. In practical terms, that means they help the product owner define value, the development team deliver the value, and the scrum team get better.
+
+The Scrum Master focuses on:
+\begin{itemize}
+    \item Transparency
+    \item Empiricism
+    \item Self-organization
+    \item The Scrum events
+\end{itemize}
+
+\subsection{The Scrum Events}
+
+The Scrum events are key elements of the Scrum Framework. They provide regular opportunities for enacting the Scrum pillars of Inspection, Adaptation and Transparency. In addition, they help teams keep aligned with the Sprint and Product Goals, improve Developer productivity, and remove impediments and reduce the need to schedule too many additional meetings.
+
+\begin{itemize}
+    \item \textbf{Sprint}: All work in Scrum is done in a series of short projects called Sprints. This enables rapid feedback loops.
+    
+    \item \textbf{Sprint Planning}: The Sprint starts with a planning session in which the Developers plan the work they intend to do in the Sprint. This plan creates a shared understanding and alignment among the team.
+    
+    \item \textbf{Daily Scrum}: The Developers meet daily to inspect their progress toward the Sprint Goal, discuss any challenges they've run into, and tweak their plan for the next day as needed.
+    
+    \item \textbf{Sprint Review}: At the end of the Sprint, the Scrum Team meets with stakeholders to show what they have accomplished and get feedback.
+    
+    \item \textbf{Sprint Retrospective}: Finally, the Scrum Team gets together to discuss how the Sprint went and if there are things they could do differently and improve in the next Sprint.
+\end{itemize}
+
+\section{Conclusion}
+
+In conclusion of this chapter, it is clear that planning and methodology are essential pillars to ensure the success of the project. By fully understanding the project framework, including the host organization's expectations and the challenges ahead, the team is better prepared to meet the challenges ahead.
+
+This chapter lays the solid foundation on which the entire project will be built, providing a valuable guide for the next steps. The next chapter will allow us to analyze and specify the needs developed in our project. 

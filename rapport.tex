@@ -1,0 +1,340 @@
+\documentclass[12pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in, headheight=14.5pt} % Adjusted margins with proper headheight
+\usepackage{pdfpages}
+\usepackage{emptypage} % To ensure blank pages are truly empty
+\usepackage{microtype} % Improve justification and reduce overfull hboxes
+\usepackage{titlesec} % For custom chapter and section styling
+\usepackage{xcolor} % For custom colors
+\usepackage[most]{tcolorbox} % For colored boxes
+\usepackage{fancyhdr} % For custom headers and footers
+\usepackage{tocloft} % For Table of Contents customization
+\usepackage{lettrine} % For drop caps
+\usepackage{lipsum} % For dummy text if needed
+\usepackage{enumitem} % For better list control
+\usepackage{caption} % For caption styling
+\usepackage{setspace} % For line spacing control
+\usepackage{pifont} % For decorative symbols
+\usepackage{tikz} % For drawing fancy elements
+\usepackage{amssymb} % For mathematical symbols like \checkmark
+\usepackage{bookmark} % Better PDF bookmarks
+\usepackage{hyperref} % For clickable links in ToC (moved to after other packages)
+\usepackage{float}
+\usepackage{colortbl} % For colored table cells
+\usepackage{array} % For better table column formatting
+\usepackage{calc} % For coordinate calculations in TikZ
+\usepackage{mdframed} % For framed environments
+\usetikzlibrary{calc}
+\tcbuselibrary{skins,breakable}
+
+% Define a refined professional color palette
+\definecolor{primary}{RGB}{33, 64, 95} % Deep navy blue
+\definecolor{secondary}{RGB}{145, 145, 145} % Medium gray
+\definecolor{accent}{RGB}{201, 172, 140} % Gold/Bronze accent
+\definecolor{background}{RGB}{248, 248, 248} % Light background
+\definecolor{bodytext}{RGB}{40, 40, 40} % Near-black for body text
+
+% Set default text color
+\color{bodytext}
+
+% Customize chapter style - more elegant
+\titleformat{\chapter}[display]
+{\normalfont\Large\bfseries\color{primary}}
+{\filcenter\color{primary}\MakeUppercase{\chaptertitlename}~\thechapter}
+{1em}
+{\filcenter\LARGE}[\vspace{0.5em}\centerline{\rule{0.6\textwidth}{1pt}}]
+\titlespacing*{\chapter}{0pt}{30pt}{40pt}
+
+% Section styling - more subtle
+\titleformat{\section}
+{\normalfont\large\bfseries\color{primary}}
+{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% Subsection styling
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries\color{primary}}
+{\thesubsection}{1em}{}
+
+% Set up fancy headers - more elegant
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\textit{\leftmark}}
+\fancyfoot[C]{\textcolor{secondary}{\small{Final Year Project}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% Enhanced Table of Contents styling
+% Title formatting
+\renewcommand{\cfttoctitlefont}{\hfill\LARGE\bfseries\color{primary}} 
+\renewcommand{\cftaftertoctitle}{\hfill\null\\[1em]\hfill\rule{0.6\textwidth}{1pt}}
+
+% Entry formatting
+\renewcommand{\cftchapfont}{\normalfont\bfseries\color{bodytext}} % Chapter font in black
+\renewcommand{\cftsecfont}{\normalfont\itshape} % Section font
+\renewcommand{\cftsubsecfont}{\normalfont} % Subsection font
+
+% Dot leaders with custom styling
+\renewcommand{\cftdot}{$\cdot$} % Better centered dots
+\renewcommand{\cftdotsep}{2.5} % Adjust dot spacing
+\renewcommand{\cftchapleader}{\color{secondary}\cftdotfill{\cftdotsep}} % Chapter dots
+\renewcommand{\cftsecleader}{\color{secondary}\cftdotfill{\cftdotsep}} % Section dots
+
+% Page numbers
+\renewcommand{\cftchappagefont}{\normalfont\bfseries\color{bodytext}} % Chapter page number
+\renewcommand{\cftsecpagefont}{\normalfont\color{bodytext}} % Section page number
+
+% Spacing for better presentation
+\setlength{\cftbeforetoctitleskip}{1em} % Space before title
+\setlength{\cftaftertoctitleskip}{2em} % Space after title
+\setlength{\cftbeforechapskip}{1em} % Space before chapters
+\setlength{\cftbeforesecskip}{0.5em} % Space before sections
+
+% Chapter numbering format
+\renewcommand{\cftchappresnum}{\color{primary}} % Color for chapter numbers
+\renewcommand{\cftchapaftersnum}{.\hspace{0.8em}} % Add period after number
+
+% Indentation
+\setlength{\cftchapindent}{0em} % No indent for chapters
+\setlength{\cftsecindent}{1.5em} % Indent for sections
+\setlength{\cftsubsecindent}{3em} % Indent for subsections
+
+% Title
+\renewcommand{\contentsname}{\color{primary}Table of Contents}
+
+% Improved caption style
+\captionsetup{
+  font=small,
+  labelfont={bf,color=primary},
+  margin=10pt,
+  format=hang,
+  justification=centering,
+}
+
+% Lettrine (drop caps) settings - more elegant
+\renewcommand{\LettrineFontHook}{\color{primary}\bfseries}
+\setcounter{DefaultLines}{3}
+\setlength{\DefaultFindent}{0.5em}
+\setlength{\DefaultNindent}{0em}
+\setlength{\DefaultSlope}{0pt} % Ensure proper alignment
+
+% Define line spacing for main text
+\onehalfspacing
+
+% Hyperref settings - more professional
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=primary,
+    urlcolor=primary,
+    citecolor=primary,
+    pdftitle={PFE Rapport},
+    pdfauthor={KORPOR},
+    pdfsubject={Final Year Project},
+    pdfkeywords={MySQL, Express-Node.js, React, Vite},
+    pdfpagemode=UseOutlines,
+    pdfstartview=FitH,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+}
+
+% Define a new environment for important information - more elegant
+\newenvironment{important}{%
+  \begin{tcolorbox}[
+    colback=background,
+    colframe=primary,
+    arc=1mm, % Slightly rounded corners
+    boxrule=0.5pt,
+    left=8pt,
+    right=8pt,
+    top=6pt,
+    bottom=6pt,
+    width=\textwidth,
+    title={\textbf{Important}},
+    fonttitle=\color{white}
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+% Define a command for first paragraph styling with better alignment
+\newcommand{\firstparagraph}[1]{%
+  \lettrine[lines=2,findent=0.5em,nindent=0em,loversize=0.05,lraise=0.05]{\textcolor{primary}{#1}}{}%
+}
+
+% Define a command for chapter quotes
+\newcommand{\chapterquote}[2]{%
+  \begin{flushright}
+    \begin{minipage}{0.7\textwidth}
+      \small\itshape #1
+      \begin{flushright}
+        \normalfont --- #2
+      \end{flushright}
+    \end{minipage}
+  \end{flushright}
+  \vspace{1cm}
+}
+
+% Enhanced figure environment with side lines
+\newtcolorbox{figureframe}{
+  enhanced,
+  frame hidden,
+  boxrule=0mm,
+  borderline west={3.5pt}{0pt}{primary},
+  sharp corners,
+  breakable,
+  left=15pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  toptitle=0pt,
+  bottomtitle=0pt,
+  colback=white,
+  overlay={
+    % Main accent line
+    \draw[line width=1pt, accent] ([xshift=5pt]frame.north west) -- ([xshift=5pt]frame.south west);
+    
+    % Top decorative elements
+    \fill[accent] ([xshift=0pt,yshift=-3pt]frame.north west) circle (2pt);
+    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=-5pt]frame.north west) -- ([xshift=15pt,yshift=-5pt]frame.north west);
+    
+    % Bottom decorative elements
+    \fill[accent] ([xshift=0pt,yshift=3pt]frame.south west) circle (2pt);
+    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=5pt]frame.south west) -- ([xshift=15pt,yshift=5pt]frame.south west);
+  }
+}
+
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+
+\renewenvironment{figure}[1][htbp]{%
+  \origfigure[#1]%
+  \begin{figureframe}%
+}{%
+  \end{figureframe}%
+  \endorigfigure%
+}
+
+% Styled table environment with decorative side line - same style
+\newtcolorbox{tableframe}{
+  enhanced,
+  frame hidden,
+  boxrule=0mm,
+  borderline west={3.5pt}{0pt}{primary},
+  sharp corners,
+  breakable,
+  left=15pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  toptitle=0pt,
+  bottomtitle=0pt,
+  colback=white,
+  overlay={
+    % Main accent line
+    \draw[line width=1pt, accent] ([xshift=5pt]frame.north west) -- ([xshift=5pt]frame.south west);
+    
+    % Top decorative elements
+    \fill[accent] ([xshift=0pt,yshift=-3pt]frame.north west) circle (2pt);
+    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=-5pt]frame.north west) -- ([xshift=15pt,yshift=-5pt]frame.north west);
+    
+    % Bottom decorative elements
+    \fill[accent] ([xshift=0pt,yshift=3pt]frame.south west) circle (2pt);
+    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=5pt]frame.south west) -- ([xshift=15pt,yshift=5pt]frame.south west);
+  }
+}
+
+\let\origtable\table
+\let\endorigtable\endtable
+\renewenvironment{table}[1][htbp]{%
+  \origtable[#1]%
+  \begin{tableframe}%
+}{%
+  \end{tableframe}%
+  \endorigtable%
+}
+
+\begin{document}
+
+% Cover Page
+\includepdf[pages=1]{cover page.pdf}
+
+% Blank Page after Cover - ensure it's actually blank
+\newpage
+\thispagestyle{empty}
+\null
+\newpage
+
+% Start Arabic page numbering
+\pagenumbering{arabic}
+
+% Summary and Abstract
+\input{summary_abstract.tex}
+\cleardoublepage
+
+% Dedication
+\input{dedication.tex}
+\cleardoublepage
+
+% Acknowledgement
+\input{acknowledgement.tex}
+\cleardoublepage
+
+% Table of Contents with enhanced styling
+\thispagestyle{empty}
+
+% Decorative frame for TOC page
+\begin{tikzpicture}[remember picture, overlay]
+  % Draw a subtle decorative line at top of page
+  \draw[color=accent, line width=0.5pt] 
+    ([yshift=-1.5cm]current page.north west) -- 
+    ([yshift=-1.5cm]current page.north east);
+  % Draw a matching line at bottom of page  
+  \draw[color=accent, line width=0.5pt] 
+    ([yshift=1.5cm]current page.south west) -- 
+    ([yshift=1.5cm]current page.south east);
+\end{tikzpicture}
+
+\vspace*{2cm}
+\begin{center}
+{\color{primary}\LARGE\textbf{\MakeUppercase{Table of Contents}}}
+\vspace{0.3cm}
+
+% Decorative element below title
+\begin{tikzpicture}
+  \draw[color=primary, line width=1pt] (0,0) -- (6,0);
+  \draw[color=accent, line width=0.5pt] (1,0.15) -- (5,-0.15);
+\end{tikzpicture}
+\end{center}
+\vspace{1.8cm}
+
+\begin{minipage}{\textwidth}
+\tableofcontents
+\end{minipage}
+\cleardoublepage
+
+% General Introduction
+\input{general_introduction.tex}
+\cleardoublepage
+
+% Chapter 1: Project Context
+\input{chapter1.tex}
+\cleardoublepage
+
+% Chapter 2: Analysis and Specification
+\input{chapter2.tex}
+\cleardoublepage
+
+% Main Matter (Page numbering already set to arabic)
+% \chapter{Project Context}
+% \input{chapters/project_context.tex}
+
+% \chapter{Introduction} % Example for later
+% \input{chapters/introduction.tex}
+
+\end{document} 

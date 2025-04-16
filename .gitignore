@@ -1,0 +1,18 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# PDF output file (optional, if you want to keep it out of git)
+# *.pdf
+
+# Build directories (e.g., _build)
+_build/ 
