@@ -1,0 +1,24 @@
+name: Build LaTeX to PDF
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: rapport.tex
+      
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rapport-pdf
+          path: rapport.pdf
+          retention-days: 7 
