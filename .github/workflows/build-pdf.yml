@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
@@ -17,7 +17,7 @@ jobs:
           root_file: rapport.tex
       
       - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: rapport-pdf
           path: rapport.pdf
