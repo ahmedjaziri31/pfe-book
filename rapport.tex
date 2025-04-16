@@ -28,6 +28,7 @@
 \usepackage{array} % For better table column formatting
 \usepackage{calc} % For coordinate calculations in TikZ
 \usepackage{mdframed} % For framed environments
+\usepackage{afterpage} % For operations on the following page
 \usetikzlibrary{calc}
 \tcbuselibrary{skins,breakable}
 
@@ -81,7 +82,7 @@
 
 % Dot leaders with custom styling
 \renewcommand{\cftdot}{$\cdot$} % Better centered dots
-\renewcommand{\cftdotsep}{2.5} % Adjust dot spacing
+\renewcommand{\cftdotsep}{2.0} % Tighter dot spacing
 \renewcommand{\cftchapleader}{\color{secondary}\cftdotfill{\cftdotsep}} % Chapter dots
 \renewcommand{\cftsecleader}{\color{secondary}\cftdotfill{\cftdotsep}} % Section dots
 
@@ -300,10 +301,8 @@
     ([yshift=1.5cm]current page.south east);
 \end{tikzpicture}
 
-\vspace*{2cm}
 \begin{center}
 {\color{primary}\LARGE\textbf{\MakeUppercase{Table of Contents}}}
-\vspace{0.3cm}
 
 % Decorative element below title
 \begin{tikzpicture}
@@ -311,11 +310,25 @@
   \draw[color=accent, line width=0.5pt] (1,0.15) -- (5,-0.15);
 \end{tikzpicture}
 \end{center}
-\vspace{1.8cm}
+% \vspace{1.8cm}
+
+% Hide the default "Contents" heading and remove any default horizontal line
+\renewcommand{\contentsname}{}
+\renewcommand{\cftaftertoctitle}{}
 
 \begin{minipage}{\textwidth}
+\begingroup
+\fontsize{11pt}{13pt}\selectfont
 \tableofcontents
+\endgroup
 \end{minipage}
+
+% Ensure TOC pages have no page numbers
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+% Add this to make sure the second TOC page also has no page number
+\addtocontents{toc}{\protect\afterpage{\protect\thispagestyle{empty}}}
+
 \cleardoublepage
 
 % General Introduction
@@ -325,6 +338,9 @@
 % Chapter 1: Project Context
 \input{chapter1.tex}
 \cleardoublepage
+
+% Insert page break in TOC before Chapter 2
+\addtocontents{toc}{\protect\newpage}
 
 % Chapter 2: Analysis and Specification
 \input{chapter2.tex}
