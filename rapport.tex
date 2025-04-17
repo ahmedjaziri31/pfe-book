@@ -346,6 +346,13 @@
 \input{chapter2.tex}
 \cleardoublepage
 
+% Insert page break in TOC before Chapter 3
+\addtocontents{toc}{\protect\newpage}
+
+% Chapter 3: Design and Implementation
+\input{chapter3.tex}
+\cleardoublepage
+
 % Main Matter (Page numbering already set to arabic)
 % \chapter{Project Context}
 % \input{chapters/project_context.tex}
