@@ -29,6 +29,7 @@
 \usepackage{calc} % For coordinate calculations in TikZ
 \usepackage{mdframed} % For framed environments
 \usepackage{afterpage} % For operations on the following page
+\usepackage{longtable} % For tables that span multiple pages
 \usetikzlibrary{calc}
 \tcbuselibrary{skins,breakable}
 
@@ -186,7 +187,6 @@
   enhanced,
   frame hidden,
   boxrule=0mm,
-  borderline west={3.5pt}{0pt}{primary},
   sharp corners,
   breakable,
   left=15pt,
@@ -196,18 +196,6 @@
   toptitle=0pt,
   bottomtitle=0pt,
   colback=white,
-  overlay={
-    % Main accent line
-    \draw[line width=1pt, accent] ([xshift=5pt]frame.north west) -- ([xshift=5pt]frame.south west);
-    
-    % Top decorative elements
-    \fill[accent] ([xshift=0pt,yshift=-3pt]frame.north west) circle (2pt);
-    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=-5pt]frame.north west) -- ([xshift=15pt,yshift=-5pt]frame.north west);
-    
-    % Bottom decorative elements
-    \fill[accent] ([xshift=0pt,yshift=3pt]frame.south west) circle (2pt);
-    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=5pt]frame.south west) -- ([xshift=15pt,yshift=5pt]frame.south west);
-  }
 }
 
 \let\origfigure\figure
@@ -226,7 +214,6 @@
   enhanced,
   frame hidden,
   boxrule=0mm,
-  borderline west={3.5pt}{0pt}{primary},
   sharp corners,
   breakable,
   left=15pt,
@@ -236,18 +223,6 @@
   toptitle=0pt,
   bottomtitle=0pt,
   colback=white,
-  overlay={
-    % Main accent line
-    \draw[line width=1pt, accent] ([xshift=5pt]frame.north west) -- ([xshift=5pt]frame.south west);
-    
-    % Top decorative elements
-    \fill[accent] ([xshift=0pt,yshift=-3pt]frame.north west) circle (2pt);
-    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=-5pt]frame.north west) -- ([xshift=15pt,yshift=-5pt]frame.north west);
-    
-    % Bottom decorative elements
-    \fill[accent] ([xshift=0pt,yshift=3pt]frame.south west) circle (2pt);
-    \draw[line width=0.75pt, accent] ([xshift=7pt,yshift=5pt]frame.south west) -- ([xshift=15pt,yshift=5pt]frame.south west);
-  }
 }
 
 \let\origtable\table
@@ -323,11 +298,11 @@
 \endgroup
 \end{minipage}
 
-% Ensure TOC pages have no page numbers
-\addtocontents{toc}{\protect\thispagestyle{empty}}
+% Ensure TOC pages have no page numbers -- REMOVED
+% \addtocontents{toc}{\protect\thispagestyle{empty}}
 
-% Add this to make sure the second TOC page also has no page number
-\addtocontents{toc}{\protect\afterpage{\protect\thispagestyle{empty}}}
+% Add this to make sure the second TOC page also has no page number -- REMOVED
+% \addtocontents{toc}{\protect\afterpage{\protect\thispagestyle{empty}}}
 
 \cleardoublepage
 

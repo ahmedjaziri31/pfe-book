@@ -294,20 +294,134 @@ The backlog was created before the sprints to plan the milestones and determine 
     \end{itemize}
 \end{itemize}
 
-\begin{table}[htbp]
-    \centering
-    \caption{Korpor Product Backlog}
-    \label{tab:product-backlog}
-    \begin{tabular}{|c|l|p{8cm}|c|}
-        \hline
-        \textbf{Code} & \textbf{Theme} & \textbf{User story} & \textbf{Priority} \\
-        \hline
-        % Add your product backlog items here
-        % Example:
-        % PB001 & Authentication & As a user, I want to be able to register and login using my email & Must \\
-        \hline
-    \end{tabular}
-\end{table}
+\begin{longtable}{|c|l|p{8cm}|c|}
+    \caption{Korpor Product Backlog\label{tab:product-backlog}} \\
+    \hline
+    \textbf{Code} & \textbf{Theme} & \textbf{User story} & \textbf{Priority} \\
+    \hline
+    \endfirsthead
+    
+    \hline
+    \endhead
+    
+    \hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+    \endfoot
+    
+    \hline
+    \endlastfoot
+    
+    PB001 & Authentication & As a user, I want to create an account and authenticate securely & Must \\
+    \hline
+    PB002 & User Management & As a user, I want to manage my profile information & Must \\
+    \hline
+    PB003 & Authentication & As a user, I want to securely log out of my account & Must \\
+    \hline
+    PB004 & Admin Management & As a Super Admin, I want to manage admin accounts for different real estate companies & Should \\
+    
+    \newpage
+    
+    PB005 & Security & As a Super Admin, I want to monitor security and compliance across the platform & Could \\
+    \hline
+    PB006 & Configuration & As a Super Admin, I want to configure platform-wide features and settings & Could \\
+    \hline
+    PB007 & Analytics & As a Super Admin, I want to generate and analyze global performance reports & Could \\
+    \hline
+    PB008 & Moderation & As a Super Admin, I want to moderate content across the platform & Won't \\
+    \hline
+    PB009 & AI Integration & As a Super Admin, I want to chat with an AI assistant that can securely access database information & Could \\
+    \hline
+    PB010 & Listing Management & As an Admin, I want to manage real estate listings in my company & Must \\
+    \hline
+    PB011 & Agent Management & As an Admin, I want to oversee real estate agents and their permissions & Should \\
+    \hline
+    PB012 & Transaction Management & As an Admin, I want to track transactions and calculate agent commissions & Should \\
+    \hline
+    PB013 & Customer Service & As an Admin, I want to address investor inquiries and issues & Could \\
+    \hline
+    PB014 & Analytics & As an Admin, I want to access a comprehensive agency dashboard & Could \\
+    \hline
+    PB015 & AI Integration & As an Admin, I want to input property details and receive AI-powered valuation & Should \\
+    \hline
+    PB016 & Listing Management & As an Agent, I want to create and manage property listings & Must \\
+    \hline
+    PB017 & Investment Management & As an Agent, I want to handle investment and purchase requests & Could \\
+    \hline
+    PB018 & Data Management & As an Agent, I want to contribute data for AI-driven estimates & Could \\
+    \hline
+    PB019 & Customer Relations & As an Agent, I want to maintain client relationships and communications & Could \\
+    \hline
+    PB020 & Finance & As an Agent, I want to view my commissions on sales and rentals & Should \\
+    \hline
+    PB021 & Property Discovery & As an Investor, I want to browse available property listings & Must \\
+    \hline
+    PB022 & Search Functionality & As an Investor, I want to filter properties based on my preferences & Could \\
+    \hline
+    PB023 & Investment Process & As an Investor, I want to invest in properties through a simple process & Could \\
+    \hline
+    PB024 & Portfolio Management & As an Investor, I want to track my investment portfolio in real-time & Must \\
+    \hline
+    PB025 & Payment Processing & As an Investor, I want to make secure payments through various methods & Should \\
+    \hline
+    PB026 & AI Recommendations & As an Investor, I want to receive personalized property recommendations & Must \\
+    \hline
+    PB027 & AI Assistance & As an Investor, I want to consult an AI assistant for real estate legal questions & Could \\
+    \hline
+    PB028 & Financial Prediction & As an Investor, I want to see predictions of potential earnings & Could \\
+    \hline
+    PB029 & Finance Management & As an Investor, I want to manage my earnings and withdrawals & Could \\
+    \hline
+    PB030 & AI System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
+    \hline
+    PB031 & AI Prediction & As the System, I want to predict property valuations and rental prices & Should \\
+    \hline
+    PB032 & AI Forecasting & As the System, I want to forecast potential investment returns & Should \\
+    \hline
+    PB033 & NLP Integration & As the System, I want to provide real estate legal information via NLP & Could \\
+    \hline
+    PB034 & Security & As the System, I want to secure AI database access for authorized queries & Could \\
+    \hline
+    PB035 & Blockchain & As the System, I want to create and manage virtual contracts for transactions & Must \\
+    \hline
+    PB036 & Blockchain & As an Investor, I want my property investments to be secured via blockchain & Must \\
+    \hline
+    PB037 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
+    \hline
+    PB038 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
+    \hline
+    PB039 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
+    \hline
+    PB040 & Authentication & As the System, I want to automate authentication and session management & Should \\
+    \hline
+    PB041 & Notifications & As the System, I want to generate real-time notifications for relevant users & Could \\
+    \hline
+    PB042 & Data Consistency & As the System, I want to maintain transaction consistency across the platform & Should \\
+    \hline
+    PB043 & Security & As the System, I want to ensure secure communication between AI and database & Should \\
+    \hline
+    PB044 & CI/CD & As a Developer, I want CI/CD pipelines to build project images on GitHub & Must \\
+    \hline
+    PB045 & Deployment & As a Developer, I want to automate image deployment to GCP registry & Must \\
+    \hline
+    PB046 & Deployment & As a Developer, I want to auto-deploy backend services and database & Must \\
+    \hline
+    PB047 & Containerization & As a Developer, I want to containerize application components with Docker & Must \\
+    \hline
+    PB048 & Web Deployment & As a Developer, I want to automatically deploy the web app frontend & Should \\
+    \hline
+    PB049 & Mobile Deployment & As a Developer, I want to automate mobile app deployments to Play Store & Should \\
+    \hline
+    PB050 & Versioning & As a Developer, I want to implement versioning for mobile app releases & Should \\
+    \hline
+    PB051 & Monitoring & As an Admin, I want to monitor system health and performance & Could \\
+    \hline
+    PB052 & Configuration & As a Super Admin, I want to manage environment configurations & Could \\
+    \hline
+    PB053 & Mobile UI/UX & As an Investor, I want a responsive, intuitive mobile interface & Should \\
+    \hline
+    PB054 & Notifications & As an Investor, I want to receive push notifications about my investments & Should \\
+    \hline
+    PB055 & Offline Access & As an Investor, I want offline access to my basic portfolio information & Should \\
+\end{longtable}
 
 \section{Sprint planning}
 
@@ -316,13 +430,17 @@ In order to complete the project within the deadlines set by the internship agre
 In our project management, we opted for the proportional distribution method in order to estimate the costs.
 Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
 
+\vspace{1cm}
+
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file once available
-    % \includegraphics[width=0.9\textwidth]{images/gantt-chart.png}
+    \includegraphics[width=0.7\textwidth]{images/gantt-chart.png}
     \caption{GANTT chart with sprint planning}
     \label{fig:gantt-chart}
 \end{figure}
+
+% \vspace{2cm}
 
 \section{Conclusion}
 
