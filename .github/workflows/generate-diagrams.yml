@@ -22,10 +22,16 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y graphviz
+          sudo apt-get install -y graphviz libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++
 
-      - name: Install MDGen
-        run: npm install -g mdgen
+      - name: Install StarUML CLI
+        run: |
+          # Download StarUML CLI instead of using mdgen
+          mkdir -p ./staruml-cli
+          cd ./staruml-cli
+          wget https://github.com/staruml/staruml-cli/releases/latest/download/staruml-cli-linux-x64.tar.gz
+          tar -xzf staruml-cli-linux-x64.tar.gz
+          sudo chmod +x ./staruml
 
       - name: Generate Diagrams from MDJ
         run: |
@@ -33,11 +39,11 @@ jobs:
             output_dir="diagrams/$(dirname "${mdj_file#./}")"
             mkdir -p "$output_dir"
             
-            # Export diagrams as SVG
-            mdgen image -m "$mdj_file" -o "$output_dir/<%=diagram.name%>.svg" -f "svg" -s @Diagram
+            # Export diagrams as PNG using StarUML CLI
+            ./staruml-cli/staruml export --format png "$mdj_file" --out "$output_dir"
             
-            # Export diagrams as PNG
-            mdgen image -m "$mdj_file" -o "$output_dir/<%=diagram.name%>.png" -f "png" -s @Diagram
+            # Rename files to match diagram names if needed
+            # This might need customization based on how StarUML CLI names the output files
           done
 
       - name: Commit and Push Generated Diagrams
