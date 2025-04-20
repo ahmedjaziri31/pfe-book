@@ -1,0 +1,49 @@
+name: Generate Diagrams from StarUML MDJ
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.mdj'
+
+jobs:
+  generate-diagrams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
+
+      - name: Install MDGen
+        run: npm install -g mdgen
+
+      - name: Generate Diagrams from MDJ
+        run: |
+          find . -name "*.mdj" | while read mdj_file; do
+            output_dir="diagrams/$(dirname "${mdj_file#./}")"
+            mkdir -p "$output_dir"
+            
+            # Export diagrams as SVG
+            mdgen image -m "$mdj_file" -o "$output_dir/<%=diagram.name%>.svg" -f "svg" -s @Diagram
+            
+            # Export diagrams as PNG
+            mdgen image -m "$mdj_file" -o "$output_dir/<%=diagram.name%>.png" -f "png" -s @Diagram
+          done
+
+      - name: Commit and Push Generated Diagrams
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add diagrams/
+          git commit -m "Generate diagrams from StarUML MDJ files" || echo "No changes to commit"
+          git push 

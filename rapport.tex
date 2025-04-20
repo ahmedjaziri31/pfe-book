@@ -65,11 +65,32 @@
 % Set up fancy headers - more elegant
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\thepage}
+% Remove page number from header
+% \fancyhead[R]{\thepage}
 \fancyhead[L]{\textit{\leftmark}}
-\fancyfoot[C]{\textcolor{secondary}{\small{Final Year Project}}}
+% Add page number to center footer
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\textcolor{secondary}{\small{Final Year Project}}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.2pt}
+
+% Define a plain pagestyle with page numbers at bottom
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \fancyfoot[R]{\textcolor{secondary}{\small{Final Year Project}}}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.2pt}%
+}
+
+% Make sure chapter pages show page numbers
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
 
 % Enhanced Table of Contents styling
 % Title formatting
@@ -255,10 +276,12 @@
 
 % Dedication
 \input{dedication.tex}
+\thispagestyle{plain}
 \cleardoublepage
 
 % Acknowledgement
 \input{acknowledgement.tex}
+\thispagestyle{plain}
 \cleardoublepage
 
 % Table of Contents with enhanced styling
@@ -290,8 +313,44 @@
 \renewcommand{\contentsname}{}
 \renewcommand{\cftaftertoctitle}{}
 
-% Return to simple TOC generation
+% This ensures that only the first page of TOC has no page number
 \tableofcontents
+% Make subsequent pages of TOC have page numbers at bottom
+\addtocontents{toc}{\protect\thispagestyle{plain}}
+
+\cleardoublepage
+
+% List of Figures
+\thispagestyle{empty}
+
+% Decorative frame for List of Figures page
+\begin{tikzpicture}[remember picture, overlay]
+  % Draw a subtle decorative line at top of page
+  \draw[color=accent, line width=0.5pt] 
+    ([yshift=-1.5cm]current page.north west) -- 
+    ([yshift=-1.5cm]current page.north east);
+  % Draw a matching line at bottom of page  
+  \draw[color=accent, line width=0.5pt] 
+    ([yshift=1.5cm]current page.south west) -- 
+    ([yshift=1.5cm]current page.south east);
+\end{tikzpicture}
+
+\begin{center}
+{\color{primary}\LARGE\textbf{\MakeUppercase{List of Figures}}}
+
+% Decorative element below title
+\begin{tikzpicture}
+  \draw[color=primary, line width=1pt] (0,0) -- (6,0);
+  \draw[color=accent, line width=0.5pt] (1,0.15) -- (5,-0.15);
+\end{tikzpicture}
+\end{center}
+
+% Hide the default "List of Figures" heading and remove any default horizontal line
+\renewcommand{\listfigurename}{}
+
+\listoffigures
+% Make subsequent pages of List of Figures have page numbers at bottom
+\addtocontents{lof}{\protect\thispagestyle{plain}}
 
 \cleardoublepage
 
@@ -323,5 +382,13 @@
 
 % \chapter{Introduction} % Example for later
 % \input{chapters/introduction.tex}
+
+% Chapter 4: Conclusion & Future Work
+\input{Conclusion.tex}
+\cleardoublepage
+
+% Appendices and Bibliography
+\input{Appendix.tex}
+\cleardoublepage
 
 \end{document} 
