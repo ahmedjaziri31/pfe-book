@@ -7,12 +7,18 @@ on:
     paths:
       - '**.mdj'
 
+permissions:
+  contents: write
+
 jobs:
   generate-diagrams:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ github.token }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y graphviz libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++
+          sudo apt-get install -y graphviz libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++ jq
 
       - name: Install PlantUML
         run: |
@@ -76,4 +82,4 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add diagrams/
           git commit -m "Generate diagrams from StarUML MDJ files" || echo "No changes to commit"
-          git push 
+          git push origin HEAD:${GITHUB_REF} 
