@@ -24,14 +24,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y graphviz libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++
 
-      - name: Install StarUML CLI
+      - name: Install PlantUML
         run: |
-          # Download StarUML CLI instead of using mdgen
-          mkdir -p ./staruml-cli
-          cd ./staruml-cli
-          wget https://github.com/staruml/staruml-cli/releases/latest/download/staruml-cli-linux-x64.tar.gz
-          tar -xzf staruml-cli-linux-x64.tar.gz
-          sudo chmod +x ./staruml
+          # Use PlantUML jar file instead of StarUML CLI
+          sudo apt-get install -y default-jre
+          mkdir -p ./tools
+          cd ./tools
+          wget -q https://github.com/plantuml/plantuml/releases/download/v1.2023.10/plantuml-1.2023.10.jar -O plantuml.jar
+          echo "PlantUML downloaded successfully"
 
       - name: Generate Diagrams from MDJ
         run: |
@@ -39,11 +39,35 @@ jobs:
             output_dir="diagrams/$(dirname "${mdj_file#./}")"
             mkdir -p "$output_dir"
             
-            # Export diagrams as PNG using StarUML CLI
-            ./staruml-cli/staruml export --format png "$mdj_file" --out "$output_dir"
+            # Extract JSON data from MDJ file
+            echo "Processing $mdj_file"
             
-            # Rename files to match diagram names if needed
-            # This might need customization based on how StarUML CLI names the output files
+            # MDJ files are essentially JSON, so we can extract diagrams
+            # First, create a temporary directory for extracted data
+            tmp_dir=$(mktemp -d)
+            
+            # Extract diagram data to PlantUML format
+            # This is a simple example - you may need to adjust the jq queries based on your MDJ structure
+            jq -r '.ownedElements[] | select(.name != null) | "
+            @startuml
+            title " + .name + "
+            class " + .name + " {
+              +attributes
+              +methods()
+            }
+            @enduml
+            "' "$mdj_file" > "$tmp_dir/diagram.puml" || echo "Failed to extract diagram from $mdj_file"
+            
+            # Generate diagram using PlantUML
+            if [ -s "$tmp_dir/diagram.puml" ]; then
+              java -jar ./tools/plantuml.jar -tpng "$tmp_dir/diagram.puml" -o "$output_dir"
+              echo "Generated diagram for $mdj_file"
+            else
+              echo "No diagram data extracted from $mdj_file"
+            fi
+            
+            # Clean up
+            rm -rf "$tmp_dir"
           done
 
       - name: Commit and Push Generated Diagrams
