@@ -362,9 +362,6 @@
 \input{chapter1.tex}
 \cleardoublepage
 
-% Insert page break in TOC before Chapter 2
-\addtocontents{toc}{\protect\newpage}
-
 % Chapter 2: Analysis and Specification
 \input{chapter2.tex}
 \cleardoublepage
@@ -383,12 +380,30 @@
 % \chapter{Introduction} % Example for later
 % \input{chapters/introduction.tex}
 
-% Chapter 4: Conclusion & Future Work
+% Chapter 4:
+\input{chapter4.tex}
+\cleardoublepage
+
+% Chapter 5:
+\input{chapter5.tex}
+\cleardoublepage
+
+% Chapter 6:
+\input{chapter6.tex}
+\cleardoublepage
+
+% Conclusion
 \input{Conclusion.tex}
 \cleardoublepage
 
+\input{vision.tex}
+\cleardoublepage
+
 % Appendices and Bibliography
+
 \input{Appendix.tex}
 \cleardoublepage
+
+
 
 \end{document} 
