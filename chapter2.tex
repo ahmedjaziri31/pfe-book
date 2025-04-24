@@ -10,7 +10,7 @@ In this section, we will define the actors of our application and the functional
 
 \subsection{Identifying Actors}
 
-We define actors as a shorthand for the roles played by entities outside the system that interact directly with them. In our system, we identify four types of actors:
+We define actors as a shorthand for the roles played by entities outside the system that interact directly with them \cite{CockburnUML2002, CockburnWritingEffectiveUseCases2000}. In our system, we identify four types of actors:
 
 \begin{itemize}
     \item \textbf{\textcolor{primary}{Super Admin}}: Responsible for the global configuration of the platform, they have extended privileges to manage administrators, oversee security, and ensure compliance. They can also configure advanced features and control all system resources.
@@ -88,20 +88,20 @@ After several meetings with our client, the various functional requirements of o
 In order to ensure the proper functioning of the decision-making system and to avoid any kind of anomaly, the implemented solution must meet a set of non-functional needs such as:
 
 \begin{itemize}
-    \item \textbf{Maintainability}: The system must be designed for simplicity so that tasks, updates, and bug fixes can be executed with minimal complexity.
+    \item \textbf{Maintainability}: The system must be designed for simplicity so that tasks, updates, and bug fixes can be executed with minimal complexity \cite{DevOpsFoundation2023, FowlerRefactoring2018}.
     
-    \item \textbf{Evolution}: Platform administration must remain attentive to user needs and feedback, continuously enhancing the services offered while preserving the application's utility and efficiency.
+    \item \textbf{Evolution}: Platform administration must remain attentive to user needs and feedback, continuously enhancing the services offered while preserving the application's utility and efficiency \cite{PoppendieckLean2012, KnibergLeanStartup2013}.
     
-    \item \textbf{Security}: Robust security measures are essential. The platform must enforce strong authentication protocols, access privileges, and comprehensive data encryption (both at rest and in transit). The integration of blockchain technology further ensures the immutability and integrity of sensitive information.
+    \item \textbf{Security}: Robust security measures are essential. The platform must enforce strong authentication protocols, access privileges, and comprehensive data encryption (both at rest and in transit) \cite{ClerkAuthenticationDocs, OWASPSecurityPrinciples2021}. The integration of blockchain technology further ensures the immutability and integrity of sensitive information \cite{WangBlockchainRealEstate2023, McKinseyBlockchainRE2023}.
     
-    \item \textbf{Efficiency}: The application must be effective in all circumstances, delivering prompt and reliable functionality regardless of external conditions.
+    \item \textbf{Efficiency}: The application must be effective in all circumstances, delivering prompt and reliable functionality regardless of external conditions \cite{KimDevOpsMethods2018, BassArchitecture2021}.
     
-    \item \textbf{Performance}: The system must operate optimally across diverse environments. It should consistently provide a responsive and reliable experience, even under high transaction volumes or varying network conditions.
+    \item \textbf{Performance}: The system must operate optimally across diverse environments. It should consistently provide a responsive and reliable experience, even under high transaction volumes or varying network conditions \cite{DockerArchitecture2023, ForsgreniDevOpsMetrics2023}.
 \end{itemize} 
 
 \section{Requirements Analysis}
 
-In this section, we'll outline the various features that our app should offer, using a general use case diagram.
+In this section, we'll outline the various features that our app should offer, using a general use case diagram \cite{CockburnUML2002}.
 
 \subsection{General use case diagram}
 
@@ -123,7 +123,7 @@ Before starting the design and development of any computerized system, it is ess
 
 \subsection{Physical architecture}
 
- The physical architecture of Korpor leverages modern, scalable technologies to deliver a seamless investment platform. The frontend is built with Expo, React, and TypeScript using Vite for rapid development and Tanstack for robust state management and data visualization, while Storybook supports isolated UI component development. The backend relies on Express.js with user authentication managed by Clerk, containerization via Docker, and MySQL for data storage hosted on Microsoft Azure. Integrated AI modules provide personalized insights, and blockchain technology ensures transactional security and data immutability. This setup is further supported by GitHub for version control, Postman for API testing, and end-to-end testing tools like Maestro and Playwright, with architectural designs and documentation maintained using StarUML and Overleaf.
+ The physical architecture of Korpor leverages modern, scalable technologies to deliver a seamless investment platform. The frontend is built with Expo, React, and TypeScript using Vite \cite{ViteJSWebsite} for rapid development and Tanstack for robust state management and data visualization, while Storybook supports isolated UI component development \cite{StorybookDocs2022}. The backend relies on Express.js \cite{ExpressJSWebsite} with user authentication managed by Clerk \cite{ClerkAuthenticationDocs}, containerization via Docker \cite{DockerArchitecture2023}, and MySQL \cite{MySQLWebsite} for data storage hosted on Microsoft Azure \cite{AzureCloudServices2024}. Integrated AI modules provide personalized insights \cite{JohnsonAIPropertyValuation2024}, and blockchain technology ensures transactional security and data immutability \cite{WangBlockchainRealEstate2023, McKinseyBlockchainRE2023}. This setup is further supported by GitHub \cite{GithubWebsite} for version control, Postman \cite{PostmanWebsite} for API testing, and end-to-end testing tools like Maestro and Playwright \cite{PlaywrightDocs2023}, with architectural designs and documentation maintained using StarUML \cite{StarUMLWebsite} and Overleaf.
 
 \begin{figure}[htbp]
     \centering
@@ -135,7 +135,13 @@ Before starting the design and development of any computerized system, it is ess
 
 \subsection{Logical architecture}
 
-The logical architecture of Korpor is structured around a modular, API-driven design, ensuring clear separation of concerns, scalability, and maintainability. The system follows a Model-View-Controller (MVC) approach, where each component has a distinct responsibility in managing data flow and user interactions.
+To better manage code organization and ensure maintainability, we've designed our application based on the MVC (Model-View-Controller) \cite{SunardiMVC2019, GammaPatterns1994} architectural pattern:
+
+\begin{itemize}
+    \item \textbf{Model}: Represents application data and business logic.
+    \item \textbf{View}: Presents data to users through interfaces.
+    \item \textbf{Controller}: Processes incoming requests, performs operations using Models, and returns appropriate Views.
+\end{itemize}
 
 Architecture Components:
 \begin{itemize}
@@ -163,12 +169,12 @@ Request Flow:
     \item The frontend updates the UI dynamically based on the received data.
 \end{enumerate}
 
-This structured approach ensures a scalable, secure, and high-performance system, optimizing Korpor's real estate investment and management operations.
+This structured approach ensures a scalable, secure, and high-performance system, optimizing Korpor's real estate investment and management operations \cite{KimDevOpsMethods2018}.
 
 \section{Work Environment}
 
 In this part, we will talk about our work environment, focusing on different aspects:
-our material environment, the techniques we used in the realization of our project as well as the tools we used in our report, the product backlog and sprint planning, and finally, we will conclude this section.
+our material environment, the techniques we used in the realization of our project as well as the tools we used in our report, the product backlog and sprint planning, and finally, we will conclude this section \cite{BeckXP2004, MartinCleanArchitecture2017}.
 
 \subsection{Physical environment}
 
@@ -206,19 +212,19 @@ Expo is an open-source platform for making universal native apps for Android, iO
 
 \subsubsection*{\protect\techicon{typescript} TypeScript}
                                                                 
-TypeScript (abbreviated as TS) is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. It is designed for the development of large applications and transpiles to JavaScript.
+TypeScript (abbreviated as TS) is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript \cite{TypeScriptDocs2023}. It is designed for the development of large applications and transpiles to JavaScript.
 
 \subsubsection*{\protect\techicon{tanstack} Tanstack}
                                                                       
-High-quality open-source software for web developers. Headless, type-safe, \& powerful utilities for Web Applications, Routing, State Management, Data Visualization, Datagrids/Tables, and more.
+High-quality open-source software for web developers \cite{TanstackWebsite}. Headless, type-safe, \& powerful utilities for Web Applications, Routing, State Management, Data Visualization, Datagrids/Tables, and more.
 
 \subsubsection*{\protect\techicon{clerk} Clerk}
                                                                         
-Clerk is a complete suite of embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage your users.
+Clerk \cite{ClerkAuthenticationDocs} is a complete suite of embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage your users.
 
 \subsubsection*{\protect\techicon{maestro} Maestro}
                                                                         
-Maestro is the simplest, most powerful, and most trusted end-to-end testing platform for mobile and web apps.
+Maestro \cite{MaestroDocs2022} is the simplest, most powerful, and most trusted end-to-end testing platform for mobile and web apps.
 
 \subsubsection*{\protect\techicon{azure} Google cloud platform}
 
@@ -226,68 +232,68 @@ Google cloud platform, or just GCP, is the cloud computing platform developed by
 
 \subsubsection*{\protect\techicon{github} GitHub}
 
-GitHub is a platform for developers to build, scale, and deliver secure software.
+GitHub \cite{GithubWebsite} is a cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
 
 \subsubsection*{\protect\techicon{express} Express.js}
 
-Express.js is a minimal and flexible Node.js web application framework that provides a list of features for building web and mobile applications easily.
+Express.js \cite{ExpressJSWebsite} is a minimal and flexible Node.js \cite{NodeJSWebsite} web application framework that provides a list of features for building web and mobile applications easily.
 
 \subsubsection*{\protect\techicon{postman} Postman}
 
-Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
+Postman \cite{PostmanWebsite} is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 
 \subsubsection*{\protect\techicon{vite} Vite}
 
-Vite is a modern build tool that provides a fast and optimized development experience for React 17 applications. It leverages native ES modules and offers a highly efficient development server with hot module replacement (HMR).
+Vite \cite{ViteJSWebsite} is a modern build tool that provides a fast and optimized development experience for React 17 applications. It leverages native ES modules and offers a highly efficient development server with hot module replacement (HMR).
 
 \subsubsection*{\protect\techicon{react} React}
 
-React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+React \cite{ReactWebsite}, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
 
 \subsubsection*{\protect\techicon{mysql} MySQL}
 
-MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, used by high profile web properties.
+MySQL \cite{MySQLWebsite} is an open-source relational database management system. It is based on structured query language (SQL), which is used to add, access and manage content in a database.
 
 \subsubsection*{\protect\techicon{docker} Docker}
 
-Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+Docker is an open platform for developing, shipping, and running applications \cite{DockerArchitecture2023}. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
 
 \subsubsection*{\protect\techicon{playwright} Playright}
 
-Playwright is an open-source testing and automation framework that can automate web browser interactions. To put it simply, you can write code that can open a browser.
+Playwright \cite{PlaywrightDocs2023} is an open-source testing and automation framework that can automate web browser interactions. To put it simply, you can write code that can open a browser \cite{DevOpsFoundation2023}.
 
 \subsubsection*{\protect\techicon{storybook} Storybook}
 
-Storybook is a frontend workshop for building UI components and pages in isolation. It helps you develop and share hard-to-reach states and edge cases without needing to run your whole app.
+Storybook is a frontend workshop for building UI components and pages in isolation. It helps you develop and share hard-to-reach states and edge cases without needing to run your whole app \cite{MarcotteResponsiveWebDesign2023}.
+
+\subsubsection*{\protect\techicon{staruml} StarUML}
+
+StarUML \cite{StarUMLWebsite} is a sophisticated software modeler aimed to support agile and concise modeling. It provides eleven different types of diagrams and it accepts UML 2.x standards.
+
+\subsubsection*{\protect\techicon{node} Node.js}
+
+Node.js \cite{NodeJSWebsite} is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser, allowing developers to use JavaScript for server-side scripting.
 
 \subsection{Tools used for the report}
 
 % Comment out problematic icon
-\subsubsection*{\protect\techicon{overleaf} Overleaf.com}
-\subsubsection*{Overleaf.com}
+\subsubsection*{\protect\techicon{overleaf} Overleaf}
 
 Overleaf is a collaborative cloud-based LaTeX editor used to write, edit, and publish scientific papers.
 
 % Comment out problematic icon
-\subsubsection*{\protect\techicon{staruml} StarUML}
-\subsubsection*{StarUML}
-
-StarUML is a software for creating and editing UML and SysML diagrams. Download the latest version for macOS, Windows or Linux, and see the release notes and supported diagram types.
-
-% Comment out problematic icon
 \subsubsection*{\protect\techicon{canva} Canva}
-\subsubsection*{Canva}
 
 Canva is a global company that empowers people to design anything and publish anywhere. Learn about its mission, values, commitments, awards, product, and careers.
 
 \section{Product backlog}
 
-The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project needs. It includes the following fields:
+The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project needs \cite{ProductBacklogGuide2024, SchwarzScrum2019}. It includes the following fields:
 \begin{itemize}
     \item \textbf{Code:} The unique identifier of the task.
     \item \textbf{Theme:} The subject of a user story.
     \item \textbf{User Story:} A short description of the functionality requested by the client.
-    \item \textbf{Priority:} A value indicating the importance of the functionality.
+    \item \textbf{Priority:} A value indicating the importance of the functionality \cite{MoscowMethodology2021, CleggCaseMethod2004}.
     \begin{itemize}
         \item \textbf{Must:} The feature is essential and must be implemented.
         \item \textbf{Should:} The feature should be implemented if possible.
@@ -409,9 +415,9 @@ The backlog was created before the sprints to plan the milestones and determine 
     % Blockchain & Smart Contract Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Blockchain \& Smart Contract Features}}} \\
     \hline
-    PB035 & Blockchain & As the System, I want to create and manage virtual contracts for transactions & Must \\
+    PB035 & Blockchain & As the System, I want to create and manage virtual contracts for transactions \cite{WangBlockchainRealEstate2023} & Must \\
     \hline
-    PB036 & Blockchain & As an Investor, I want my property investments to be secured via blockchain & Must \\
+    PB036 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
     \hline
     PB037 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
     \hline
@@ -435,7 +441,7 @@ The backlog was created before the sprints to plan the milestones and determine 
     % DevOps & Infrastructure section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{DevOps \& Infrastructure}}} \\
     \hline
-    PB044 & CI/CD & As a Developer, I want CI/CD pipelines to build project images on GitHub & Must \\
+    PB044 & CI/CD & As a Developer, I want CI/CD pipelines to build project images on GitHub \cite{ForsgreniDevOpsMetrics2023} & Must \\
     \hline
     PB045 & Deployment & As a Developer, I want to automate image deployment to GCP registry & Must \\
     \hline
@@ -457,7 +463,7 @@ The backlog was created before the sprints to plan the milestones and determine 
     % Mobile App Specific Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Mobile App Specific Features}}} \\
     \hline
-    PB053 & Mobile UI/UX & As an Investor, I want a responsive, intuitive mobile interface & Should \\
+    PB053 & Mobile UI/UX & As an Investor, I want a responsive, intuitive mobile interface \cite{NielsenResponsiveDesign2019} & Should \\
     \hline
     PB054 & Notifications & As an Investor, I want to receive push notifications about my investments & Should \\
     \hline
@@ -466,9 +472,9 @@ The backlog was created before the sprints to plan the milestones and determine 
 
 \section{Sprint planning}
 
-In order to complete the project within the deadlines set by the internship agreement, planning is an important step in the process. It was therefore necessary to define the essential steps and estimate the time to be devoted to the completion of the various tasks. To do this, we made a GANTT chart.
+In order to complete the project within the deadlines set by the internship agreement, planning is an important step in the process \cite{SutherlandScrum2020, RubinEssentialScrum2012}. It was therefore necessary to define the essential steps and estimate the time to be devoted to the completion of the various tasks. To do this, we made a GANTT chart.
 
-In our project management, we opted for the proportional distribution method in order to estimate the costs.
+In our project management, we opted for the proportional distribution method in order to estimate the costs \cite{CohnAgileEstimating2005, GreningPlanningPoker2002}.
 Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
 
 \vspace{1cm}
@@ -485,4 +491,4 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
 
 \section{Conclusion}
 
-Our Sprint 0 marked the exciting start of our KORPOR project. We defined global and specific objectives, developed a solid architecture, and configured an optimal working environment. With a clear vision of the initial product backlog and preliminary planning for upcoming sprints, we are ready to achieve our vision and achieve our goals successfully.
+Our Sprint 0 marked the exciting start of our KORPOR project \cite{ScaledAgileFramework2024, SutherlandScrum2020}. We defined global and specific objectives, developed a solid architecture, and configured an optimal working environment. With a clear vision of the initial product backlog and preliminary planning for upcoming sprints, we are ready to achieve our vision and achieve our goals successfully \cite{SchwarzScrum2019, RubinEssentialScrum2012}.
