@@ -32,6 +32,8 @@
 \usepackage{longtable} % For tables that span multiple pages
 \usetikzlibrary{calc}
 \tcbuselibrary{skins,breakable}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Use BibLaTeX
+\addbibresource{references.bib} % Specify the BibTeX file
 
 % Define a refined professional color palette
 \definecolor{primary}{RGB}{33, 64, 95} % Deep navy blue
@@ -404,6 +406,6 @@
 \input{Appendix.tex}
 \cleardoublepage
 
-
+\printbibliography % Print the bibliography
 
 \end{document} 
