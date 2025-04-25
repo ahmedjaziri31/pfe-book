@@ -30,6 +30,7 @@
 \usepackage{mdframed} % For framed environments
 \usepackage{afterpage} % For operations on the following page
 \usepackage{longtable} % For tables that span multiple pages
+\usepackage{multicol} % For multi-column layout
 \usetikzlibrary{calc}
 \tcbuselibrary{skins,breakable}
 \usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Use BibLaTeX
@@ -417,6 +418,13 @@
 \input{Appendix.tex}
 \cleardoublepage
 
+% Bibliography with two columns and smaller font size
+\begingroup
+\small % Reduce font size for bibliography
+\setlength{\bibitemsep}{0.5\baselineskip} % Reduce space between entries
+\begin{multicols}{2} % Two-column layout
 \printbibliography % Print the bibliography
+\end{multicols}
+\endgroup
 
 \end{document} 

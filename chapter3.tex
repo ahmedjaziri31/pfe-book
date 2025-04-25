@@ -30,7 +30,6 @@ The system supports three distinct user types, each with different permissions a
     \item \textbf{Agent}: Has limited access to the system based on their assigned responsibilities.
 \end{itemize}
 
-\newpage
 
 \subsection{Authentication System}
 \subsubsection{Sign-up Process}
@@ -66,17 +65,15 @@ We implemented automated scraping systems to collect real estate data from vario
 \subsubsection{Scraping Architecture}
 \begin{figure}[ht!]
     \centering
-    % Placeholder for a diagram of the scraping architecture
-    % \includegraphics[width=0.8\textwidth]{images/scraping_architecture.png}
-    \caption{Real Estate Data Scraping Architecture}
-    \label{fig:scraping-architecture}
+    % Placeholder for a diagram of the scraping workchart
+    \includegraphics[width=1\textwidth]{images/workchartscraper.png}
+    \caption{Data Scraping workchart}
+    \label{fig:scraping-workchart}
 \end{figure}
 
 Our scraping system uses a distributed architecture with the following components:
 \begin{itemize}
-    \item Crawler modules designed for specific data sources
     \item Rate-limiting and request throttling to respect website policies
-    \item Proxy rotation and user agent randomization for ethical scraping
     \item Scheduled jobs for regular data updates
     \item Data validation and cleaning pipelines
 \end{itemize}
