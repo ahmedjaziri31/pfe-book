@@ -282,6 +282,22 @@ Node.js \cite{NodeJSWebsite} is an open-source, cross-platform JavaScript runtim
 \subsubsection*{\protect\techicon{overleaf} Overleaf}
 
 Overleaf is a collaborative cloud-based LaTeX editor used to write, edit, and publish scientific papers.
+\subsection{Source code management with Git and GitHub}
+\subsubsection{Git Workflow}
+
+We used GitHub \cite{GithubWebsite} for storing our application code. We set up a repository with a structured branching strategy to ensure organized development.
+\newpage
+
+The main branch maintains the history of official releases, while the develop branch is used for integrating new features. This approach allows us to maintain a stable production version while simultaneously developing new functionality.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/gitWorkflow.png}
+    \caption{Git Workflow}
+    \label{fig:git-workflow}
+\end{figure}
+
+For each new feature or bug fix, we create a feature branch from develop. Once the work is completed and tested, it is merged back into develop through a pull request process. This ensures code review and quality control before any changes are integrated. When a release is ready, develop is merged into main, creating a new stable version of the application.
 
 % Comment out problematic icon
 \subsubsection*{\protect\techicon{canva} Canva}
@@ -482,6 +498,7 @@ In our project management, we opted for the proportional distribution method in 
 Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
 
 \vspace{1cm}
+\newpage
 
 \begin{figure}[htbp]
     \centering
@@ -496,3 +513,4 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
 \section{Conclusion}
 
 Our Sprint 0 marked the exciting start of our KORPOR project \cite{ScaledAgileFramework2024, SutherlandScrum2020}. We defined global and specific objectives, developed a solid architecture, and configured an optimal working environment. With a clear vision of the initial product backlog and preliminary planning for upcoming sprints, we are ready to achieve our vision and achieve our goals successfully \cite{SchwarzScrum2019, RubinEssentialScrum2012}.
+
