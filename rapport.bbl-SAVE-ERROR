@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{RooseveltRealEstateQuote}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a41c280389c5c9bcb901410b6f1d08bc}{%
+           family={Roosevelt},
+           familyi={R\bibinitperiod},
+           given={Franklin\bibnamedelima D.},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Random House}%
+      }
+      \strng{namehash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{fullhash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{fullhashraw}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{bibnamehash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{authorbibnamehash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{authornamehash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{authorfullhash}{a41c280389c5c9bcb901410b6f1d08bc}
+      \strng{authorfullhashraw}{a41c280389c5c9bcb901410b6f1d08bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Quoted in numerous real estate publications and historical archives}
+      \field{title}{The Public Papers and Addresses of Franklin D. Roosevelt}
+      \field{volume}{7}
+      \field{year}{1938}
+    \endentry
     \entry{G2CompetitiveAnalysis2024}{online}{}{}
       \name{author}{1}{}{%
         {{hash=71c154fe7cbb5c5c9329be14d70cc2cf}{%
@@ -38,15 +66,15 @@
       \strng{authornamehash}{71c154fe7cbb5c5c9329be14d70cc2cf}
       \strng{authorfullhash}{71c154fe7cbb5c5c9329be14d70cc2cf}
       \strng{authorfullhashraw}{71c154fe7cbb5c5c9329be14d70cc2cf}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
       \field{title}{How to Conduct a Competitive Analysis of Software Solutions}
       \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -73,16 +101,16 @@
       \strng{authornamehash}{26ae0bda2d6af8e875a1335484e562e2}
       \strng{authorfullhash}{26ae0bda2d6af8e875a1335484e562e2}
       \strng{authorfullhashraw}{26ae0bda2d6af8e875a1335484e562e2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
       \field{title}{How to create a competitive analysis (with examples)}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2025}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://asana.com/resources/competitive-analysis-example
@@ -110,16 +138,16 @@
       \strng{authornamehash}{bab33058a85a3da561416fd017a3bf2a}
       \strng{authorfullhash}{bab33058a85a3da561416fd017a3bf2a}
       \strng{authorfullhashraw}{bab33058a85a3da561416fd017a3bf2a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{title}{UX competitive analysis}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2025}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.lyssna.com/blog/ux-competitive-analysis/
@@ -147,22 +175,57 @@
       \strng{authornamehash}{78f2eb70b675f9caa1a92d17047dfa37}
       \strng{authorfullhash}{78f2eb70b675f9caa1a92d17047dfa37}
       \strng{authorfullhashraw}{78f2eb70b675f9caa1a92d17047dfa37}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{title}{The Complete Guide to Competitive Analysis}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2025}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://strategicmanagementinsight.com/tools/competitive-analysis/
       \endverb
       \verb{url}
       \verb https://strategicmanagementinsight.com/tools/competitive-analysis/
+      \endverb
+    \endentry
+    \entry{LinkedInAIFinTech2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ffd2743f40d5c01b1eaf74efd5e42751}{%
+           family={{RECAP}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {LinkedIn}%
+      }
+      \strng{namehash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{fullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{fullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{bibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{authorbibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{authornamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{authorfullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \strng{authorfullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{AI, fintech, and automation on the real estate industry}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
       \endverb
     \endentry
     \entry{MobileRealityAIRealEstate2024}{online}{}{}
@@ -182,16 +245,16 @@
       \strng{authornamehash}{8f36a1727ba62624213e2d305cb0a102}
       \strng{authorfullhash}{8f36a1727ba62624213e2d305cb0a102}
       \strng{authorfullhashraw}{8f36a1727ba62624213e2d305cb0a102}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{3}
       \field{title}{How AI in Real Estate is Transforming the Future of Property and Investment}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2025}
+      \field{urlday}{19}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://themobilereality.com/blog/proptech/ai-in-real-estate
@@ -217,15 +280,15 @@
       \strng{authornamehash}{95026035d13c50fb4b86539ae047e6c4}
       \strng{authorfullhash}{95026035d13c50fb4b86539ae047e6c4}
       \strng{authorfullhashraw}{95026035d13c50fb4b86539ae047e6c4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{title}{5 AI Tools for Real Estate Investors}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -301,8 +364,8 @@
       \strng{authornamehash}{3c90d6fb0fc2ecafcacd866602dbfffe}
       \strng{authorfullhash}{e4bf80fddb0f3e0d1fda148d351193d6}
       \strng{authorfullhashraw}{e4bf80fddb0f3e0d1fda148d351193d6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of Machine Learning and Systems}
@@ -312,52 +375,17 @@
       \field{pages}{309\bibrangedash 321}
       \range{pages}{13}
     \endentry
-    \entry{LinkedInAIFinTech2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=ffd2743f40d5c01b1eaf74efd5e42751}{%
-           family={{RECAP}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {LinkedIn}%
-      }
-      \strng{namehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{fullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{fullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{bibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorbibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authornamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorfullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorfullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{2}
-      \field{title}{AI, fintech, and automation on the real estate industry}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
-      \endverb
-      \verb{url}
-      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
-      \endverb
-    \endentry
     \entry{GitWebsite}{online}{}{}
       \list{organization}{1}{%
         {Software Freedom Conservancy}%
       }
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{title}{Git}
       \field{urlday}{20}
       \field{urlmonth}{3}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://git-scm.com/
@@ -370,13 +398,13 @@
       \list{organization}{1}{%
         {GitHub, Inc.}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{title}{GitHub}
       \field{urlday}{20}
       \field{urlmonth}{3}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://github.com/
@@ -409,15 +437,15 @@
       \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{The official Scrum Guide, November 2020 version}
       \field{title}{The Scrum Guide}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
       \field{year}{2020}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -444,15 +472,15 @@
       \strng{authornamehash}{6c73dbfb146ccdd1c4f339f94cd09e2e}
       \strng{authorfullhash}{6c73dbfb146ccdd1c4f339f94cd09e2e}
       \strng{authorfullhashraw}{6c73dbfb146ccdd1c4f339f94cd09e2e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Three Pillars of Scrum: Understanding Scrum's Core Principles}
-      \field{urlday}{14}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{N.d.}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.atlassian.com/agile/project-management/3-pillars-scrum
@@ -483,6 +511,7 @@
       \strng{authornamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
       \strng{authorfullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
       \strng{authorfullhashraw}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -490,6 +519,34 @@
       \field{isbn}{978-0201702255}
       \field{title}{Writing Effective Use Cases}
       \field{year}{2002}
+    \endentry
+    \entry{CockburnWritingEffectiveUseCases2000}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c1e5acec4259bb4c17ca1a00866f32e1}{%
+           family={Cockburn},
+           familyi={C\bibinitperiod},
+           given={Alistair},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{fullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{fullhashraw}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{bibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorbibnamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authornamehash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorfullhash}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \strng{authorfullhashraw}{c1e5acec4259bb4c17ca1a00866f32e1}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0201702255}
+      \field{title}{Writing Effective Use Cases}
+      \field{year}{2000}
     \endentry
     \entry{DevOpsFoundation2023}{book}{}{}
       \name{author}{2}{}{%
@@ -522,6 +579,34 @@
       \field{isbn}{978-1492097136}
       \field{title}{DevOps Foundations: Modern Software Development Practices}
       \field{year}{2023}
+    \endentry
+    \entry{FowlerRefactoring2018}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{bibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorbibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authornamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-0134757599}
+      \field{title}{Refactoring: Improving the Design of Existing Code}
+      \field{year}{2018}
     \endentry
     \entry{PoppendieckLean2012}{article}{}{}
       \name{author}{2}{}{%
@@ -556,6 +641,33 @@
       \field{title}{Lean Software Development: An Agile Toolkit}
       \field{year}{2012}
     \endentry
+    \entry{KnibergLeanStartup2013}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=21b4b0b95d2e23cb807ae277c60489e0}{%
+           family={Kniberg},
+           familyi={K\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pragmatic Bookshelf}%
+      }
+      \strng{namehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{fullhash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{fullhashraw}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{bibnamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorbibnamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authornamehash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorfullhash}{21b4b0b95d2e23cb807ae277c60489e0}
+      \strng{authorfullhashraw}{21b4b0b95d2e23cb807ae277c60489e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1934356852}
+      \field{title}{Lean from the Trenches: Managing Large-Scale Projects with Kanban}
+      \field{year}{2013}
+    \endentry
     \entry{ClerkAuthenticationDocs}{online}{}{}
       \list{organization}{1}{%
         {Clerk, Inc.}%
@@ -566,13 +678,48 @@
       \field{title}{Clerk Authentication Documentation}
       \field{urlday}{27}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
+      \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://clerk.com/docs
       \endverb
       \verb{url}
       \verb https://clerk.com/docs
+      \endverb
+    \endentry
+    \entry{OWASPSecurityPrinciples2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b0d7a4bf1a0878d4e92cdd7461e48710}{%
+           family={{OWASP Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Open Web Application Security Project}%
+      }
+      \strng{namehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{bibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorbibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authornamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWASP Top Ten Security Principles}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-top-ten/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-top-ten/
       \endverb
     \endentry
     \entry{WangBlockchainRealEstate2023}{article}{}{}
@@ -618,29 +765,29 @@
     \endentry
     \entry{McKinseyBlockchainRE2023}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=17f3a3636597dfb2c1d5d0fbaba57160}{%
-           family={{McKinsey & Company}},
+        {{hash=96eaa81a81a29c441708d1ec4be5a27b}{%
+           family={{McKinsey \& Company}},
            familyi={M\bibinitperiod}}}%
       }
       \list{organization}{1}{%
-        {McKinsey & Company}%
+        {McKinsey \& Company}%
       }
-      \strng{namehash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{fullhash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{fullhashraw}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{bibnamehash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{authorbibnamehash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{authornamehash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{authorfullhash}{17f3a3636597dfb2c1d5d0fbaba57160}
-      \strng{authorfullhashraw}{17f3a3636597dfb2c1d5d0fbaba57160}
+      \strng{namehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{bibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorbibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authornamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Blockchain in Real Estate: Transforming Property Transactions}
       \field{urlday}{22}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -690,6 +837,44 @@
       \field{title}{The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations}
       \field{year}{2018}
     \endentry
+    \entry{BassArchitecture2021}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=97196c0aaced1368c3042b9299a9b34b}{%
+           family={Bass},
+           familyi={B\bibinitperiod},
+           given={Len},
+           giveni={L\bibinitperiod}}}%
+        {{hash=806866eee4e5b55ba7360bfe43f4f397}{%
+           family={Clements},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4a2e06c3fa40bc2221536e74ab90b7ec}{%
+           family={Kazman},
+           familyi={K\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{fullhash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{fullhashraw}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{bibnamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authorbibnamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authornamehash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authorfullhash}{f3c472223052fa8f8a1c396381e08cd3}
+      \strng{authorfullhashraw}{f3c472223052fa8f8a1c396381e08cd3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-0136886099}
+      \field{title}{Software Architecture in Practice}
+      \field{year}{2021}
+    \endentry
     \entry{DockerArchitecture2023}{online}{}{}
       \name{author}{1}{}{%
         {{hash=d0103298273e8b47481264a1f6655466}{%
@@ -714,7 +899,7 @@
       \field{title}{Docker Architecture and Container Design}
       \field{urlday}{27}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -754,8 +939,8 @@
       \field{labeltitlesource}{title}
       \field{title}{DevOps Metrics That Matter: Measuring Success in 2023}
       \field{urlday}{22}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -766,20 +951,40 @@
       \endverb
     \endentry
     \entry{ViteJSWebsite}{online}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{note}{Evan You and Vite contributors}
       \field{title}{Vite}
       \field{urlday}{23}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://vitejs.dev/guide/
       \endverb
       \verb{url}
       \verb https://vitejs.dev/guide/
+      \endverb
+    \endentry
+    \entry{StorybookDocs2022}{online}{}{}
+      \list{organization}{1}{%
+        {Storybook Contributors}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Storybook Documentation}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://storybook.js.org/docs/
+      \endverb
+      \verb{url}
+      \verb https://storybook.js.org/docs/
       \endverb
     \endentry
     \entry{ExpressJSWebsite}{online}{}{}
@@ -792,7 +997,7 @@
       \field{title}{Express - Node.js web application framework}
       \field{urlday}{23}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://expressjs.com/
@@ -811,7 +1016,7 @@
       \field{title}{MySQL Documentation}
       \field{urlday}{23}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://dev.mysql.com/doc/
@@ -844,7 +1049,7 @@
       \field{title}{Azure Cloud Platform Services}
       \field{urlday}{27}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -894,19 +1099,39 @@
       \list{organization}{1}{%
         {Postman, Inc.}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Postman}
       \field{urlday}{20}
       \field{urlmonth}{3}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.postman.com/
       \endverb
       \verb{url}
       \verb https://www.postman.com/
+      \endverb
+    \endentry
+    \entry{PlaywrightDocs2023}{online}{}{}
+      \list{organization}{1}{%
+        {Microsoft Corporation}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Playwright End-to-End Testing Documentation}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://playwright.dev/docs/intro
+      \endverb
+      \verb{url}
+      \verb https://playwright.dev/docs/intro
       \endverb
     \endentry
     \entry{StarUMLWebsite}{online}{}{}
@@ -918,8 +1143,8 @@
       \field{labeltitlesource}{title}
       \field{title}{StarUML}
       \field{urlday}{18}
-      \field{urlmonth}{3}
-      \field{urlyear}{2024}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://staruml.io/
@@ -1009,6 +1234,126 @@
       \field{title}{Design Patterns: Elements of Reusable Object-Oriented Software}
       \field{year}{1994}
     \endentry
+    \entry{BeckXP2004}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=c5dcbe71f60a8d55caa11fe1493614d0}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={Kent},
+           giveni={K\bibinitperiod}}}%
+        {{hash=db962664752cf07563d309bf97320bc5}{%
+           family={Andres},
+           familyi={A\bibinitperiod},
+           given={Cynthia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{fullhash}{05a972d2322d7190412c8633c5806a97}
+      \strng{fullhashraw}{05a972d2322d7190412c8633c5806a97}
+      \strng{bibnamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authorbibnamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authornamehash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authorfullhash}{05a972d2322d7190412c8633c5806a97}
+      \strng{authorfullhashraw}{05a972d2322d7190412c8633c5806a97}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-0321278654}
+      \field{title}{Extreme Programming Explained: Embrace Change}
+      \field{year}{2004}
+    \endentry
+    \entry{MartinCleanArchitecture2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0134494166}
+      \field{title}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
+      \field{year}{2017}
+    \endentry
+    \entry{TypeScriptDocs2023}{online}{}{}
+      \list{organization}{1}{%
+        {Microsoft Corporation}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{TypeScript Documentation}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.typescriptlang.org/docs/
+      \endverb
+      \verb{url}
+      \verb https://www.typescriptlang.org/docs/
+      \endverb
+    \endentry
+    \entry{TanstackWebsite}{online}{}{}
+      \list{organization}{1}{%
+        {TanStack}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{TanStack - High-quality open-source software for web development}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tanstack.com/
+      \endverb
+      \verb{url}
+      \verb https://tanstack.com/
+      \endverb
+    \endentry
+    \entry{MaestroDocs2022}{online}{}{}
+      \list{organization}{1}{%
+        {Maestro Labs, Inc.}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Maestro Documentation}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://maestro.mobile.dev/
+      \endverb
+      \verb{url}
+      \verb https://maestro.mobile.dev/
+      \endverb
+    \endentry
     \entry{NodeJSWebsite}{online}{}{}
       \list{organization}{1}{%
         {OpenJS Foundation}%
@@ -1018,8 +1363,8 @@
       \field{labeltitlesource}{title}
       \field{title}{Node.js}
       \field{urlday}{18}
-      \field{urlmonth}{3}
-      \field{urlyear}{2024}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://nodejs.org/en
@@ -1038,7 +1383,7 @@
       \field{title}{React}
       \field{urlday}{16}
       \field{urlmonth}{4}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://react.dev/
@@ -1066,50 +1411,14 @@
       \strng{authornamehash}{ca762f825f70c5a1f00a689ca3e9869e}
       \strng{authorfullhash}{ca762f825f70c5a1f00a689ca3e9869e}
       \strng{authorfullhashraw}{ca762f825f70c5a1f00a689ca3e9869e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
       \field{isbn}{978-1937557522}
       \field{title}{Responsive Web Design: Patterns and Principles for the Modern Web}
       \field{year}{2023}
-    \endentry
-    \entry{ProductBacklogGuide2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=77528f1a23f99cfd32b0fb0125da3d7e}{%
-           family={Rosenfelt},
-           familyi={R\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Atlassian}%
-      }
-      \strng{namehash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{fullhash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{fullhashraw}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{bibnamehash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{authorbibnamehash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{authornamehash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{authorfullhash}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \strng{authorfullhashraw}{77528f1a23f99cfd32b0fb0125da3d7e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{A Comprehensive Guide to Product Backlog Management}
-      \field{urlday}{22}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.atlassian.com/agile/scrum/backlogs
-      \endverb
-      \verb{url}
-      \verb https://www.atlassian.com/agile/scrum/backlogs
-      \endverb
     \endentry
     \entry{SchwarzScrum2019}{online}{}{}
       \name{author}{1}{}{%
@@ -1137,7 +1446,7 @@
       \field{title}{The Scrum Product Backlog: A Guide for Product Owners}
       \field{urlday}{30}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{year}{2019}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -1179,7 +1488,7 @@
       \field{title}{The MoSCoW Method: A Prioritization Technique for Project Management}
       \field{urlday}{27}
       \field{urlmonth}{5}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{year}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -1277,13 +1586,40 @@
       \strng{authornamehash}{88326d6ce0b4b966c134cea4e91a781f}
       \strng{authorfullhash}{88326d6ce0b4b966c134cea4e91a781f}
       \strng{authorfullhashraw}{88326d6ce0b4b966c134cea4e91a781f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0385346474}
       \field{title}{Scrum: The Art of Doing Twice the Work in Half the Time}
       \field{year}{2020}
+    \endentry
+    \entry{RubinEssentialScrum2012}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=61495192b331e8e69899b82278511ea2}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Kenneth\bibnamedelima S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{61495192b331e8e69899b82278511ea2}
+      \strng{fullhash}{61495192b331e8e69899b82278511ea2}
+      \strng{fullhashraw}{61495192b331e8e69899b82278511ea2}
+      \strng{bibnamehash}{61495192b331e8e69899b82278511ea2}
+      \strng{authorbibnamehash}{61495192b331e8e69899b82278511ea2}
+      \strng{authornamehash}{61495192b331e8e69899b82278511ea2}
+      \strng{authorfullhash}{61495192b331e8e69899b82278511ea2}
+      \strng{authorfullhashraw}{61495192b331e8e69899b82278511ea2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0137043293}
+      \field{title}{Essential Scrum: A Practical Guide to the Most Popular Agile Process}
+      \field{year}{2012}
     \endentry
     \entry{CohnAgileEstimating2005}{book}{}{}
       \name{author}{1}{}{%
@@ -1304,8 +1640,8 @@
       \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
       \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
       \strng{authorfullhashraw}{d33712bcde2d63bad054a832b61d01e8}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0131479418}
@@ -1328,8 +1664,8 @@
       \strng{authornamehash}{61bdeb09cfbfab0465639014ab3b69be}
       \strng{authorfullhash}{61bdeb09cfbfab0465639014ab3b69be}
       \strng{authorfullhashraw}{61bdeb09cfbfab0465639014ab3b69be}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Renaissance Software Consulting}
@@ -1366,8 +1702,8 @@
       \field{labeltitlesource}{title}
       \field{title}{SAFe for Lean Enterprises 6.0}
       \field{urlday}{22}
-      \field{urlmonth}{10}
-      \field{urlyear}{2024}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
       \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
@@ -1387,7 +1723,7 @@
       \field{title}{Tailwind CSS}
       \field{urlday}{16}
       \field{urlmonth}{4}
-      \field{urlyear}{2024}
+      \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://tailwindcss.com/
@@ -1396,20 +1732,68 @@
       \verb https://tailwindcss.com/
       \endverb
     \endentry
+    \entry{PropertyStarTunisia}{online}{}{}
+      \list{organization}{1}{%
+        {PropertyStar Ltd.}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{PropertyStar Tunisia - Real Estate Listings}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.properstar.co.uk/tunisia
+      \endverb
+      \verb{url}
+      \verb https://www.properstar.co.uk/tunisia
+      \endverb
+    \endentry
+    \entry{RemaxTunisia}{online}{}{}
+      \list{organization}{1}{%
+        {RE/MAX Tunisia}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{RE/MAX Tunisia Real Estate}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.remax.com.tn/
+      \endverb
+      \verb{url}
+      \verb https://www.remax.com.tn/
+      \endverb
+    \endentry
+    \entry{AlMindhar}{online}{}{}
+      \list{organization}{1}{%
+        {STE SK ALMINDHAR}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Al-Mindhar Real Estate Platform}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://al-mindhar.com/
+      \endverb
+      \verb{url}
+      \verb https://al-mindhar.com/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{BassArchitecture2021}
-  \missing{BeckXP2004}
-  \missing{CockburnWritingEffectiveUseCases2000}
-  \missing{FowlerRefactoring2018}
-  \missing{KnibergLeanStartup2013}
-  \missing{MaestroDocs2022}
-  \missing{MartinCleanArchitecture2017}
-  \missing{OWASPSecurityPrinciples2021}
-  \missing{PlaywrightDocs2023}
-  \missing{RubinEssentialScrum2012}
-  \missing{StorybookDocs2022}
-  \missing{TanstackWebsite}
-  \missing{TypeScriptDocs2023}
+  \missing{ProductBacklogGuide2024}
 \endrefsection
 \endinput
 
