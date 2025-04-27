@@ -1,19 +1,15 @@
 \chapter{Project Context}
 
-\section{Introduction}
+\section*{Introduction}
 
-The aim of this chapter is to present the general framework of the Korpor project, a solution dedicated to real estate investment. In this section, we'll discuss successively:
+The aim of this chapter is to present the general framework of the Korpor project, a solution dedicated to real estate investment. In this chapter, we'll discuss successively:
 
-\begin{itemize}
-    \item The presentation of the host organization.
-    \item The context and challenges of the real estate sector.
-    \item Analysis of existing solutions and identification of their limitations.
-    \item Definition of functional and non-functional needs of the mobile application and web back office.
-\end{itemize}
+The presentation of the host organization and the context and challenges of the real estate sector and the analysis of existing solutions and identification of their limitations.
+
 
 \section{Project Context}
 
-This work is part of the end-of-study project for the national diploma of Applied Bachelor's degree in Computer Science from the Higher Institute of Computer Science and Mathematics of Monastir (ISIMM) for the year 2024/2025. I had the opportunity to do my end-of-study internship at the company
+This work is part of the end-of-study project for the national diploma of Applied Bachelor's degree in Computer Science from the Higher Institute of Computer Science and Mathematics of Monastir (ISIMM) for the year 2024/2025. we has the opportunity to do our end-of-study internship at the company
 ``KZ IT Services'', under the supervision of Mr. Khalil Zouari.
 
 \section{Hosting Company}
@@ -27,9 +23,8 @@ The purpose of this section is to present the company within which I developed m
     \label{fig:hosting-company}
 \end{figure}
 
-\subsection{Hosting Company}
 
-\textbf{\textcolor{primary}{KZ IT Service}} is a dynamic software company dedicated to delivering innovative IT solutions tailored to modern business needs. We specialize in designing and developing robust, scalable applications that drive efficiency and digital transformation. Our experienced team leverages cutting-edge technology to create customized software that exceeds client expectations. With a strong commitment to quality and continuous improvement, we build lasting partnerships based on trust and excellence. At ``KZ IT Service'', innovation is at the core of everything we do, empowering our clients to achieve sustainable growth and success.
+\textbf{\textcolor{primary}{``KZ IT Services''}} is a dynamic software company dedicated to delivering innovative IT solutions tailored to modern business needs. they are specialize in designing and developing robust, scalable applications that drive efficiency and digital transformation. thier experienced team leverages cutting-edge technology to create customized software that exceeds client expectations. With a strong commitment to quality and continuous improvement, they build lasting partnerships based on trust and excellence. At ``KZ IT Service'', innovation is at the core of everything they do, empowering thier clients to achieve sustainable growth and success.
 
 \section{Preliminary Study}
 
@@ -37,9 +32,7 @@ This preliminary study provides a review of some existing investment and asset m
 
 \subsection{Existing Solutions Study}
 
-For understanding the present scenario and to clearly demarcate our goals, some renowned investment platform analyses offering similar features, including ``Aseel'' and ``Stake'', are performed \cite{G2CompetitiveAnalysis2024, AsanaCompetitiveAnalysis2024}.
-
-\subsection{Available solutions and analysis}
+After conducting extensive research on investment platforms similar to our concept across the global market, we carefully analyzed numerous applications based on their performance metrics and market position. From this comprehensive study, we specifically selected ``Aseel'' and ``Stake'' for in-depth analysis \cite{G2CompetitiveAnalysis2024, AsanaCompetitiveAnalysis2024} due to their exceptional performance and status as leading companies in the real estate investment platform sector.
 
 \subsubsection{The Aseel Platform}
 
@@ -54,16 +47,16 @@ For understanding the present scenario and to clearly demarcate our goals, some 
     \label{fig:aseel-platform}
 \end{figure}
 
-\begin{center}
-    \vspace{0.5em}
-    \begin{tikzpicture}
-        \draw[primary, line width=1pt] (0,0) -- (0.3\textwidth,0);
-        \draw[accent, line width=0.7pt] (0.1\textwidth,-0.07) -- (0.4\textwidth,0.07);
-        \fill[primary] (0,0) circle (2pt);
-        \fill[accent] (0.3\textwidth,0) circle (2pt);
-    \end{tikzpicture}
-    \vspace{0.5em}
-\end{center}
+% \begin{center}
+%     \vspace{0.5em}
+%     \begin{tikzpicture}
+%         \draw[primary, line width=1pt] (0,0) -- (0.3\textwidth,0);
+%         \draw[accent, line width=0.7pt] (0.1\textwidth,-0.07) -- (0.4\textwidth,0.07);
+%         \fill[primary] (0,0) circle (2pt);
+%         \fill[accent] (0.3\textwidth,0) circle (2pt);
+%     \end{tikzpicture}
+%     \vspace{0.5em}
+% \end{center}
 
 \subsubsection{The Stake Platform}
 
@@ -127,26 +120,31 @@ Table \ref{tab:evaluation} presents the evaluation of the existing solutions bas
 
 \subsection{Proposed Solution}
 
-Having studied the already working platforms for investments, we found strengths and weaknesses that could define what was required from the project. Our proposed solution will look at:
+Having studied the already working platforms for investments, we found strengths and weaknesses that could define what was required from the project. 
 
-\begin{itemize}
-    \item Developing an efficient mobile application for investment management.
-    \item Increasing the level of users' engagement with recommendations using the power of AI \cite{MobileRealityAIRealEstate2024, HouseCanaryAIInvestors2024, SmilkovTensorFlowJS2019}.
-    \item Ensuring responsive and user-friendly interaction with the interface.
-    \item Gaining the trust of investors by ensuring transparency and security in the investing platform.
-    \item Enhancing the security of data and following all the financial regulations.
-\end{itemize}
 
 The \textbf{\textcolor{primary}{Korpor}} platform will be offering the following features:
 
+A listing of investment opportunities with deep financial insights into those opportunities and the abiltie of investing in fractions of property ownership.
+
 \begin{itemize}
-    \item A directory of investment opportunities with deep financial insights into those opportunities.
     \item AI-driven recommendations of investments as per users' preferences \cite{LinkedInAIFinTech2024}.
     \item Smooth funding and payout mechanisms.
     \item Real-time portfolio performance tracking on a single screen/dashboard.
     \item Forum for interactive discussions on strategy and market trends among its users.
     \item Referral and Rewards System: An engaging system for rewarding users via referral.
 \end{itemize}
+
+Our proposed solution will look at:
+
+\begin{itemize}
+    \item Developing an efficient mobile application for investment management.
+    \item Increasing the level of users engagement with recommendations using the power of AI \cite{MobileRealityAIRealEstate2024, HouseCanaryAIInvestors2024, SmilkovTensorFlowJS2019}.
+    \item Ensuring responsive and user-friendly interaction with the interface.
+    \item Gaining the trust of investors by ensuring transparency and security in the investing platform.
+    \item Enhancing the security of data and following all the financial regulations.
+\end{itemize}
+
 
 \section{Development methodology}
 
@@ -214,8 +212,8 @@ The Scrum events are key elements of the Scrum Framework. They provide regular o
     \item \textbf{Sprint Retrospective}: Finally, the Scrum Team gets together to discuss how the Sprint went and if there are things they could do differently and improve in the next Sprint.
 \end{itemize}
 
-\section{Conclusion}
+\section*{Conclusion}
 
-In conclusion of this chapter, it is clear that planning and methodology are essential pillars to ensure the success of the project. By fully understanding the project framework, including the host organization's expectations and the challenges ahead, the team is better prepared to meet the challenges ahead.
+It is clear that planning and methodology are essential pillars to ensure the success of the project. By fully understanding the project framework, including the host organization's expectations and the challenges ahead, the team is better prepared to meet the challenges ahead.
 
 This chapter lays the solid foundation on which the entire project will be built, providing a valuable guide for the next steps. The next chapter will allow us to analyze and specify the needs developed in our project. 
