@@ -2465,6 +2465,28 @@
     <bcf:citekey order="70" intorder="1">PropertyStarTunisia</bcf:citekey>
     <bcf:citekey order="71" intorder="1">RemaxTunisia</bcf:citekey>
     <bcf:citekey order="72" intorder="1">AlMindhar</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">Nakamoto2008Bitcoin</bcf:citekey>
+    <bcf:citekey order="73" intorder="2">Tapscott2016Blockchain</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Veuger2018RealEstateBlockchain</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">Buterin2014Ethereum</bcf:citekey>
+    <bcf:citekey order="75" intorder="2">Szabo1997SmartContracts</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">Zheng2018BlockchainChallenges</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">Antonopoulos2018MasteringEthereum</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">Bartoletti2017EmpiricalAnalysis</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">Xu2019ArchitectingBlockchainApplications</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">SolidityDocs</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">EthersJSDocs</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">InfuraWeb3</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">MetaMaskDocs</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">Bamakan2020BlockchainPayment</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">Szabo1997SmartContracts</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">Wohrer2018SmartContractApplications</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">Dannen2017SoliditySmartContracts</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Wust2018BlockchainNeed</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">Parizi2018SmartContractProgramming</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">Casino2019BlockchainApplications</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">Botha2021BackofficeBlockchain</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">Andoni2019BlockchainOverview</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -2,11 +2,11 @@
 
 \section*{Introduction}
 
-In recent years, blockchain technology has emerged as a powerful tool for building trust, enhancing transparency, and decentralizing processes across various industries. In the context of Korpor, a platform aimed at facilitating real estate investments, blockchain plays a crucial role in ensuring the reliability and traceability of financial operations.
+In recent years, blockchain technology has emerged as a powerful tool for building trust, enhancing transparency, and decentralizing processes across various industries \cite{Nakamoto2008Bitcoin, Tapscott2016Blockchain}. In the context of Korpor, a platform aimed at facilitating real estate investments, blockchain plays a crucial role in ensuring the reliability and traceability of financial operations.
 
-Traditional real estate investment systems often rely on centralized authorities and intermediaries, which may introduce delays, additional costs, or even fraudulent behavior. By integrating blockchain, Korpor addresses these limitations by recording key transactions such as investments, rent distributions, and project creation directly on a decentralized ledger. This ensures that all stakeholders can verify actions in a transparent and immutable manner, without needing to trust a single party.
+Traditional real estate investment systems often rely on centralized authorities and intermediaries, which may introduce delays, additional costs, or even fraudulent behavior. By integrating blockchain, Korpor addresses these limitations by recording key transactions such as investments, rent distributions, and project creation directly on a decentralized ledger \cite{Veuger2018RealEstateBlockchain}. This ensures that all stakeholders can verify actions in a transparent and immutable manner, without needing to trust a single party.
 
-Moreover, smart contracts enable the automation of operations like rent distribution and investment validation, reducing human error and increasing efficiency.
+Moreover, smart contracts enable the automation of operations like rent distribution and investment validation, reducing human error and increasing efficiency \cite{Buterin2014Ethereum, Szabo1997SmartContracts}.
 
 \section{Overview of Use Cases}
 
@@ -50,20 +50,20 @@ The integration of blockchain technology into the \textbf{\textcolor{primary}{Ko
     \item \textbf{Security and trust in transactions}
     \begin{itemize}
         \item Ensures that each transaction is securely signed and verified.
-        \item Builds trust among users by preventing unauthorized modifications.
+        \item Builds trust among users by preventing unauthorized modifications \cite{Zheng2018BlockchainChallenges}.
         \item Enhances transparency through verifiable on-chain records.
     \end{itemize}
 
     \item \textbf{Decentralization and immutability}
     \begin{itemize}
         \item Eliminates single points of failure by distributing data across the blockchain.
-        \item Guarantees that data, once written, cannot be altered.
+        \item Guarantees that data, once written, cannot be altered \cite{Antonopoulos2018MasteringEthereum}.
         \item Promotes resilience and long-term reliability of the system.
     \end{itemize}
 
     \item \textbf{Automation through smart contracts}
     \begin{itemize}
-        \item Enables automatic execution of business logic (e.g., rent distribution).
+        \item Enables automatic execution of business logic (e.g., rent distribution) \cite{Bartoletti2017EmpiricalAnalysis}.
         \item Reduces manual intervention and human error.
         \item Increases system efficiency through self-executing contracts.
     \end{itemize}
@@ -91,21 +91,21 @@ The blockchain component is designed to integrate seamlessly within the overall 
         \item \textit{Off-chain:}
         \begin{itemize}
             \item User data, authentication, and detailed analytics are managed by the backend and stored in a centralized database (MySQL).
-            \item Interaction with the blockchain is facilitated through API endpoints and external services.
+            \item Interaction with the blockchain is facilitated through API endpoints and external services \cite{Xu2019ArchitectingBlockchainApplications}.
         \end{itemize}
     \end{itemize}
 
     \item \textbf{Technologies used}
    \begin{itemize}
-    \item \includegraphics[width=0.05\textwidth]{images/icons/solidity.png} \textbf{Solidity:} A high-level programming language specifically designed for writing secure, efficient, and decentralized smart contracts on the Ethereum blockchain.
+    \item \includegraphics[width=0.05\textwidth]{images/icons/solidity.png} \textbf{Solidity:} A high-level programming language specifically designed for writing secure, efficient, and decentralized smart contracts on the Ethereum blockchain \cite{SolidityDocs}.
     
-    \item \includegraphics[width=0.05\textwidth]{images/icons/etherscan.png} \textbf{Ethers.js:} A popular JavaScript library used to interact with the Ethereum blockchain, providing functionality to manage accounts, send transactions, and call smart contract functions.
+    \item \includegraphics[width=0.05\textwidth]{images/icons/etherscan.png} \textbf{Ethers.js:} A popular JavaScript library used to interact with the Ethereum blockchain, providing functionality to manage accounts, send transactions, and call smart contract functions \cite{EthersJSDocs}.
     
     \item \includegraphics[width=0.05\textwidth]{images/icons/sepolia.png} \textbf{Sepolia Testnet:} A test network for Ethereum that allows developers to deploy and test their smart contracts in a safe, controlled environment without spending real cryptocurrency.
     
-    \item \includegraphics[width=0.05\textwidth]{images/icons/infura.png} \textbf{Infura:} A cloud-based platform that provides access to Ethereum nodes via JSON-RPC, eliminating the need to run a full Ethereum node.
+    \item \includegraphics[width=0.05\textwidth]{images/icons/infura.png} \textbf{Infura:} A cloud-based platform that provides access to Ethereum nodes via JSON-RPC, eliminating the need to run a full Ethereum node \cite{InfuraWeb3}.
     
-    \item \includegraphics[width=0.05\textwidth]{images/icons/metamask.png} \textbf{MetaMask:} A widely-used browser extension and mobile application that serves as a cryptocurrency wallet for interacting with decentralized applications.
+    \item \includegraphics[width=0.05\textwidth]{images/icons/metamask.png} \textbf{MetaMask:} A widely-used browser extension and mobile application that serves as a cryptocurrency wallet for interacting with decentralized applications \cite{MetaMaskDocs}.
    \end{itemize}
 \end{itemize}
 
@@ -129,7 +129,7 @@ Paymee acts as a bridge between the user's traditional banking system and our de
 \begin{itemize}
     \item Paymee provides a secure and verified method for processing payments via bank cards or wallets.
     \item It offers real-time transaction status updates, which are essential for synchronizing with blockchain confirmations.
-    \item The integration ensures that only successful payments are recorded on-chain, reducing fraud and improving traceability.
+    \item The integration ensures that only successful payments are recorded on-chain, reducing fraud and improving traceability \cite{Bamakan2020BlockchainPayment}.
 \end{itemize}
 
 \subsubsection{Justifying the Choice of Paymee}
@@ -173,9 +173,9 @@ Based on these factors, \textbf{Paymee} was selected as the most suitable paymen
 
 \subsection{Smart Contracts Overview}
 
-A smart contract is a self-executing contract with the terms of the agreement directly written into lines of code. These contracts run on blockchain platforms, such as Ethereum, and are designed to automatically enforce and execute the terms of an agreement without the need for intermediaries. 
+A smart contract is a self-executing contract with the terms of the agreement directly written into lines of code \cite{Szabo1997SmartContracts}. These contracts run on blockchain platforms, such as Ethereum, and are designed to automatically enforce and execute the terms of an agreement without the need for intermediaries. 
 
-Smart contracts operate on decentralized networks, ensuring transparency, immutability, and security. They allow parties to interact and transact with one another in a trustless environment, where the contract's logic is executed automatically when predefined conditions are met.
+Smart contracts operate on decentralized networks, ensuring transparency, immutability, and security. They allow parties to interact and transact with one another in a trustless environment, where the contract's logic is executed automatically when predefined conditions are met \cite{Wohrer2018SmartContractApplications}.
 
 \subsection{Smart Contract Responsibilities}
 
@@ -190,7 +190,7 @@ The smart contract in the Korpor application is responsible for managing the cri
 
 \subsection{Data Structures and Functions}
 
-In the smart contract, several data structures and functions are employed to manage and store key information, facilitating efficient interaction with the system.
+In the smart contract, several data structures and functions are employed to manage and store key information, facilitating efficient interaction with the system \cite{Dannen2017SoliditySmartContracts}.
 
 \subsubsection{Data Structures}
 
@@ -264,7 +264,7 @@ function getInvestmentDetails(address investor) public view returns (uint256) {
 
 \subsubsection{Deployment}
 
-The smart contracts were deployed following a structured workflow:
+The smart contracts were deployed following a structured workflow \cite{Wust2018BlockchainNeed}:
 
 \begin{itemize}
     \item Compiled and deployed using \includegraphics[width=0.05\textwidth]{images/icons/remix.png} \texttt{Remix IDE} onto the \textbf{Sepolia Testnet}
@@ -277,6 +277,7 @@ The smart contracts were deployed following a structured workflow:
         \item \textbf{Rent Distribution Contract:} \texttt{0x74Ca4D7B2856dddCb1a074A9e40A7fC33deD6437}
     \end{itemize}
 \end{itemize}
+
 \newpage
 % Placeholder for Etherscan screenshot after deployment
 \begin{figure}[htbp]
@@ -302,8 +303,9 @@ The testing approach included:
     \item \textbf{Unit Testing:} Testing core functions individually
     \item \textbf{Integration Testing:} Validating full transaction flows
     \item \textbf{Event Listening:} Capturing and validating event emissions
-    \item \textbf{Performance Testing:} Ensuring efficient operation under load
+    \item \textbf{Performance Testing:} Ensuring efficient operation under load \cite{Parizi2018SmartContractProgramming}
 \end{itemize}
+
 \newpage
 % Placeholder for Smart Contract Deployment & Interaction flowchart
 \begin{figure}[htbp]
@@ -313,6 +315,7 @@ The testing approach included:
   \caption{Flowchart: Smart Contract Deployment \& Interaction}
   \label{fig:contract-flowchart}
 \end{figure}
+
 \newpage
 % Placeholder for Full Blockchain Deployment Diagram
 \begin{figure}[htbp]
@@ -325,7 +328,7 @@ The testing approach included:
 
 \section{Integration Flow}
 
-The integration flow can be summarized as follows:
+The integration flow can be summarized as follows \cite{Casino2019BlockchainApplications}:
 
 \subsection{Investment Flow}
 
@@ -373,7 +376,7 @@ The backoffice provides administrators with a comprehensive dashboard to manage 
 \begin{itemize}
     \item Real-time monitoring of blockchain transactions
     \item Project management interface for adding, editing, and removing properties
-    \item User management with role-based access control
+    \item User management with role-based access control \cite{Botha2021BackofficeBlockchain}
     \item Financial reporting and analytics
     \item Blockchain transaction verification tools
 \end{itemize}
@@ -409,7 +412,7 @@ Administrators can monitor and manage all types of transactions:
 
 \section*{Conclusion}
 
-The blockchain integration and backoffice features of the Korpor platform provide a robust foundation for secure, transparent, and efficient real estate investment management. By leveraging blockchain technology for critical financial operations while maintaining a user-friendly interface through the backoffice, the platform successfully bridges the gap between traditional finance and decentralized systems.
+The blockchain integration and backoffice features of the Korpor platform provide a robust foundation for secure, transparent, and efficient real estate investment management. By leveraging blockchain technology for critical financial operations while maintaining a user-friendly interface through the backoffice, the platform successfully bridges the gap between traditional finance and decentralized systems \cite{Andoni2019BlockchainOverview}.
 
 The smart contracts deployed on the Ethereum Sepolia Testnet validate core operations such as investment recording and rent distribution, ensuring the accuracy and transparency of financial flows. All interactions are securely handled and recorded on-chain, offering verifiable proof of activity and strengthening participant confidence.
 
