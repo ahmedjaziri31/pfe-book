@@ -123,7 +123,35 @@ The user management process enables administrators to create, view, update, and 
     \caption{Manage Users Process Details}
     \label{tab:manage_users_process}
 \end{table}
-\newpage
+
+
 The sign-up process includes user registration, role assignment, and account verification steps. During registration, users are categorized into one of the three user types: Super Admin, Admin, or Agent, with each type having different permissions and access levels within the system.
+
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/auth_classdiag.PNG}
+    \caption{Authentication System Class Diagram}
+    \label{fig:auth-class-diagram}
+\end{figure}
+
+Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentication system. It showcases the key components and their relationships involved in user authentication and authorization.
+
+\newpage
+
+\begin{itemize}
+    \item \textbf{AuthComponents}: Represents the UI elements for authentication, such as SignInForm, SignUpForm, ForgotPasswordForm, ResetPasswordForm, and OTPVerification. These components are used by \textbf{MobileAuthScreens}.
+    \item \textbf{MobileAuthScreens}: Includes screens like LoginScreen, SignupScreen, and ForgotPasswordScreen that utilize \textbf{AuthComponents} and interact with the \textbf{AuthService}.
+    \item \textbf{AuthService}: Acts as an intermediary between the frontend components/screens and the backend. It handles functions like signIn, signUp, verifyEmail, forgotPassword, resetPassword, logout, refreshToken, and error handling. It consumes \textbf{AuthRoutes}.
+    \item \textbf{AuthRoutes}: Defines the API endpoints for authentication, such as /login, /register, /verify-email, /forgot-password, /reset-password, /logout, and /refresh-token. These routes map to methods in the \textbf{AuthController}.
+    \item \textbf{AuthController}: Contains the core logic for authentication processes, including login, register, verifyEmail, resetPassword, changePassword, logout, refreshToken, and sendVerificationEmail. It interacts with the \textbf{User}, \textbf{Role}, and \textbf{BlacklistedToken} models and utilizes \textbf{AuthMiddleware}.
+    \item \textbf{AuthMiddleware}: Provides middleware functions for authentication (authenticate) and authorization (authorize roles). It also manages blacklisted tokens (blacklistToken) and interacts with the \textbf{User} model.
+    \item \textbf{User}: Represents the user entity with attributes like id, accountNo, name, surname, email, password, birthdate, resetCode, isVerified, approvalStatus, failedLoginAttempts, lockedUntil, refreshToken, and refreshTokenExpires. A User has one or more \textbf{Role}s.
+    \item \textbf{Role}: Defines user roles with attributes like id, name, privileges (JSON), and description. Each User is associated with a Role (0..1 relationship shown, typically a User has at least one Role, but the diagram indicates a User can have zero or one Role, which might need clarification or represent a specific system design choice, e.g., a default role or a user awaiting role assignment).
+    \item \textbf{BlacklistedToken}: Stores tokens that have been invalidated (e.g., after logout or password change) with attributes like id, token, and expiresAt. It includes methods like isBlacklisted and cleanupExpired. The \textbf{AuthController} uses this to validate tokens, and \textbf{AuthMiddleware} checks against it.
+\end{itemize}
+
+% \newpage
 
 % Additional sections for subsequent sprints will be added later 
