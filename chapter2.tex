@@ -1,8 +1,8 @@
-\chapter{Analysis and Specification of Requirements}
+\chapter{Requirements Specification and Analysis}
 
 \section*{Introduction}
 
-In this chapter, we will present the analysis and specification of Requirements. We start by presenting the specification of the requirements, illustrating them using the diagram of the global use cases. Then we will present our project architecture and our working environment, and finally we will present our product backlog and releases planning, and we will close our chapter with a conclusion.
+  In this chapter, we will present the analysis and specification of Requirements. We start by presenting the specification of the requirements, illustrating them using global use case diagram. Then we will present our project architecture and our working environment, and finally the product backlog and release planning, and we will close our chapter with a conclusion.
 
 \section{Requirements Specification}
 
@@ -144,7 +144,7 @@ To better manage code organization and ensure maintainability, we've designed ou
 
 Architecture Components:
 \begin{itemize}
-    \item \textbf{Model:} The MySQL database serves as the core data source, responsible for storing and managing application data, including user profiles, real estate listings, transactions, and investment records. The data layer interacts with the backend through ORM or query-based operations, ensuring efficient data retrieval and persistence.
+    \item \textbf{Model:} The data layer interacts with the backend through ORM or query-based operations, ensuring efficient data retrieval and persistence.
     
     \item \textbf{Controller:} The Express.js backend acts as the intermediary between the database and the frontend, handling user requests, business logic, and data validation. It processes API calls from the frontend and interacts with services such as Clerk for authentication, AI modules for predictive analytics, and blockchain integration for secure transactions.
     
