@@ -61,7 +61,6 @@ After several meetings with our client, the various functional requirements of o
     \item \textbf{Maintain Client Relationships}: Communicate with investors, schedule property visits, and follow up on inquiries.
     \item \textbf{View Commissions}: Track earnings based on successful sales or rentals.
 \end{itemize}
-\newpage
 \subsubsection{For the Investor (Mobile App User)}
 \begin{itemize}
     \item \textbf{Create an account \& authenticate}: Register to gain access to the platform's core features.
@@ -82,7 +81,7 @@ After several meetings with our client, the various functional requirements of o
     \item \textbf{Maintain Transaction Consistency}: Update dashboards, user balances, and property statuses automatically upon each operation.
     \item \textbf{Optimize Performance}: Monitor server load, scale resources, and ensure a smooth, responsive application experience.
 \end{itemize} 
-\newpage
+
 \subsection{Non-functional Requirements}
 
 In order to ensure the proper functioning of the decision-making system and to avoid any kind of anomaly, the implemented solution must meet a set of non-functional needs such as:
@@ -122,7 +121,7 @@ Before starting the design and development of any computerized system, it is ess
 
 \subsection{Physical architecture}
 
- The physical architecture of Korpor leverages modern, scalable technologies to deliver a seamless investment platform. The frontend is built with Expo, React, and TypeScript using Vite \cite{ViteJSWebsite} for rapid development and Tanstack for robust state management and data visualization, while Storybook supports isolated UI component development \cite{StorybookDocs2022}. The backend relies on Express.js \cite{ExpressJSWebsite} with user authentication managed by Clerk \cite{ClerkAuthenticationDocs}, containerization via Docker \cite{DockerArchitecture2023}, and MySQL \cite{MySQLWebsite} for data storage hosted on Microsoft Azure \cite{AzureCloudServices2024}. Integrated AI modules provide personalized insights \cite{JohnsonAIPropertyValuation2024}, and blockchain technology ensures transactional security and data immutability \cite{WangBlockchainRealEstate2023, McKinseyBlockchainRE2023}. This setup is further supported by GitHub \cite{GithubWebsite} for version control, Postman \cite{PostmanWebsite} for API testing, and end-to-end testing tools like Maestro and Playwright \cite{PlaywrightDocs2023}, with architectural designs and documentation maintained using StarUML \cite{StarUMLWebsite} and Overleaf.
+Korpor's physical architecture, depicted in Figure \ref{fig:physical-architecture}, is a distributed system. Users interact via **Mobile Devices** (React Native app) and **Web Browsers** (React components), communicating via HTTP/JSON with backend services primarily on **Google Cloud Platform (GCP)**. GCP handles core logic and data, featuring a **Cloud Run JS Server** for the main backend, a **Cloud Run Flask Server** for AI models (prediction, recommendation, chatbots), **Cloud SQL** for database storage, and a **Google Cloud VPS** for data scraping models. Blockchain operations leverage **Infura** for Solidity code and the **Sepolia Testnet** for contracts, using RPC and HTTP/JSON. An administrative **Web Panel** is hosted on a **Hosting.com server**. 
 
 \begin{figure}[htbp]
     \centering
@@ -160,7 +159,6 @@ our material environment, the techniques we used in the realization of our proje
 \subsection{Physical environment}
 
 The work was carried out by a laptop computer that is equipped with these detailed features presented in Table \ref{tab:physical-env} below:
-\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|l|l|}
@@ -273,7 +271,6 @@ We used GitHub \cite{GithubWebsite} for storing our application code. We set up 
 % \newpage
 
 The main branch maintains the history of official releases, while the develop branch is used for integrating new features. This approach allows us to maintain a stable production version while simultaneously developing new functionality.
-\newpage
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.9\textwidth]{images/gitWorkflow.png}
@@ -475,8 +472,6 @@ In order to complete the project within the deadlines set by the internship agre
 
 In our project management, we opted for the proportional distribution method in order to estimate the costs \cite{CohnAgileEstimating2005, GreningPlanningPoker2002}.
 Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
-
-\vspace{1cm}
 \newpage
 
 \begin{figure}[htbp]
