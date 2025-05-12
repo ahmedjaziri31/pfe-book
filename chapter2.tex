@@ -119,7 +119,6 @@ The overall diagram is illustrated in Figure \ref{fig:use-case-diagram}:
 \section{Software architecture}
 
 Before starting the design and development of any computerized system, it is essential to prepare the architecture.
-\newpage
 
 \subsection{Physical architecture}
 
@@ -143,6 +142,7 @@ Korpor's logical architecture follows the MVC (Model-View-Controller) pattern \c
     \item \textbf{Controller}: The Express.js backend processes requests from the View, interacts with the Model and external services (Clerk, AI, Blockchain), and determines the response.
 \end{itemize}
 User requests flow from the View (frontend) to the Controller (backend), which interacts with the Model (data) and services before returning data to update the View. This structure ensures scalability and separation of concerns. The architecture is illustrated in Figure \ref{fig:logical-architecture}.
+% \newpage
 
 \begin{figure}[htbp]
     \centering
@@ -160,7 +160,7 @@ our material environment, the techniques we used in the realization of our proje
 \subsection{Physical environment}
 
 The work was carried out by a laptop computer that is equipped with these detailed features presented in Table \ref{tab:physical-env} below:
-
+\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|l|l|}
