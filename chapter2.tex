@@ -61,7 +61,7 @@ After several meetings with our client, the various functional requirements of o
     \item \textbf{Maintain Client Relationships}: Communicate with investors, schedule property visits, and follow up on inquiries.
     \item \textbf{View Commissions}: Track earnings based on successful sales or rentals.
 \end{itemize}
-
+\newpage
 \subsubsection{For the Investor (Mobile App User)}
 \begin{itemize}
     \item \textbf{Create an account \& authenticate}: Register to gain access to the platform's core features.
@@ -82,7 +82,7 @@ After several meetings with our client, the various functional requirements of o
     \item \textbf{Maintain Transaction Consistency}: Update dashboards, user balances, and property statuses automatically upon each operation.
     \item \textbf{Optimize Performance}: Monitor server load, scale resources, and ensure a smooth, responsive application experience.
 \end{itemize} 
-
+\newpage
 \subsection{Non-functional Requirements}
 
 In order to ensure the proper functioning of the decision-making system and to avoid any kind of anomaly, the implemented solution must meet a set of non-functional needs such as:
@@ -107,18 +107,19 @@ In this section, we'll outline the various features that our app should offer, u
 
 Below, we present the various actors of the application and the actions they are authorized to perform.
 The overall diagram is illustrated in Figure \ref{fig:use-case-diagram}:
-
+\newpage
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file once available
-    \includegraphics[width=0.6\textwidth]{images/diagram de case d utilisation general.png}
+    \includegraphics[width=1.03\textwidth]{images/diagram de case d utilisation general.png}
+    % \vspace{0.5cm}
     \caption{General use case diagram}
     \label{fig:use-case-diagram}
 \end{figure}
-\newpage
 \section{Software architecture}
 
 Before starting the design and development of any computerized system, it is essential to prepare the architecture.
+\newpage
 
 \subsection{Physical architecture}
 
@@ -127,50 +128,29 @@ Before starting the design and development of any computerized system, it is ess
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file once available
-    % \includegraphics[width=0.85\textwidth]{images/physical_architecture.png}
+    \includegraphics[width=1.03\textwidth]{images/deploiement_general_diag.png}
+    % \vspace{0.5cm}  
     \caption{Deployment diagram}
     \label{fig:physical-architecture}
 \end{figure}
 
 \subsection{Logical architecture}
 
-To better manage code organization and ensure maintainability, we've designed our application based on the MVC (Model-View-Controller) \cite{SunardiMVC2019, GammaPatterns1994} architectural pattern:
-
+Korpor's logical architecture follows the MVC (Model-View-Controller) pattern \cite{SunardiMVC2019, GammaPatterns1994} for maintainability.
 \begin{itemize}
-    \item \textbf{Model}: Represents application data and business logic.
-    \item \textbf{View}: Presents data to users through interfaces.
-    \item \textbf{Controller}: Processes incoming requests, performs operations using Models, and returns appropriate Views.
+    \item \textbf{Model}: Manages application data and business logic, interacting with the backend database.
+    \item \textbf{View}: The frontend (React, TypeScript, TanStack) presents data to users and handles interactions.
+    \item \textbf{Controller}: The Express.js backend processes requests from the View, interacts with the Model and external services (Clerk, AI, Blockchain), and determines the response.
 \end{itemize}
-
-Architecture Components:
-\begin{itemize}
-    \item \textbf{Model:} The data layer interacts with the backend through ORM or query-based operations, ensuring efficient data retrieval and persistence.
-    
-    \item \textbf{Controller:} The Express.js backend acts as the intermediary between the database and the frontend, handling user requests, business logic, and data validation. It processes API calls from the frontend and interacts with services such as Clerk for authentication, AI modules for predictive analytics, and blockchain integration for secure transactions.
-    
-    \item \textbf{View:} The frontend is built with React, TypeScript, and TanStack tools, ensuring a responsive and interactive UI. The frontend communicates with the backend via API requests, displaying dynamic content and allowing seamless user interaction.
-\end{itemize}
-
-The logical architecture is illustrated in Figure \ref{fig:logical-architecture}.
+User requests flow from the View (frontend) to the Controller (backend), which interacts with the Model (data) and services before returning data to update the View. This structure ensures scalability and separation of concerns. The architecture is illustrated in Figure \ref{fig:logical-architecture}.
 
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file once available
-    \includegraphics[width=0.9\textwidth]{images/logique.png}
+    \includegraphics[width=0.8\textwidth]{images/logique.png}
     \caption{Logical architecture}
     \label{fig:logical-architecture}
 \end{figure}
-
-Request Flow:
-\begin{enumerate}
-    \item A user action (e.g., viewing property listings) triggers a request in the frontend.
-    \item The request is sent to the backend via an API call.
-    \item The Express.js controller processes the request, interacting with the database and other services.
-    \item Data is retrieved, processed, and returned as a response.
-    \item The frontend updates the UI dynamically based on the received data.
-\end{enumerate}
-
-This structured approach ensures a scalable, secure, and high-performance system, optimizing Korpor's real estate investment and management operations \cite{KimDevOpsMethods2018}.
 
 \section{Work Environment}
 
@@ -290,10 +270,10 @@ Canva is a global company that empowers people to design anything and publish an
 \subsection{Source code management with Git and GitHub}
 
 We used GitHub \cite{GithubWebsite} for storing our application code. We set up a repository with a structured branching strategy to ensure organized development.
-\newpage
+% \newpage
 
 The main branch maintains the history of official releases, while the develop branch is used for integrating new features. This approach allows us to maintain a stable production version while simultaneously developing new functionality.
-
+\newpage
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.9\textwidth]{images/gitWorkflow.png}
@@ -305,7 +285,7 @@ For each new feature or bug fix, we create a feature branch from develop. Once t
 
 \section{Product backlog}
 
-The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project needs \cite{ProductBacklogGuide2024, SchwarzScrum2019}. It includes the following fields:
+The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project needs \cite{SchwarzScrum2019}. It includes the following fields:
 \begin{itemize}
     \item \textbf{Code:} The unique identifier of the task.
     \item \textbf{Theme:} The subject of a user story.
