@@ -19,16 +19,19 @@ Our first sprint focused on establishing essential foundational components of th
 \subsection{Overview}
 The first sprint focuses on establishing the core authentication system and user management functionality. This foundation is critical for all subsequent features as it defines user roles and access controls.
 
-\subsection{User Types}
-The system supports three distinct user types, each with different permissions and capabilities:
-\begin{itemize}
-    \item \textbf{Super Admin}: Has complete access to all system features and can manage admins and agents.
-    \item \textbf{Admin}: Can manage agents and has access to administrative features within their assigned scope.
-    \item \textbf{Agent}: Has limited access to the system based on their assigned responsibilities.
-\end{itemize}
 
+\subsection{Authentication and User Management System}
+The Authentication and User Management system forms the backbone of Korpor's security and user interaction model. It encompasses processes for user registration with role assignment, secure login with session and token management, password recovery mechanisms, and session termination. Figure \ref{fig:auth-usermgmt-usecase} illustrates the global use cases for these core functionalities.
 
-\subsection{Authentication System}
+\begin{figure}[htbp]
+    \centering
+    % Replace with actual image file path
+    \includegraphics[width=0.9\textwidth]{images/auth-usermgmt-usecase.png} 
+    \caption{Global Use Case Diagram for Authentication and User Management}
+    \label{fig:auth-usermgmt-usecase}
+\end{figure}
+\newpage
+
 \subsubsection{Sign-up Process}
 The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The diagram shows the authentication flow for new users registering in the system.
 
@@ -39,6 +42,12 @@ The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The
     \label{fig:signup-diagram}
 \end{figure}
 
+Figure \ref{fig:signup-activity-diagram} illustrates the activity flow of the sign-up process. The process begins when a new user navigates to the sign-up page and presses the sign-up button. The system then presents a form for the user to fill out. Upon submission, the system validates the entered information. 
+
+If the information is invalid, the user is prompted to correct the form. If the information is valid, the system saves the user's details in the database and sends a verification email to the user. The user must then check their email. 
+
+Upon successful email verification, the system redirects the user to an "email verification code" page or a similar confirmation step. The Super Admin is then involved in a two-step verification process. If the Super Admin accepts the user, their login is enabled. If the Super Admin refuses the user, the user's account is deleted. If the initial email verification step fails (e.g., there's an issue with the verification code), an error message is displayed to the user.
+
 \newpage
 
 \begin{figure}[ht!]
@@ -48,17 +57,12 @@ The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The
     \label{fig:signup-activity-diagram}
 \end{figure}
 
-Figure \ref{fig:signup-activity-diagram} illustrates the activity flow of the sign-up process. The process begins when a new user navigates to the sign-up page and presses the sign-up button. The system then presents a form for the user to fill out. Upon submission, the system validates the entered information. 
-
-If the information is invalid, the user is prompted to correct the form. If the information is valid, the system saves the user's details in the database and sends a verification email to the user. The user must then check their email. 
-
-Upon successful email verification, the system redirects the user to an "email verification code" page or a similar confirmation step. The Super Admin is then involved in a two-step verification process. If the Super Admin accepts the user, their login is enabled. If the Super Admin refuses the user, the user's account is deleted. If the initial email verification step fails (e.g., there's an issue with the verification code), an error message is displayed to the user.
 
 % \vspace{1cm}
 
 \subsubsection{Login Process}
 The login process allows existing users to access the system. The table below details the use case.
-\newpage
+
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|l|p{0.7\textwidth}|}
@@ -67,7 +71,7 @@ The login process allows existing users to access the system. The table below de
         \hline
         Use Case & User Login \\
         \hline
-        Actor & User (Super Admin, Admin, Agent) \\
+        Actor & User (Super Admin, Admin, Agent, Investor) \\
         \hline
         Precondition & User has an existing, verified account. User is on the login page. \\
         \hline
@@ -89,6 +93,7 @@ The login process allows existing users to access the system. The table below de
     \label{tab:login_process}
 \end{table}
 
+\newpage
 \subsubsection{Manage Users Process}
 The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case.
 
@@ -127,12 +132,12 @@ The user management process enables administrators to create, view, update, and 
 
 The sign-up process includes user registration, role assignment, and account verification steps. During registration, users are categorized into one of the three user types: Super Admin, Admin, or Agent, with each type having different permissions and access levels within the system.
 
-\newpage
+\newpage    
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/auth_classdiag.PNG}
-    \caption{Authentication System Class Diagram}
+    \includegraphics[width=1\textwidth]{images/auth_classdiag.PNG}
+    \caption{Authentication AND User Management System Class Diagram}
     \label{fig:auth-class-diagram}
 \end{figure}
 
@@ -152,6 +157,72 @@ Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentica
     \item \textbf{BlacklistedToken}: Stores tokens that have been invalidated (e.g., after logout or password change) with attributes like id, token, and expiresAt. It includes methods like isBlacklisted and cleanupExpired. The \textbf{AuthController} uses this to validate tokens, and \textbf{AuthMiddleware} checks against it.
 \end{itemize}
 
+\subsection{Implementation Interfaces}
+The implementation of the authentication and user management system resulted in the following key user interfaces:
+
+\subsubsection{Sign-in Interface}
+The sign-in interface provides a secure and user-friendly means for users to authenticate. Figure \ref{fig:signin-interface} shows the implementation of this interface.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    % Add correct path when available
+    \includegraphics[width=1\textwidth]{images/signin-interface.png}
+    \caption{Sign-in Interface Implementation}
+    \label{fig:signin-interface}
+\end{figure}
+
+\subsubsection{Sign-up Interface}
+The sign-up interface allows new users to register for an account. It collects necessary information and begins the verification process. Figure \ref{fig:signup-interface} displays this implementation.
+
+\begin{figure}[htbp]
+    \centering
+    % Add correct path when available
+    \includegraphics[width=1\textwidth]{images/signup-interface.png}
+    \caption{Sign-up Interface Implementation}
+    \label{fig:signup-interface}
+\end{figure}
+
+\subsubsection{User Management in Super Admin Dashboard}
+The Super Admin dashboard provides comprehensive user management capabilities, including the ability to view, create, edit, and deactivate user accounts. Figure \ref{fig:user-management} shows this powerful interface.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/user-management-dashboard.png}
+    \caption{User Management Interface in Super Admin Dashboard}
+    \label{fig:user-management}
+\end{figure}
+
+\subsection{Mobile Application Interfaces}
+The mobile application provides a streamlined authentication experience for investors. The login and sign-up interfaces are designed for clarity and ease of use on mobile devices, as shown in Figure \ref{fig:mobile-auth-interfaces}.
+
+\begin{figure}[htbp]
+    \centering
+    % Replace with actual image file path
+    % \includegraphics[width=0.9\textwidth]{images/mobile-auth-screens.png} 
+    \caption{Mobile Application Login and Sign-up Interfaces}
+    \label{fig:mobile-auth-interfaces}
+\end{figure}
+\newpage % Ensures the next section starts on a new page if needed
+
+\subsection{Testing Validation}
+To ensure the reliability and functionality of the authentication and user management system, we implemented comprehensive testing using Playwright, an end-to-end testing framework \cite{PlaywrightDocs2023}.
+
+\subsubsection{Playwright Test Results}
+The authentication system underwent rigorous testing through automated test scripts that verified all key functionality, including sign-up, sign-in, password reset, and user management operations. Figure \ref{fig:playwright-tests} demonstrates the successful execution of these tests.
 % \newpage
+\begin{figure}[htbp]
+    \centering
+    % Add correct path when available
+    \includegraphics[width=0.75\textwidth]{images/playwright-test-results.png}
+    \caption{Playwright Test Results for Authentication System}
+    \label{fig:playwright-tests}
+\end{figure}
+
+
+All tests passed successfully, confirming the robustness of the implemented authentication system.
+
+\section*{Conclusion}
+
+The Foundation sprint successfully established the secure authentication and user management infrastructure for the Korpor platform.
 
 % Additional sections for subsequent sprints will be added later 

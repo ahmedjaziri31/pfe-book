@@ -185,6 +185,7 @@ The work was carried out by a laptop computer that is equipped with these detail
   \includegraphics[height=1em]{images/icons/#1.png}%
 }
 
+\begin{multicols}{2}
 \subsubsection*{\protect\techicon{expo} Expo}
 
 Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
@@ -252,9 +253,10 @@ StarUML \cite{StarUMLWebsite} is a sophisticated software modeler aimed to suppo
 \subsubsection*{\protect\techicon{node} Node.js}
 
 Node.js \cite{NodeJSWebsite} is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser, allowing developers to use JavaScript for server-side scripting.
+\end{multicols}
 
 \subsection{Tools used for the report}
-
+\begin{multicols}{2}
 % Comment out problematic icon
 \subsubsection*{\protect\techicon{overleaf} Overleaf}
 
@@ -264,21 +266,17 @@ Overleaf is a collaborative cloud-based LaTeX editor used to write, edit, and pu
 \subsubsection*{\protect\techicon{canva} Canva}
 
 Canva is a global company that empowers people to design anything and publish anywhere. Learn about its mission, values, commitments, awards, product, and careers.
+\end{multicols}
 
 \subsection{Source code management with Git and GitHub}
+GitHub \cite{GithubWebsite} was utilized for version control, employing a structured branching strategy for organized development. The `main` branch holds official release history, while `develop` serves as an integration branch for new features. Feature branches are created from `develop` for new tasks or bug fixes. Upon completion and testing, these are merged back into `develop` via pull requests, ensuring code review and quality control. Merging `develop` into `main` creates a new stable application version. This workflow is illustrated in Figure \ref{fig:git-workflow}.
 
-We used GitHub \cite{GithubWebsite} for storing our application code. We set up a repository with a structured branching strategy to ensure organized development.
-% \newpage
-
-The main branch maintains the history of official releases, while the develop branch is used for integrating new features. This approach allows us to maintain a stable production version while simultaneously developing new functionality.
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.9\textwidth]{images/gitWorkflow.png}
     \caption{Git Workflow}
     \label{fig:git-workflow}
 \end{figure}
-
-For each new feature or bug fix, we create a feature branch from develop. Once the work is completed and tested, it is merged back into develop through a pull request process. This ensures code review and quality control before any changes are integrated. When a release is ready, develop is merged into main, creating a new stable version of the application.
 
 \section{Product backlog}
 
@@ -324,6 +322,7 @@ Table \ref{tab:product-backlog} shows the product backlog for our Korpor project
     PB003 & Authentication & As a user, I want to securely reset my password & Must \\
     \hline
     PB004 & Admin Management & As a Super Admin, I want to manage admin accounts for different real estate companies & Should \\
+    \hline
     
     
     % Super Admin Features section
@@ -331,13 +330,9 @@ Table \ref{tab:product-backlog} shows the product backlog for our Korpor project
     \hline
     PB005 & Security & As a Super Admin, I want to monitor security and compliance across the platform & Could \\
     \hline
-    PB006 & Configuration & As a Super Admin, I want to configure platform-wide features and settings & Could \\
+    PB006 & Analytics & As a Super Admin, I want to generate and analyze global performance reports & Could \\
     \hline
-    PB007 & Analytics & As a Super Admin, I want to generate and analyze global performance reports & Could \\
-    \hline
-    PB008 & Moderation & As a Super Admin, I want to moderate content across the platform & Won't \\
-    \hline
-    PB009 & AI Integration & As a Super Admin, I want to chat with an AI assistant that can securely access database information & Could \\
+    PB007 & AI Integration & As a Super Admin, I want to chat with an AI assistant that can securely access database information & Could \\
     \hline
     
 
@@ -345,125 +340,105 @@ Table \ref{tab:product-backlog} shows the product backlog for our Korpor project
     % Admin Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Admin Features}}} \\
     \hline
-    PB010 & Listing Management & As an Admin, I want to manage real estate listings in my company & Must \\
+    PB008 & Listing Management & As an Admin, I want to manage real estate listings in my company & Must \\
     \hline
-    PB011 & Agent Management & As an Admin, I want to oversee real estate agents and their permissions & Should \\
+    PB009 & Agent Management & As an Admin, I want to oversee real estate agents and their permissions & Should \\
     \hline
-    PB012 & Transaction Management & As an Admin, I want to track transactions and calculate agent commissions & Should \\
+    PB010 & Transaction Management & As an Admin, I want to track transactions and calculate agent commissions & Should \\
     \hline
-    PB013 & Customer Service & As an Admin, I want to address investor inquiries and issues & Could \\
+    PB011 & Customer Service & As an Admin, I want to address investor inquiries and issues & Could \\
     \hline
-    PB014 & Analytics & As an Admin, I want to access a comprehensive agency dashboard & Could \\
+    PB012 & Analytics & As an Admin, I want to access a comprehensive agency dashboard & Could \\
     \hline
-    PB015 & AI Integration & As an Admin, I want to input property details and receive AI-powered valuation & Should \\
+    PB013 & AI Integration & As an Admin, I want to input property details and receive AI-powered valuation & Should \\
     \hline
     
     % Real Estate Agent Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Real Estate Agent Features}}} \\
     \hline
-    PB016 & Listing Management & As an Agent, I want to create and manage property listings & Must \\
+    PB014 & Listing Management & As an Agent, I want to create and manage property listings & Must \\
     \hline
-    PB017 & Investment Management & As an Agent, I want to handle investment and purchase requests & Could \\
+    PB015 & Investment Management & As an Agent, I want to handle investment and purchase requests & Could \\
     \hline
-    PB018 & Data Management & As an Agent, I want to contribute data for AI-driven estimates & Could \\
+    PB016 & Data Management & As an Agent, I want to contribute data for AI-driven estimates & Could \\
     \hline
-    PB019 & Customer Relations & As an Agent, I want to maintain client relationships and communications & Could \\
+    PB017 & Customer Relations & As an Agent, I want to maintain client relationships and communications & Could \\
     \hline
-    PB020 & Finance & As an Agent, I want to view my commissions on sales and rentals & Should \\
+    PB018 & Finance & As an Agent, I want to view my commissions on sales and rentals & Should \\
     \hline
     
     % Investor Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Investor Features}}} \\
     \hline
-    PB021 & Property Discovery & As an Investor, I want to browse available property listings & Must \\
+    PB019 & Property Discovery & As an Investor, I want to browse available property listings & Must \\
     \hline
-    PB022 & Search Functionality & As an Investor, I want to filter properties based on my preferences & Could \\
+    PB020 & Search Functionality & As an Investor, I want to filter properties based on my preferences & Could \\
     \hline
-    PB023 & Investment Process & As an Investor, I want to invest in properties through a simple process & Could \\
+    PB021 & Investment Process & As an Investor, I want to invest in properties through a simple process & Could \\
     \hline
-    PB024 & Portfolio Management & As an Investor, I want to track my investment portfolio in real-time & Must \\
+    PB022 & Portfolio Management & As an Investor, I want to track my investment portfolio in real-time & Must \\
     \hline
-    PB025 & Payment Processing & As an Investor, I want to make secure payments through various methods & Should \\
+    PB023 & Payment Processing & As an Investor, I want to make secure payments through various methods & Should \\
     \hline
-    PB026 & AI Recommendations & As an Investor, I want to receive personalized property recommendations & Must \\
+    PB024 & AI Recommendations & As an Investor, I want to receive personalized property recommendations & Must \\
     \hline
-    PB027 & AI Assistance & As an Investor, I want to consult an AI assistant for real estate legal questions & Could \\
+    PB025 & AI Assistance & As an Investor, I want to consult an AI assistant for real estate legal questions & Could \\
     \hline
-    PB028 & Financial Prediction & As an Investor, I want to see predictions of potential earnings & Could \\
+    PB026 & Financial Prediction & As an Investor, I want to see predictions of potential earnings & Could \\
     \hline
-    PB029 & Finance Management & As an Investor, I want to manage my earnings and withdrawals & Could \\
+    PB027 & Finance Management & As an Investor, I want to manage my earnings and withdrawals & Could \\
     \hline
     
+    PB028 & Notifications & As an Investor, I want to receive push notifications about my investments & Should \\
+    \hline
     % AI & Machine Learning Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{AI \& Machine Learning Features}}} \\
     \hline
-    PB030 & AI System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
+    PB029 & AI System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
     \hline
-    PB031 & AI Prediction & As the System, I want to predict property valuations and rental prices & Should \\
+    PB030 & AI Prediction & As the System, I want to predict property valuations and rental prices & Should \\
     \hline
-    PB032 & AI Forecasting & As the System, I want to forecast potential investment returns & Should \\
+    PB031 & AI Forecasting & As the System, I want to forecast potential investment returns & Should \\
     \hline
-    PB033 & NLP Integration & As the System, I want to provide real estate legal information via NLP & Could \\
+    PB032 & NLP Integration & As the System, I want to provide real estate legal information via NLP & Could \\
     \hline
-    PB034 & Security & As the System, I want to secure AI database access for authorized queries & Could \\
+    PB033 & Security & As the System, I want to secure AI database access for authorized queries & Could \\
     \hline
     
     % Blockchain & Smart Contract Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Blockchain \& Smart Contract Features}}} \\
     \hline
-    PB035 & Blockchain & As the System, I want to create and manage virtual contracts for transactions \cite{WangBlockchainRealEstate2023} & Must \\
+    PB034 & Blockchain & As the System, I want to create and manage virtual contracts for transactions \cite{WangBlockchainRealEstate2023} & Must \\
     \hline
-    PB036 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
+    PB035 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
     \hline
-    PB037 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
+    PB036 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
     \hline
-    PB038 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
+    PB037 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
     \hline
-    PB039 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
+    PB038 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
     \hline
-    
-    % System & Security Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{System \& Security Features}}} \\
-    \hline
-    PB040 & Authentication & As the System, I want to automate authentication and session management & Should \\
-    \hline
-    PB041 & Notifications & As the System, I want to generate real-time notifications for relevant users & Could \\
-    \hline
-    PB042 & Data Consistency & As the System, I want to maintain transaction consistency across the platform & Should \\
-    \hline
-    PB043 & Security & As the System, I want to ensure secure communication between AI and database & Should \\
-    \hline
-    
+
     % DevOps & Infrastructure section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{DevOps \& Infrastructure}}} \\
     \hline
-    PB044 & CI/CD & As a Developer, I want CI/CD pipelines to build project images on GitHub \cite{ForsgreniDevOpsMetrics2023} & Must \\
+    PB039 & CI/CD & As a Developer, I want CI/CD pipelines to build project images on GitHub \cite{ForsgreniDevOpsMetrics2023} & Must \\
     \hline
-    PB045 & Deployment & As a Developer, I want to automate image deployment to GCP registry & Must \\
+    PB040 & Deployment & As a Developer, I want to automate image deployment to GCP registry & Must \\
     \hline
-    PB046 & Deployment & As a Developer, I want to auto-deploy backend services and database & Must \\
+    PB041 & Deployment & As a Developer, I want to auto-deploy backend services and database & Must \\
     \hline
-    PB047 & Containerization & As a Developer, I want to containerize application components with Docker & Must \\
+    PB042 & Containerization & As a Developer, I want to containerize application components with Docker & Must \\
     \hline
-    PB048 & Web Deployment & As a Developer, I want to automatically deploy the web app frontend & Should \\
+    PB043 & Web Deployment & As a Developer, I want to automatically deploy the web app frontend & Should \\
     \hline
-    PB049 & Mobile Deployment & As a Developer, I want to automate mobile app deployments to Play Store & Should \\
+    PB044 & Mobile Deployment & As a Developer, I want to automate mobile app deployments to Play Store & Should \\
     \hline
-    PB050 & Versioning & As a Developer, I want to implement versioning for mobile app releases & Should \\
+    PB045 & Versioning & As a Developer, I want to implement versioning for mobile app releases & Should \\
     \hline
-    PB051 & Monitoring & As an Admin, I want to monitor system health and performance & Could \\
+    PB046 & Monitoring & As an Admin, I want to monitor system health and performance & Could \\
     \hline
-    PB052 & Configuration & As a Super Admin, I want to manage environment configurations & Could \\
-        \hline
     
-    % Mobile App Specific Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Mobile App Specific Features}}} \\
-    \hline
-    PB053 & Mobile UI/UX & As an Investor, I want a responsive, intuitive mobile interface \cite{NielsenResponsiveDesign2019} & Should \\
-    \hline
-    PB054 & Notifications & As an Investor, I want to receive push notifications about my investments & Should \\
-    \hline
-    PB055 & Offline Access & As an Investor, I want offline access to my basic portfolio information & Should \\
 \end{longtable}
 
 \section{Sprint planning}
@@ -472,7 +447,6 @@ In order to complete the project within the deadlines set by the internship agre
 
 In our project management, we opted for the proportional distribution method in order to estimate the costs \cite{CohnAgileEstimating2005, GreningPlanningPoker2002}.
 Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
-\newpage
 
 \begin{figure}[htbp]
     \centering
@@ -481,8 +455,6 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
     \caption{GANTT chart with sprint planning}
     \label{fig:gantt-chart}
 \end{figure}
-
-% \vspace{2cm}
 
 \section*{Conclusion}
 
