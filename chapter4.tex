@@ -6,7 +6,7 @@
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 
-This chapter explores the integration of artificial intelligence capabilities within our real estate platform. We have developed four distinct AI models, each addressing specific needs within the ecosystem. These models collectively enhance user experience, improve decision-making processes, and provide valuable insights to various stakeholders in the real estate market.
+This chapter explores the integration of artificial intelligence capabilities within our real estate platform. We have developed four distinct AI models, each addressing specific requirements within the ecosystem. These models collectively enhance user experience, improve decision-making processes, and provide valuable insights to various stakeholders in the real estate market.
 
 The AI features presented in this chapter represent a significant competitive advantage for our platform, enabling more accurate property valuations, personalized recommendations, intelligent assistance, and efficient administrative operations. Each model has been carefully designed to solve real-world challenges faced by users interacting with real estate data and transactions.
 
@@ -78,11 +78,51 @@ Our scraping system uses a distributed architecture with the following component
 \section{Property Valuation Prediction Model}
 \subsection{Overview}
 The Property Valuation Prediction Model is designed to estimate both the market value and potential rental income for real estate properties. This provides investors with crucial information to make informed investment decisions.
+\newpage
+\subsection{Requirements Analysis}
+\subsubsection{Use Case Diagram}
+The property valuation model serves multiple actors within the Korpor ecosystem. Figure \ref{fig:valuation-use-case} illustrates the primary use cases for the AI-powered property valuation system.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/valuation_use_case_diagram.png}
+    \caption{Property Valuation Model Use Case Diagram}
+    \label{fig:valuation-use-case}
+\end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\textbf{Use Case: Request Property Valuation}
+\begin{itemize}
+    \item \textbf{Actor}: User (representing Super Admin, Admin, and Real Estate Agent)
+    \item \textbf{Precondition}: User is authenticated and has access to valuation features
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item User inputs property details (location, size, type, amenities)
+        \item System validates input data
+        \item System processes data through ML model
+        \item System returns market value and rental income predictions
+        \item User reviews and saves valuation results
+    \end{enumerate}
+    \item \textbf{Alternative Flow}: If data is incomplete, system requests additional information
+    \item \textbf{Postcondition}: Valuation is stored and available for future reference
+\end{itemize}
+
+\subsection{System Design}
+\subsubsection{Class Diagram}
+The property valuation system follows object-oriented design principles. Figure \ref{fig:valuation-class-diagram} shows the main classes and their relationships.
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/valuation_class_diagram.png}
+    \caption{Property Valuation Model Class Diagram}
+    \label{fig:valuation-class-diagram}
+\end{figure}
 \subsection{Model Architecture and Training Process}
 \subsubsection{Data Features for Valuation}
 The accuracy of the property valuation model heavily relies on the quality and comprehensiveness of the input data. Figure \ref{fig:geo-propriety-data} outlines the key geo-property data features utilized by the model. These features capture essential characteristics of a property and its location, enabling the model to learn complex relationships and predict market values and rental incomes effectively.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.4\textwidth]{images/geo-propriety-data.png} % Replace with your actual image path
@@ -101,6 +141,7 @@ These models were trained on the prepared dataset, and their performances were e
 
 \subsubsection{Feature Importance Analysis}
 Understanding which features contribute most to the model's predictions is crucial for model interpretability and refinement. After training the selected model, a feature importance analysis was conducted. Figure \ref{fig:feature-importance} displays the top 15 most important features identified by the model. This analysis helps in validating the model's logic.
+\newpage
 
 \begin{figure}[htbp]
     \centering
@@ -112,9 +153,35 @@ Understanding which features contribute most to the model's predictions is cruci
 \subsubsection{Model Evaluation and Metrics}
 The performance of the trained regression models was rigorously evaluated using standard metrics to ensure reliability and accuracy. Key metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared (R²) score were computed on a held-out test dataset. Figure \ref{fig:model-test-metrics} presents a summary of these performance metrics for the chosen valuation model. These results provide a quantitative assessment of the model's ability to generalize to unseen data.
 
+
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.8\textwidth]{images/model_test_metrics.png} % Replace with your actual image path
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/apartmenet location.jpeg}
+        \caption*{Apartment Location Prediction}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/maison location.jpeg}
+        \caption*{House Location Prediction}
+    \end{minipage}
+    
+    \vspace{0.5cm}
+    
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/apartmeent vente.jpeg}
+        \caption*{Apartment Sale Prediction}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/maison vente.jpeg}
+        \caption*{House Sale Prediction}
+    \end{minipage}
+    
     \caption{Prediction Model Test Metrics Summary}
     \label{fig:model-test-metrics}
 \end{figure}
@@ -153,7 +220,7 @@ The Korpor mobile application provides investors with direct access to AI-powere
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.5\textwidth]{images/mobile_future_evaluation.png} % Replace with your actual image path
+    \includegraphics[width=0.3\textwidth]{images/mobile_future_evaluation.png} % Replace with your actual image path
     \caption{Mobile Interface for Future Property Evaluation Insights}
     \label{fig:mobile-future-evaluation}
 \end{figure}
@@ -168,9 +235,182 @@ To ensure a seamless and reliable user experience on the mobile platform, the in
     \caption{Maestro Test Results for Mobile Prediction Interface}
     \label{fig:maestro-tests-mobile}
 \end{figure}
+
+% \begin{table}[htbp]
+%     \centering
+%     \begin{tabular}{|c|l|l|l|c|}
+%         \hline
+%         \textbf{Test ID} & \textbf{Scenario} & \textbf{Input} & \textbf{Expected Output} & \textbf{Status} \\
+%         \hline
+%         VAL-001 & Valid property data & Complete property details & Accurate valuation & \checkmark \\
+%         \hline
+%         VAL-002 & Incomplete data & Missing property size & Error message & \checkmark \\
+%         \hline
+%         VAL-003 & Edge case location & Remote area property & Reasonable estimate & \checkmark \\
+%         \hline
+%         VAL-004 & High-value property & Luxury property details & Premium valuation & \checkmark \\
+%         \hline
+%         VAL-005 & Model performance & Large dataset & MAE < 10\% & \checkmark \\
+%         \hline
+%     \end{tabular}
+%     \caption{Property Valuation Model Test Scenarios}
+%     \label{tab:valuation-test-scenarios}
+% \end{table}
+
 \newpage
 
-% \section{Real Estate Assistant}
+\section{Real Estate Assistant (NLP Chatbot)}
+\subsection{Overview}
+The Real Estate Assistant is an intelligent NLP-powered chatbot designed to provide investors with instant access to real estate legal information and guidance. This AI assistant helps users understand complex legal concepts, property regulations, and investment procedures through natural language conversations.
+
+\subsection{Requirements Analysis}
+\subsubsection{Use Case Diagram}
+The Real Estate Assistant serves primarily investors who need legal guidance during their property investment journey. Figure \ref{fig:assistant-use-case} illustrates the main use cases for the AI assistant.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/assistant_use_case_diagram.png}
+    \caption{Real Estate Assistant Use Case Diagram}
+    \label{fig:assistant-use-case}
+\end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\textbf{Use Case: Ask Legal Question}
+\begin{itemize}
+    \item \textbf{Actor}: Investor
+    \item \textbf{Precondition}: User is authenticated and has access to the mobile app
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item Investor opens chat interface
+        \item Investor types legal question in natural language
+        \item System processes question using NLP
+        \item System retrieves relevant legal information
+        \item System provides comprehensive answer with references
+        \item System maintains conversation context for follow-up questions
+    \end{enumerate}
+    \item \textbf{Alternative Flow}: If question is unclear, system asks for clarification
+    \item \textbf{Postcondition}: Conversation is saved for future reference
+\end{itemize}
+
+\textbf{Use Case: Provide Legal Guidance}
+\begin{itemize}
+    \item \textbf{Actor}: System (AI Assistant)
+    \item \textbf{Precondition}: User has asked a legal question
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item System analyzes question intent and entities
+        \item System searches legal knowledge base
+        \item System generates contextual response
+        \item System provides relevant legal references
+        \item System suggests related topics
+    \end{enumerate}
+    \item \textbf{Postcondition}: User receives accurate legal information
+\end{itemize}
+
+\subsection{System Design}
+\subsubsection{Class Diagram}
+The Real Estate Assistant follows a modular architecture for NLP processing and knowledge management. Figure \ref{fig:assistant-class-diagram} shows the main classes and their relationships.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/assistant_class_diagram.png}
+    \caption{Real Estate Assistant Class Diagram}
+    \label{fig:assistant-class-diagram}
+\end{figure}
+
+\subsubsection{Sequence Diagram (MVC)}
+The interaction flow between the mobile interface, backend services, and NLP processing components is illustrated in Figure \ref{fig:assistant-sequence-mvc}.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/assistant_sequence_mvc.png}
+    \caption{Real Estate Assistant MVC Sequence Diagram}
+    \label{fig:assistant-sequence-mvc}
+\end{figure}
+
+\subsection{Implementation}
+\subsubsection{NLP Model Architecture}
+The Real Estate Assistant utilizes advanced natural language processing techniques to understand and respond to user queries. The system employs:
+
+\begin{itemize}
+    \item \textbf{Intent Recognition}: Identifies the purpose of user questions (property law, taxes, contracts, etc.)
+    \item \textbf{Entity Extraction}: Extracts key information like property types, locations, and legal concepts
+    \item \textbf{Context Management}: Maintains conversation history for coherent multi-turn dialogues
+    \item \textbf{Response Generation}: Creates natural, informative responses based on legal knowledge base
+\end{itemize}
+
+\subsubsection{Legal Knowledge Base}
+The assistant's knowledge base contains comprehensive information about:
+\begin{itemize}
+    \item Tunisian real estate law and regulations
+    \item Property investment procedures
+    \item Tax implications and calculations
+    \item Contract templates and requirements
+    \item Common legal issues and solutions
+\end{itemize}
+
+\subsubsection{Chat Interface Implementation}
+The mobile chat interface provides an intuitive way for investors to interact with the AI assistant. Figure \ref{fig:assistant-mobile-chat} shows the chat interface design.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/assistant_mobile_chat.png}
+    \caption{Mobile Chat Interface for Real Estate Assistant}
+    \label{fig:assistant-mobile-chat}
+\end{figure}
+
+\subsubsection{Conversation Examples}
+Figure \ref{fig:assistant-conversation-examples} demonstrates typical interactions between investors and the AI assistant, showcasing the system's ability to provide relevant legal guidance.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{images/assistant_conversation_examples.png}
+    \caption{Real Estate Assistant Conversation Examples}
+    \label{fig:assistant-conversation-examples}
+\end{figure}
+
+\subsubsection{Web Interface Integration}
+The assistant is also accessible through the web platform, providing consistent experience across devices. Figure \ref{fig:assistant-web-interface} shows the web chat implementation.
+
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/assistant_web_interface.png}
+    \caption{Web Interface for Real Estate Assistant}
+    \label{fig:assistant-web-interface}
+\end{figure}
+
+\subsection{Testing and Validation}
+\subsubsection{Test Scenarios}
+The Real Estate Assistant underwent extensive testing to ensure accurate responses and reliable performance. Table \ref{tab:assistant-test-scenarios} presents the key test scenarios.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|l|l|l|c|}
+        \hline
+        \textbf{Scenario} & \textbf{Input} & \textbf{Expected Output} & \textbf{Status} \\
+        \hline
+         Property tax query & "What are property taxes?" & Detailed tax information & \checkmark \\
+        \hline
+        Contract question & "What's in a rental contract?" & Contract requirements & \checkmark \\
+        \hline
+         Investment procedure & "How to buy property?" & Step-by-step guide & \checkmark \\
+        \hline
+         Legal compliance & "Foreign investment rules?" & Regulatory information & \checkmark \\
+        \hline
+         Context follow-up & Multi-turn conversation & Coherent responses & \checkmark \\
+        \hline
+         Unclear question & Ambiguous query & Clarification request & \checkmark \\
+        \hline
+    \end{tabular}
+    \caption{Real Estate Assistant Test Scenarios}
+    \label{tab:assistant-test-scenarios}
+\end{table}
+
+\newpage
+
 % \section{Role-Based Backoffice Agent}
 % \section{Investor-Focused Recommendation System}
 

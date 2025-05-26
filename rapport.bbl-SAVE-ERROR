@@ -47,6 +47,52 @@
       \field{volume}{7}
       \field{year}{1938}
     \endentry
+    \entry{AssilEyeInstitute}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a9a94cc79aac3a4e9f6812b8d1717696}{%
+           family={{Assil Eye Institute}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{fullhash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{fullhashraw}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{bibnamehash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{authorbibnamehash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{authornamehash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{authorfullhash}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \strng{authorfullhashraw}{a9a94cc79aac3a4e9f6812b8d1717696}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://assileye.com/}}
+      \field{note}{Accessed: 2024}
+      \field{title}{Assil Eye Institute}
+      \field{year}{2024}
+    \endentry
+    \entry{StakeWebsite}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e8dafc278a8ffa375dfd8aba7ae7f8b9}{%
+           family={{Stake}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{fullhash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{fullhashraw}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{bibnamehash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{authorbibnamehash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{authornamehash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{authorfullhash}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \strng{authorfullhashraw}{e8dafc278a8ffa375dfd8aba7ae7f8b9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://getstake.com/welcome}}
+      \field{note}{Accessed: 2024}
+      \field{title}{Stake: The modern way for anyone to invest in real estate}
+      \field{year}{2024}
+    \endentry
     \entry{G2CompetitiveAnalysis2024}{online}{}{}
       \name{author}{1}{}{%
         {{hash=71c154fe7cbb5c5c9329be14d70cc2cf}{%
@@ -66,8 +112,8 @@
       \strng{authornamehash}{71c154fe7cbb5c5c9329be14d70cc2cf}
       \strng{authorfullhash}{71c154fe7cbb5c5c9329be14d70cc2cf}
       \strng{authorfullhashraw}{71c154fe7cbb5c5c9329be14d70cc2cf}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
@@ -101,8 +147,8 @@
       \strng{authornamehash}{26ae0bda2d6af8e875a1335484e562e2}
       \strng{authorfullhash}{26ae0bda2d6af8e875a1335484e562e2}
       \strng{authorfullhashraw}{26ae0bda2d6af8e875a1335484e562e2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{2}
@@ -138,8 +184,8 @@
       \strng{authornamehash}{bab33058a85a3da561416fd017a3bf2a}
       \strng{authorfullhash}{bab33058a85a3da561416fd017a3bf2a}
       \strng{authorfullhashraw}{bab33058a85a3da561416fd017a3bf2a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
@@ -175,8 +221,8 @@
       \strng{authornamehash}{78f2eb70b675f9caa1a92d17047dfa37}
       \strng{authorfullhash}{78f2eb70b675f9caa1a92d17047dfa37}
       \strng{authorfullhashraw}{78f2eb70b675f9caa1a92d17047dfa37}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{4}
@@ -193,194 +239,12 @@
       \verb https://strategicmanagementinsight.com/tools/competitive-analysis/
       \endverb
     \endentry
-    \entry{LinkedInAIFinTech2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=ffd2743f40d5c01b1eaf74efd5e42751}{%
-           family={{RECAP}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {LinkedIn}%
-      }
-      \strng{namehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{fullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{fullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{bibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorbibnamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authornamehash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorfullhash}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \strng{authorfullhashraw}{ffd2743f40d5c01b1eaf74efd5e42751}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{2}
-      \field{title}{AI, fintech, and automation on the real estate industry}
-      \field{urlday}{15}
-      \field{urlmonth}{3}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
-      \endverb
-      \verb{url}
-      \verb https://www.linkedin.com/pulse/ai-fintech-automation-real-estate-industry-recapeg-wup1f
-      \endverb
-    \endentry
-    \entry{MobileRealityAIRealEstate2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=8f36a1727ba62624213e2d305cb0a102}{%
-           family={{Mobile Reality Team}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {The Mobile Reality}%
-      }
-      \strng{namehash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{fullhash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{fullhashraw}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{bibnamehash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{authorbibnamehash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{authornamehash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{authorfullhash}{8f36a1727ba62624213e2d305cb0a102}
-      \strng{authorfullhashraw}{8f36a1727ba62624213e2d305cb0a102}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{title}{How AI in Real Estate is Transforming the Future of Property and Investment}
-      \field{urlday}{19}
-      \field{urlmonth}{3}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://themobilereality.com/blog/proptech/ai-in-real-estate
-      \endverb
-      \verb{url}
-      \verb https://themobilereality.com/blog/proptech/ai-in-real-estate
-      \endverb
-    \endentry
-    \entry{HouseCanaryAIInvestors2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=95026035d13c50fb4b86539ae047e6c4}{%
-           family={{HouseCanary Team}},
-           familyi={H\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {HouseCanary Blog}%
-      }
-      \strng{namehash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{fullhash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{fullhashraw}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{bibnamehash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{authorbibnamehash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{authornamehash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{authorfullhash}{95026035d13c50fb4b86539ae047e6c4}
-      \strng{authorfullhashraw}{95026035d13c50fb4b86539ae047e6c4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{title}{5 AI Tools for Real Estate Investors}
-      \field{urlday}{10}
-      \field{urlmonth}{2}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.housecanary.com/blog/5-ai-tools-for-real-estate-investors
-      \endverb
-      \verb{url}
-      \verb https://www.housecanary.com/blog/5-ai-tools-for-real-estate-investors
-      \endverb
-    \endentry
-    \entry{SmilkovTensorFlowJS2019}{article}{}{}
-      \name{author}{11}{}{%
-        {{hash=bb2e0dfdbba1fad9c1db3218456c7bd8}{%
-           family={Smilkov},
-           familyi={S\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod}}}%
-        {{hash=5c0ee071be7a674fd0ba1c27bac436aa}{%
-           family={Thorat},
-           familyi={T\bibinitperiod},
-           given={Nikhil},
-           giveni={N\bibinitperiod}}}%
-        {{hash=f9267339edc6d9f2b66231afd6d7e492}{%
-           family={Assogba},
-           familyi={A\bibinitperiod},
-           given={Yannick},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=901ebfc90cc5f85da1cf9ea0d95ae9d0}{%
-           family={Yuan},
-           familyi={Y\bibinitperiod},
-           given={Ann},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a805994a424c03525ed404262e0679bc}{%
-           family={Dufour},
-           familyi={D\bibinitperiod},
-           given={Nick},
-           giveni={N\bibinitperiod}}}%
-        {{hash=9c360a1cd387ef3b02895fbc7b12535f}{%
-           family={Ping},
-           familyi={P\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=cc2b8112ad9a95fc5d9524dde2e4b863}{%
-           family={Victoria},
-           familyi={V\bibinitperiod},
-           given={Aaron\bibnamedelima H.},
-           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=bf36a95184bcf06abe636f74e9bcdc70}{%
-           family={Reif},
-           familyi={R\bibinitperiod},
-           given={Emily},
-           giveni={E\bibinitperiod}}}%
-        {{hash=5718951363cd7038d955514d08e91a2f}{%
-           family={Schafer},
-           familyi={S\bibinitperiod},
-           given={Stan\bibnamedelima S.},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=c66133f96104e3c0dcd2f73e11469ab0}{%
-           family={Wattenberg},
-           familyi={W\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b816976f12329656c7925238c1f9dad8}{%
-           family={Viégas},
-           familyi={V\bibinitperiod},
-           given={Fernanda\bibnamedelima B.},
-           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \strng{namehash}{3c90d6fb0fc2ecafcacd866602dbfffe}
-      \strng{fullhash}{e4bf80fddb0f3e0d1fda148d351193d6}
-      \strng{fullhashraw}{e4bf80fddb0f3e0d1fda148d351193d6}
-      \strng{bibnamehash}{3c90d6fb0fc2ecafcacd866602dbfffe}
-      \strng{authorbibnamehash}{3c90d6fb0fc2ecafcacd866602dbfffe}
-      \strng{authornamehash}{3c90d6fb0fc2ecafcacd866602dbfffe}
-      \strng{authorfullhash}{e4bf80fddb0f3e0d1fda148d351193d6}
-      \strng{authorfullhashraw}{e4bf80fddb0f3e0d1fda148d351193d6}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of Machine Learning and Systems}
-      \field{title}{Tensorflow.js : Machine learning for the web and beyond}
-      \field{volume}{1}
-      \field{year}{2019}
-      \field{pages}{309\bibrangedash 321}
-      \range{pages}{13}
-    \endentry
     \entry{GitWebsite}{online}{}{}
       \list{organization}{1}{%
         {Software Freedom Conservancy}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{title}{Git}
       \field{urlday}{20}
@@ -398,8 +262,8 @@
       \list{organization}{1}{%
         {GitHub, Inc.}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{GitHub}
       \field{urlday}{20}
@@ -437,8 +301,8 @@
       \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
       \strng{authorfullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{The official Scrum Guide, November 2020 version}
@@ -472,8 +336,8 @@
       \strng{authornamehash}{6c73dbfb146ccdd1c4f339f94cd09e2e}
       \strng{authorfullhash}{6c73dbfb146ccdd1c4f339f94cd09e2e}
       \strng{authorfullhashraw}{6c73dbfb146ccdd1c4f339f94cd09e2e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Three Pillars of Scrum: Understanding Scrum's Core Principles}
@@ -892,8 +756,8 @@
       \strng{authornamehash}{d0103298273e8b47481264a1f6655466}
       \strng{authorfullhash}{d0103298273e8b47481264a1f6655466}
       \strng{authorfullhashraw}{d0103298273e8b47481264a1f6655466}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Docker Architecture and Container Design}
@@ -933,8 +797,8 @@
       \strng{authornamehash}{592f289255ae3b409a0b1287eed7da5a}
       \strng{authorfullhash}{592f289255ae3b409a0b1287eed7da5a}
       \strng{authorfullhashraw}{592f289255ae3b409a0b1287eed7da5a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{DevOps Metrics That Matter: Measuring Success in 2023}
@@ -948,209 +812,6 @@
       \endverb
       \verb{url}
       \verb https://cloud.google.com/blog/products/devops-sre/the-2023-accelerate-state-of-devops-report-now-out
-      \endverb
-    \endentry
-    \entry{ViteJSWebsite}{online}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{note}{Evan You and Vite contributors}
-      \field{title}{Vite}
-      \field{urlday}{23}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://vitejs.dev/guide/
-      \endverb
-      \verb{url}
-      \verb https://vitejs.dev/guide/
-      \endverb
-    \endentry
-    \entry{StorybookDocs2022}{online}{}{}
-      \list{organization}{1}{%
-        {Storybook Contributors}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{title}{Storybook Documentation}
-      \field{urlday}{30}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://storybook.js.org/docs/
-      \endverb
-      \verb{url}
-      \verb https://storybook.js.org/docs/
-      \endverb
-    \endentry
-    \entry{ExpressJSWebsite}{online}{}{}
-      \list{organization}{1}{%
-        {Node.js Foundation}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{title}{Express - Node.js web application framework}
-      \field{urlday}{23}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://expressjs.com/
-      \endverb
-      \verb{url}
-      \verb https://expressjs.com/
-      \endverb
-    \endentry
-    \entry{MySQLWebsite}{online}{}{}
-      \list{organization}{1}{%
-        {Oracle Corporation}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{title}{MySQL Documentation}
-      \field{urlday}{23}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://dev.mysql.com/doc/
-      \endverb
-      \verb{url}
-      \verb https://dev.mysql.com/doc/
-      \endverb
-    \endentry
-    \entry{AzureCloudServices2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=2c14982e93fbf07114403b28991246ea}{%
-           family={{Microsoft Azure Team}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Microsoft Corporation}%
-      }
-      \strng{namehash}{2c14982e93fbf07114403b28991246ea}
-      \strng{fullhash}{2c14982e93fbf07114403b28991246ea}
-      \strng{fullhashraw}{2c14982e93fbf07114403b28991246ea}
-      \strng{bibnamehash}{2c14982e93fbf07114403b28991246ea}
-      \strng{authorbibnamehash}{2c14982e93fbf07114403b28991246ea}
-      \strng{authornamehash}{2c14982e93fbf07114403b28991246ea}
-      \strng{authorfullhash}{2c14982e93fbf07114403b28991246ea}
-      \strng{authorfullhashraw}{2c14982e93fbf07114403b28991246ea}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Azure Cloud Platform Services}
-      \field{urlday}{27}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://azure.microsoft.com/en-us/services/
-      \endverb
-      \verb{url}
-      \verb https://azure.microsoft.com/en-us/services/
-      \endverb
-    \endentry
-    \entry{JohnsonAIPropertyValuation2024}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=e544bec8faf41d277e181f1799c8bdf8}{%
-           family={Johnson},
-           familyi={J\bibinitperiod},
-           given={Michael\bibnamedelima R.},
-           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Wei},
-           giveni={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{fullhash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{fullhashraw}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{bibnamehash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{authorbibnamehash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{authornamehash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{authorfullhash}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \strng{authorfullhashraw}{0967fcaaffa9754bdafc20f183eaf7d7}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Real Estate Technology}
-      \field{number}{2}
-      \field{title}{Advanced AI Techniques in Property Valuation: Challenges and Opportunities}
-      \field{volume}{15}
-      \field{year}{2024}
-      \field{pages}{78\bibrangedash 95}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1080/14735789.2024.2175633
-      \endverb
-    \endentry
-    \entry{PostmanWebsite}{online}{}{}
-      \list{organization}{1}{%
-        {Postman, Inc.}%
-      }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labeltitlesource}{title}
-      \field{title}{Postman}
-      \field{urlday}{20}
-      \field{urlmonth}{3}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.postman.com/
-      \endverb
-      \verb{url}
-      \verb https://www.postman.com/
-      \endverb
-    \endentry
-    \entry{PlaywrightDocs2023}{online}{}{}
-      \list{organization}{1}{%
-        {Microsoft Corporation}%
-      }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labeltitlesource}{title}
-      \field{title}{Playwright End-to-End Testing Documentation}
-      \field{urlday}{30}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://playwright.dev/docs/intro
-      \endverb
-      \verb{url}
-      \verb https://playwright.dev/docs/intro
-      \endverb
-    \endentry
-    \entry{StarUMLWebsite}{online}{}{}
-      \list{organization}{1}{%
-        {MKLabs Co., Ltd.}%
-      }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labeltitlesource}{title}
-      \field{title}{StarUML}
-      \field{urlday}{18}
-      \field{urlmonth}{4}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://staruml.io/
-      \endverb
-      \verb{url}
-      \verb https://staruml.io/
       \endverb
     \endentry
     \entry{SunardiMVC2019}{article}{}{}
@@ -1172,8 +833,8 @@
       \strng{authornamehash}{effea2154920dc95cf5bda342f96ccd5}
       \strng{authorfullhash}{effea2154920dc95cf5bda342f96ccd5}
       \strng{authorfullhashraw}{effea2154920dc95cf5bda342f96ccd5}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Procedia Computer Science}
@@ -1226,8 +887,8 @@
       \strng{authornamehash}{4d2492409a24d4ed208ae6670cb91945}
       \strng{authorfullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
       \strng{authorfullhashraw}{5cb4a6d7baf30d11bae6682eca698b4f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0201633610}
@@ -1258,8 +919,8 @@
       \strng{authornamehash}{05a972d2322d7190412c8633c5806a97}
       \strng{authorfullhash}{05a972d2322d7190412c8633c5806a97}
       \strng{authorfullhashraw}{05a972d2322d7190412c8633c5806a97}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -1286,8 +947,8 @@
       \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
       \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
       \strng{authorfullhashraw}{6f41df64eb0dc4855be70172368604c2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0134494166}
@@ -1298,8 +959,8 @@
       \list{organization}{1}{%
         {Microsoft Corporation}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{TypeScript Documentation}
       \field{urlday}{30}
@@ -1318,8 +979,8 @@
       \list{organization}{1}{%
         {TanStack}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{TanStack - High-quality open-source software for web development}
       \field{urlday}{30}
@@ -1338,8 +999,8 @@
       \list{organization}{1}{%
         {Maestro Labs, Inc.}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{title}{Maestro Documentation}
       \field{urlday}{30}
@@ -1354,12 +1015,31 @@
       \verb https://maestro.mobile.dev/
       \endverb
     \endentry
+    \entry{ExpressJSWebsite}{online}{}{}
+      \list{organization}{1}{%
+        {Node.js Foundation}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Express - Node.js web application framework}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://expressjs.com/
+      \endverb
+      \verb{url}
+      \verb https://expressjs.com/
+      \endverb
+    \endentry
     \entry{NodeJSWebsite}{online}{}{}
       \list{organization}{1}{%
         {OpenJS Foundation}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Node.js}
       \field{urlday}{18}
@@ -1373,12 +1053,48 @@
       \verb https://nodejs.org/en
       \endverb
     \endentry
+    \entry{PostmanWebsite}{online}{}{}
+      \list{organization}{1}{%
+        {Postman, Inc.}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Postman}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postman.com/
+      \endverb
+      \verb{url}
+      \verb https://www.postman.com/
+      \endverb
+    \endentry
+    \entry{ViteJSWebsite}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Evan You and Vite contributors}
+      \field{title}{Vite}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vitejs.dev/guide/
+      \endverb
+      \verb{url}
+      \verb https://vitejs.dev/guide/
+      \endverb
+    \endentry
     \entry{ReactWebsite}{online}{}{}
       \list{organization}{1}{%
         {Meta Platforms, Inc.}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{React}
       \field{urlday}{16}
@@ -1390,6 +1106,45 @@
       \endverb
       \verb{url}
       \verb https://react.dev/
+      \endverb
+    \endentry
+    \entry{MySQLWebsite}{online}{}{}
+      \list{organization}{1}{%
+        {Oracle Corporation}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{MySQL Documentation}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dev.mysql.com/doc/
+      \endverb
+      \verb{url}
+      \verb https://dev.mysql.com/doc/
+      \endverb
+    \endentry
+    \entry{PlaywrightDocs2023}{online}{}{}
+      \list{organization}{1}{%
+        {Microsoft Corporation}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{Playwright End-to-End Testing Documentation}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://playwright.dev/docs/intro
+      \endverb
+      \verb{url}
+      \verb https://playwright.dev/docs/intro
       \endverb
     \endentry
     \entry{MarcotteResponsiveWebDesign2023}{book}{}{}
@@ -1411,14 +1166,33 @@
       \strng{authornamehash}{ca762f825f70c5a1f00a689ca3e9869e}
       \strng{authorfullhash}{ca762f825f70c5a1f00a689ca3e9869e}
       \strng{authorfullhashraw}{ca762f825f70c5a1f00a689ca3e9869e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
       \field{isbn}{978-1937557522}
       \field{title}{Responsive Web Design: Patterns and Principles for the Modern Web}
       \field{year}{2023}
+    \endentry
+    \entry{StarUMLWebsite}{online}{}{}
+      \list{organization}{1}{%
+        {MKLabs Co., Ltd.}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{StarUML}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://staruml.io/
+      \endverb
+      \verb{url}
+      \verb https://staruml.io/
+      \endverb
     \endentry
     \entry{SchwarzScrum2019}{online}{}{}
       \name{author}{1}{}{%
@@ -1439,8 +1213,8 @@
       \strng{authornamehash}{a3768e0571dfce6a11cd838da35dd1a4}
       \strng{authorfullhash}{a3768e0571dfce6a11cd838da35dd1a4}
       \strng{authorfullhashraw}{a3768e0571dfce6a11cd838da35dd1a4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Scrum Product Backlog: A Guide for Product Owners}
@@ -1481,8 +1255,8 @@
       \strng{authorfullhash}{fcda9ec56cc8836bfbe6761345737bc4}
       \strng{authorfullhashraw}{fcda9ec56cc8836bfbe6761345737bc4}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The MoSCoW Method: A Prioritization Technique for Project Management}
@@ -1523,44 +1297,13 @@
       \strng{authorfullhash}{fcda9ec56cc8836bfbe6761345737bc4}
       \strng{authorfullhashraw}{fcda9ec56cc8836bfbe6761345737bc4}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0201624328}
       \field{title}{Case Method Fast-Track: A RAD Approach}
       \field{year}{2004}
-    \endentry
-    \entry{NielsenResponsiveDesign2019}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=753054f71283d85f82cda8e35daf6bac}{%
-           family={Nielsen},
-           familyi={N\bibinitperiod},
-           given={Jakob},
-           giveni={J\bibinitperiod}}}%
-        {{hash=a3c7dfbd9e5de82c4d6b63c5164b2682}{%
-           family={Pernice},
-           familyi={P\bibinitperiod},
-           given={Kara},
-           giveni={K\bibinitperiod}}}%
-      }
-      \strng{namehash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{fullhash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{fullhashraw}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{bibnamehash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{authorbibnamehash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{authornamehash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{authorfullhash}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \strng{authorfullhashraw}{34b95991bfc6cdb57ee74a37dbed4f34}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{User Experience Magazine}
-      \field{number}{3}
-      \field{title}{Responsive Design and User Experience: Impact on Mobile Interfaces}
-      \field{volume}{19}
-      \field{year}{2019}
     \endentry
     \entry{SutherlandScrum2020}{book}{}{}
       \name{author}{2}{}{%
@@ -1586,8 +1329,8 @@
       \strng{authornamehash}{88326d6ce0b4b966c134cea4e91a781f}
       \strng{authorfullhash}{88326d6ce0b4b966c134cea4e91a781f}
       \strng{authorfullhashraw}{88326d6ce0b4b966c134cea4e91a781f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0385346474}
@@ -1613,8 +1356,8 @@
       \strng{authornamehash}{61495192b331e8e69899b82278511ea2}
       \strng{authorfullhash}{61495192b331e8e69899b82278511ea2}
       \strng{authorfullhashraw}{61495192b331e8e69899b82278511ea2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0137043293}
@@ -1640,8 +1383,8 @@
       \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
       \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
       \strng{authorfullhashraw}{d33712bcde2d63bad054a832b61d01e8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0131479418}
@@ -1664,8 +1407,8 @@
       \strng{authornamehash}{61bdeb09cfbfab0465639014ab3b69be}
       \strng{authorfullhash}{61bdeb09cfbfab0465639014ab3b69be}
       \strng{authorfullhashraw}{61bdeb09cfbfab0465639014ab3b69be}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Renaissance Software Consulting}
@@ -1696,8 +1439,8 @@
       \strng{authornamehash}{49517f1a9dd5a9980014c4a61038dfe8}
       \strng{authorfullhash}{49517f1a9dd5a9980014c4a61038dfe8}
       \strng{authorfullhashraw}{49517f1a9dd5a9980014c4a61038dfe8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{SAFe for Lean Enterprises 6.0}
@@ -1717,8 +1460,8 @@
       \list{organization}{1}{%
         {Tailwind Labs Inc.}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{Tailwind CSS}
       \field{urlday}{16}
@@ -1732,68 +1475,754 @@
       \verb https://tailwindcss.com/
       \endverb
     \endentry
-    \entry{PropertyStarTunisia}{online}{}{}
-      \list{organization}{1}{%
-        {PropertyStar Ltd.}%
+    \entry{Nakamoto2008Bitcoin}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1977190f018b398e43ede3de043de8ea}{%
+           family={Nakamoto},
+           familyi={N\bibinitperiod},
+           given={Satoshi},
+           giveni={S\bibinitperiod}}}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{namehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{fullhash}{1977190f018b398e43ede3de043de8ea}
+      \strng{fullhashraw}{1977190f018b398e43ede3de043de8ea}
+      \strng{bibnamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authorbibnamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authornamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authorfullhash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authorfullhashraw}{1977190f018b398e43ede3de043de8ea}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{PropertyStar Tunisia - Real Estate Listings}
-      \field{urlday}{15}
-      \field{urlmonth}{11}
-      \field{urlyear}{2023}
-      \field{year}{2023}
+      \field{title}{Bitcoin: A Peer-to-Peer Electronic Cash System}
+      \field{urlday}{10}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2008}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.properstar.co.uk/tunisia
+      \verb https://bitcoin.org/bitcoin.pdf
       \endverb
       \verb{url}
-      \verb https://www.properstar.co.uk/tunisia
+      \verb https://bitcoin.org/bitcoin.pdf
       \endverb
     \endentry
-    \entry{RemaxTunisia}{online}{}{}
-      \list{organization}{1}{%
-        {RE/MAX Tunisia}%
+    \entry{Tapscott2016Blockchain}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=73f6d11b42536dfd598560c86939477f}{%
+           family={Tapscott},
+           familyi={T\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8595e25741f3d1bcb5506d846e4aae1a}{%
+           family={Tapscott},
+           familyi={T\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \list{publisher}{1}{%
+        {Portfolio}%
+      }
+      \strng{namehash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{fullhash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{fullhashraw}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{bibnamehash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{authorbibnamehash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{authornamehash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{authorfullhash}{43cd6af14596a47afb501e8861ffd8ab}
+      \strng{authorfullhashraw}{43cd6af14596a47afb501e8861ffd8ab}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{RE/MAX Tunisia Real Estate}
-      \field{urlday}{15}
-      \field{urlmonth}{11}
-      \field{urlyear}{2023}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.remax.com.tn/
-      \endverb
-      \verb{url}
-      \verb https://www.remax.com.tn/
+      \field{isbn}{978-1101980132}
+      \field{title}{Blockchain Revolution: How the Technology Behind Bitcoin Is Changing Money, Business, and the World}
+      \field{year}{2016}
+    \endentry
+    \entry{Veuger2018RealEstateBlockchain}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=332837572baab3746020d8afdf8cc537}{%
+           family={Veuger},
+           familyi={V\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{332837572baab3746020d8afdf8cc537}
+      \strng{fullhash}{332837572baab3746020d8afdf8cc537}
+      \strng{fullhashraw}{332837572baab3746020d8afdf8cc537}
+      \strng{bibnamehash}{332837572baab3746020d8afdf8cc537}
+      \strng{authorbibnamehash}{332837572baab3746020d8afdf8cc537}
+      \strng{authornamehash}{332837572baab3746020d8afdf8cc537}
+      \strng{authorfullhash}{332837572baab3746020d8afdf8cc537}
+      \strng{authorfullhashraw}{332837572baab3746020d8afdf8cc537}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Facilities}
+      \field{number}{1/2}
+      \field{title}{Trust in a viable real estate economy with disruption and blockchain}
+      \field{volume}{36}
+      \field{year}{2018}
+      \field{pages}{103\bibrangedash 120}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1108/F-11-2017-0106
       \endverb
     \endentry
-    \entry{AlMindhar}{online}{}{}
-      \list{organization}{1}{%
-        {STE SK ALMINDHAR}%
+    \entry{Buterin2014Ethereum}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{%
+           family={Buterin},
+           familyi={B\bibinitperiod},
+           given={Vitalik},
+           giveni={V\bibinitperiod}}}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhashraw}{850981945102d0f671b6762173c8988a}
+      \strng{bibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorbibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authornamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorfullhash}{850981945102d0f671b6762173c8988a}
+      \strng{authorfullhashraw}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Al-Mindhar Real Estate Platform}
+      \field{title}{Ethereum White Paper: A Next-Generation Smart Contract and Decentralized Application Platform}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ethereum.org/en/whitepaper/
+      \endverb
+      \verb{url}
+      \verb https://ethereum.org/en/whitepaper/
+      \endverb
+    \endentry
+    \entry{Szabo1997SmartContracts}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a8fa37f931a316fe587067d55ea90fb}{%
+           family={Szabo},
+           familyi={S\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{fullhash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{fullhashraw}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{bibnamehash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{authorbibnamehash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{authornamehash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{authorfullhash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{authorfullhashraw}{7a8fa37f931a316fe587067d55ea90fb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{First Monday}
+      \field{number}{9}
+      \field{title}{Formalizing and Securing Relationships on Public Networks}
+      \field{volume}{2}
+      \field{year}{1997}
+      \verb{urlraw}
+      \verb https://firstmonday.org/ojs/index.php/fm/article/view/548
+      \endverb
+      \verb{url}
+      \verb https://firstmonday.org/ojs/index.php/fm/article/view/548
+      \endverb
+    \endentry
+    \entry{Zheng2018BlockchainChallenges}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=94aeb96f7bbdfa5f304dc958ab7f265c}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Zibin},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=d93ea8b86f5966d92a614665f6182178}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Shaoan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8060518804b5167fb2be592fec4be87e}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Hong-Ning},
+           giveni={H\bibinithyphendelim N\bibinitperiod}}}%
+        {{hash=3cd0ebc9a46c36ceb086385f0a9b3df4}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiangping},
+           giveni={X\bibinitperiod}}}%
+        {{hash=356e7b7c2a63b9a13bc494bb2b58e7ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Huaimin},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7167798026dee376319381ec60b4dd1a}
+      \strng{fullhash}{59c2e268701ca1b5b80b42e2f89938c7}
+      \strng{fullhashraw}{59c2e268701ca1b5b80b42e2f89938c7}
+      \strng{bibnamehash}{7167798026dee376319381ec60b4dd1a}
+      \strng{authorbibnamehash}{7167798026dee376319381ec60b4dd1a}
+      \strng{authornamehash}{7167798026dee376319381ec60b4dd1a}
+      \strng{authorfullhash}{59c2e268701ca1b5b80b42e2f89938c7}
+      \strng{authorfullhashraw}{59c2e268701ca1b5b80b42e2f89938c7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Web and Grid Services}
+      \field{number}{4}
+      \field{title}{Blockchain challenges and opportunities: a survey}
+      \field{volume}{14}
+      \field{year}{2018}
+      \field{pages}{352\bibrangedash 375}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1504/IJWGS.2018.095647
+      \endverb
+    \endentry
+    \entry{Antonopoulos2018MasteringEthereum}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a8107494556af1100a132bb87b1cbd5d}{%
+           family={Antonopoulos},
+           familyi={A\bibinitperiod},
+           given={Andreas\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9f252fbc7b8ff3c128b3e8dd806afa9b}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={Gavin},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{0515da2a94d478608713cf3718d598f1}
+      \strng{fullhash}{0515da2a94d478608713cf3718d598f1}
+      \strng{fullhashraw}{0515da2a94d478608713cf3718d598f1}
+      \strng{bibnamehash}{0515da2a94d478608713cf3718d598f1}
+      \strng{authorbibnamehash}{0515da2a94d478608713cf3718d598f1}
+      \strng{authornamehash}{0515da2a94d478608713cf3718d598f1}
+      \strng{authorfullhash}{0515da2a94d478608713cf3718d598f1}
+      \strng{authorfullhashraw}{0515da2a94d478608713cf3718d598f1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1491971949}
+      \field{title}{Mastering Ethereum: Building Smart Contracts and DApps}
+      \field{year}{2018}
+    \endentry
+    \entry{Bartoletti2017EmpiricalAnalysis}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=2d02e0086a3b5333f3f804c853b6ae0a}{%
+           family={Bartoletti},
+           familyi={B\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=38e112a374a1c736080e6f725a62f7f4}{%
+           family={Pompianu},
+           familyi={P\bibinitperiod},
+           given={Livio},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{fullhash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{fullhashraw}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{bibnamehash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{authorbibnamehash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{authornamehash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{authorfullhash}{77692bbe364bf6a280f655d91b33aa1f}
+      \strng{authorfullhashraw}{77692bbe364bf6a280f655d91b33aa1f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Financial Cryptography and Data Security}
+      \field{title}{An Empirical Analysis of Smart Contracts: Platforms, Applications, and Design Patterns}
+      \field{year}{2017}
+      \field{pages}{494\bibrangedash 509}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-319-70278-0_31
+      \endverb
+    \endentry
+    \entry{Xu2019ArchitectingBlockchainApplications}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=268fd6e7a95a4d5d0ad195cf0a184d4c}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiwei},
+           giveni={X\bibinitperiod}}}%
+        {{hash=abc750fbcc7dcb3bfa0e713bc89d28ff}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0073d81416d89f2456421b06265dfe39}{%
+           family={Staples},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c10b260d67a13ae922e9d8c5819ce74d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Liming},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3903018fc17327f32ca2eb9248c90100}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=97196c0aaced1368c3042b9299a9b34b}{%
+           family={Bass},
+           familyi={B\bibinitperiod},
+           given={Len},
+           giveni={L\bibinitperiod}}}%
+        {{hash=72f4c42f181b1843dc1b20d49f768775}{%
+           family={Pautasso},
+           familyi={P\bibinitperiod},
+           given={Cesare},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0ae2c6115458d9e2350e17bd72824c10}{%
+           family={Rimba},
+           familyi={R\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e3e8ce512d55bf8efb207bffd5c1008}
+      \strng{fullhash}{2dd2a62ac2d4e98c49b8cb2b8baa8c2c}
+      \strng{fullhashraw}{2dd2a62ac2d4e98c49b8cb2b8baa8c2c}
+      \strng{bibnamehash}{5e3e8ce512d55bf8efb207bffd5c1008}
+      \strng{authorbibnamehash}{5e3e8ce512d55bf8efb207bffd5c1008}
+      \strng{authornamehash}{5e3e8ce512d55bf8efb207bffd5c1008}
+      \strng{authorfullhash}{2dd2a62ac2d4e98c49b8cb2b8baa8c2c}
+      \strng{authorfullhashraw}{2dd2a62ac2d4e98c49b8cb2b8baa8c2c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE International Conference on Software Architecture (ICSA)}
+      \field{title}{A Taxonomy of Blockchain-Based Systems for Architecture Design}
+      \field{year}{2019}
+      \field{pages}{243\bibrangedash 252}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ICSA.2017.33
+      \endverb
+    \endentry
+    \entry{SolidityDocs}{online}{}{}
+      \list{organization}{1}{%
+        {Ethereum Foundation}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Solidity Documentation}
       \field{urlday}{15}
-      \field{urlmonth}{11}
-      \field{urlyear}{2023}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
       \field{year}{2023}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://al-mindhar.com/
+      \verb https://docs.soliditylang.org/
       \endverb
       \verb{url}
-      \verb https://al-mindhar.com/
+      \verb https://docs.soliditylang.org/
+      \endverb
+    \endentry
+    \entry{EthersJSDocs}{online}{}{}
+      \list{organization}{1}{%
+        {ethers}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{ethers.js Documentation}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ethers.org/
+      \endverb
+      \verb{url}
+      \verb https://docs.ethers.org/
+      \endverb
+    \endentry
+    \entry{InfuraWeb3}{online}{}{}
+      \list{organization}{1}{%
+        {Consensys}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Infura Web3 API Documentation}
+      \field{urlday}{22}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.infura.io/
+      \endverb
+      \verb{url}
+      \verb https://docs.infura.io/
+      \endverb
+    \endentry
+    \entry{MetaMaskDocs}{online}{}{}
+      \list{organization}{1}{%
+        {ConsenSys}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{MetaMask Documentation}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.metamask.io/
+      \endverb
+      \verb{url}
+      \verb https://docs.metamask.io/
+      \endverb
+    \endentry
+    \entry{Bamakan2020BlockchainPayment}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8fe2689cbe09d4ee7ec0cb68ecf523f1}{%
+           family={Bamakan},
+           familyi={B\bibinitperiod},
+           given={Seyed\bibnamedelimb Mojtaba\bibnamedelima Hosseini},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=de098325d9007ed593b77c245afacd3b}{%
+           family={Motavali},
+           familyi={M\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9ad159685eb98ff71bd16dd95bdbfc0f}{%
+           family={Babaei\bibnamedelima Bondarti},
+           familyi={B\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{fullhash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{fullhashraw}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{bibnamehash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{authorbibnamehash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{authornamehash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{authorfullhash}{3bfd667c96976fe60cda07fb82c67914}
+      \strng{authorfullhashraw}{3bfd667c96976fe60cda07fb82c67914}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{title}{A survey of blockchain consensus algorithms performance evaluation criteria}
+      \field{volume}{154}
+      \field{year}{2020}
+      \field{pages}{113385}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2020.113385
+      \endverb
+    \endentry
+    \entry{Wohrer2018SmartContractApplications}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc3942405f8b24da639a20845b4c6057}{%
+           family={Wöhrer},
+           familyi={W\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8198ac91909ab35df0d2db932cb66483}{%
+           family={Zdun},
+           familyi={Z\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{fullhash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{fullhashraw}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{bibnamehash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{authorbibnamehash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{authornamehash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{authorfullhash}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \strng{authorfullhashraw}{c2fc5eb38d7cdbbcf69828111494a7cb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Workshop on Blockchain Oriented Software Engineering (IWBOSE)}
+      \field{title}{Smart contracts: security patterns in the ethereum ecosystem and solidity}
+      \field{year}{2018}
+      \field{pages}{2\bibrangedash 8}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/IWBOSE.2018.8327565
+      \endverb
+    \endentry
+    \entry{Dannen2017SoliditySmartContracts}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1482caac5d0fdcf3c7d4e44228bdb59e}{%
+           family={Dannen},
+           familyi={D\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{fullhash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{fullhashraw}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{bibnamehash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{authorbibnamehash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{authornamehash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{authorfullhash}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \strng{authorfullhashraw}{1482caac5d0fdcf3c7d4e44228bdb59e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1484225349}
+      \field{title}{Introducing Ethereum and Solidity: Foundations of Cryptocurrency and Blockchain Programming for Beginners}
+      \field{year}{2017}
+    \endentry
+    \entry{Wust2018BlockchainNeed}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=93f51612eb291d72b1f911d9c714e581}{%
+           family={Wüst},
+           familyi={W\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+        {{hash=044061dd8826f333066f6d1eed145f63}{%
+           family={Gervais},
+           familyi={G\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{fullhash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{fullhashraw}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{bibnamehash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{authorbibnamehash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{authornamehash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{authorfullhash}{f0c3ddaec66bb6c9060d1709d618393e}
+      \strng{authorfullhashraw}{f0c3ddaec66bb6c9060d1709d618393e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Crypto Valley Conference on Blockchain Technology (CVCBT)}
+      \field{title}{Do you need a Blockchain?}
+      \field{year}{2018}
+      \field{pages}{45\bibrangedash 54}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/CVCBT.2018.00011
+      \endverb
+    \endentry
+    \entry{Parizi2018SmartContractProgramming}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=8ee13bda3a9aa624880f1ab33f75c60a}{%
+           family={Parizi},
+           familyi={P\bibinitperiod},
+           given={Reza\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=013202c34f21e205bb277e697e5ffd5b}{%
+           family={Dehghantanha},
+           familyi={D\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b93f2a310bb2c20e877f1ec4a985c4bd}{%
+           family={Choo},
+           familyi={C\bibinitperiod},
+           given={Kim-Kwang\bibnamedelima Raymond},
+           giveni={K\bibinithyphendelim K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=752ec77a65891116ac57887f527e881d}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Amritraj},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6e5923b5d44888eb1fc1dedde5b160b}
+      \strng{fullhash}{a2bff4d8cd135e18ab48f66c2fcf38b0}
+      \strng{fullhashraw}{a2bff4d8cd135e18ab48f66c2fcf38b0}
+      \strng{bibnamehash}{c6e5923b5d44888eb1fc1dedde5b160b}
+      \strng{authorbibnamehash}{c6e5923b5d44888eb1fc1dedde5b160b}
+      \strng{authornamehash}{c6e5923b5d44888eb1fc1dedde5b160b}
+      \strng{authorfullhash}{a2bff4d8cd135e18ab48f66c2fcf38b0}
+      \strng{authorfullhashraw}{a2bff4d8cd135e18ab48f66c2fcf38b0}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{28th Annual International Conference on Computer Science and Software Engineering}
+      \field{title}{Empirical Vulnerability Analysis of Automated Smart Contracts Security Testing on Blockchains}
+      \field{year}{2018}
+      \field{pages}{103\bibrangedash 113}
+      \range{pages}{11}
+    \endentry
+    \entry{Casino2019BlockchainApplications}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9c08bd6394eb497ea4f80889f9cd1580}{%
+           family={Casino},
+           familyi={C\bibinitperiod},
+           given={Fran},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7839e1372a1f5081ba305b8b0b7e4330}{%
+           family={Dasaklis},
+           familyi={D\bibinitperiod},
+           given={Thomas\bibnamedelima K.},
+           giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=fb25a705ecb4db067d80a1f025858e97}{%
+           family={Patsakis},
+           familyi={P\bibinitperiod},
+           given={Constantinos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{fullhash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{fullhashraw}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{bibnamehash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{authorbibnamehash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{authornamehash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{authorfullhash}{bc1adb7928b523973ebd8d5a2be50c43}
+      \strng{authorfullhashraw}{bc1adb7928b523973ebd8d5a2be50c43}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Telematics and Informatics}
+      \field{title}{A systematic literature review of blockchain-based applications: Current status, classification and open issues}
+      \field{volume}{36}
+      \field{year}{2019}
+      \field{pages}{55\bibrangedash 81}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/j.tele.2018.11.006
+      \endverb
+    \endentry
+    \entry{Botha2021BackofficeBlockchain}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a8b33520ea425a8b9d3b2d666ca6d8a7}{%
+           family={Botha},
+           familyi={B\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5a65e1e966bf2523b74eff4ee493db15}{%
+           family={Schutte},
+           familyi={S\bibinitperiod},
+           given={Christiaan},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0cac9d1ae3aa20b84e8f74b0c7feffb3}{%
+           family={Steyn},
+           familyi={S\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff4a537425905071ae1df806d81630ae}
+      \strng{fullhash}{ff4a537425905071ae1df806d81630ae}
+      \strng{fullhashraw}{ff4a537425905071ae1df806d81630ae}
+      \strng{bibnamehash}{ff4a537425905071ae1df806d81630ae}
+      \strng{authorbibnamehash}{ff4a537425905071ae1df806d81630ae}
+      \strng{authornamehash}{ff4a537425905071ae1df806d81630ae}
+      \strng{authorfullhash}{ff4a537425905071ae1df806d81630ae}
+      \strng{authorfullhashraw}{ff4a537425905071ae1df806d81630ae}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{South African Journal of Industrial Engineering}
+      \field{number}{2}
+      \field{title}{An Architecture for Blockchain Back-Office Systems for Supply Chain Management using Business Process Model and Notation}
+      \field{volume}{32}
+      \field{year}{2021}
+      \field{pages}{59\bibrangedash 73}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.7166/32-2-2544
+      \endverb
+    \endentry
+    \entry{Andoni2019BlockchainOverview}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=d05005edc5812b93cd7b04597a0211d8}{%
+           family={Andoni},
+           familyi={A\bibinitperiod},
+           given={Merlinda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17eae82bf918cce6367751ff51cd57a6}{%
+           family={Robu},
+           familyi={R\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8203c46986abcdec01a47dbe2854f9f6}{%
+           family={Flynn},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=040b7c473c4a3f7a9466015f4d0c7e2a}{%
+           family={Abram},
+           familyi={A\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3c40c0ecba4e67646f087f6782db2fd2}{%
+           family={Geach},
+           familyi={G\bibinitperiod},
+           given={Dale},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2cfa9cf146c87f3c606e174664a17d30}{%
+           family={Jenkins},
+           familyi={J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=20566c66764b9044eed72e112d89facf}{%
+           family={McCallum},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=79a1af631bb5aee1a6baf85c693a6e47}{%
+           family={Peacock},
+           familyi={P\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ede6bc161c36b01f8aa6de0955d701}
+      \strng{fullhash}{6ef399527f31304b230c2a6d94eabecb}
+      \strng{fullhashraw}{6ef399527f31304b230c2a6d94eabecb}
+      \strng{bibnamehash}{69ede6bc161c36b01f8aa6de0955d701}
+      \strng{authorbibnamehash}{69ede6bc161c36b01f8aa6de0955d701}
+      \strng{authornamehash}{69ede6bc161c36b01f8aa6de0955d701}
+      \strng{authorfullhash}{6ef399527f31304b230c2a6d94eabecb}
+      \strng{authorfullhashraw}{6ef399527f31304b230c2a6d94eabecb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Renewable and Sustainable Energy Reviews}
+      \field{title}{Blockchain technology in the energy sector: A systematic review of challenges and opportunities}
+      \field{volume}{100}
+      \field{year}{2019}
+      \field{pages}{143\bibrangedash 174}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1016/j.rser.2018.10.014
       \endverb
     \endentry
   \enddatalist
-  \missing{ProductBacklogGuide2024}
 \endrefsection
 \endinput
 
