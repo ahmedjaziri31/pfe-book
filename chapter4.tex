@@ -11,7 +11,7 @@ This chapter explores the integration of artificial intelligence capabilities wi
 The AI features presented in this chapter represent a significant competitive advantage for our platform, enabling more accurate property valuations, personalized recommendations, intelligent assistance, and efficient administrative operations. Each model has been carefully designed to solve real-world challenges faced by users interacting with real estate data and transactions.
 
 \section{Data Collection and Scraping}
-\subsection{Overview}
+\subsection*{Overview}
 This section details the data collection processes implemented to gather the real estate market data required for our AI models. 
 
 \subsection{Real Estate Data Scraping}
@@ -57,28 +57,23 @@ could later be processed and used for training our prediction models.
     \end{minipage}
 \end{figure}
 
-
 Our scraping system uses a distributed architecture with the following components:
 \begin{itemize}
-    \item Rate-limiting and request throttling to respect website policies
-    \item Scheduled jobs for regular data updates
-    \item Data validation and cleaning pipelines
+    \item Scheduled jobs for regular data updates, Data validation and cleaning pipelines
 \end{itemize}
-\newpage
+
 \begin{figure}[htbp]
     \centering
     % Placeholder for a diagram of the scraping workchart
-    \includegraphics[width=0.55\textwidth]{images/workchartscraper.png}
+    \includegraphics[width=0.35\textwidth]{images/workchartscraper.png}
     \caption{Data Scraping workchart}
     \label{fig:scraping-workchart}
 \end{figure}
 
-
-
 \section{Property Valuation Prediction Model}
-\subsection{Overview}
+\subsection*{Overview}
 The Property Valuation Prediction Model is designed to estimate both the market value and potential rental income for real estate properties. This provides investors with crucial information to make informed investment decisions.
-\newpage
+
 \subsection{Requirements Analysis}
 \subsubsection{Use Case Diagram}
 The property valuation model serves multiple actors within the Korpor ecosystem. Figure \ref{fig:valuation-use-case} illustrates the primary use cases for the AI-powered property valuation system.
@@ -94,7 +89,7 @@ The property valuation model serves multiple actors within the Korpor ecosystem.
 
 \textbf{Use Case: Request Property Valuation}
 \begin{itemize}
-    \item \textbf{Actor}: User (representing Super Admin, Admin, and Real Estate Agent)
+    \item \textbf{Actor}: User (representing Super Admin, Admin, Real Estate Agent)
     \item \textbf{Precondition}: User is authenticated and has access to valuation features
     \item \textbf{Main Flow}: 
     \begin{enumerate}
@@ -188,7 +183,7 @@ The performance of the trained regression models was rigorously evaluated using 
 \newpage
 
 \subsubsection{Prediction Sequence Flow}
-The interaction sequence for the AI property valuation prediction model is depicted in Figure \ref{fig:ai-prediction-sequence}. This diagram illustrates the flow of requests and data between the user, the application frontend, the backend server, and the AI prediction service to generate a property valuation.
+The interaction sequence for the AI property valuation prediction model in Figure \ref{fig:ai-prediction-sequence}.
 
 \begin{figure}[htbp]
     \centering
@@ -199,14 +194,15 @@ The interaction sequence for the AI property valuation prediction model is depic
 
 
 \subsubsection{Prediction User Interface}
-The user interface for the property valuation prediction model is designed to be intuitive. Users input property details through a form, and the system displays the AI-generated valuation. Figure \ref{fig:prediction-form} shows the input form, and Figure \ref{fig:prediction-results} displays an example of the prediction results screen.
+Figure \ref{fig:prediction-form} shows the input form, and Figure \ref{fig:prediction-results} displays an example of the prediction results screen.
 
 \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.9\textwidth]{images/screenshot_form_predition.png}
+        \includegraphics[width=0.7\textwidth]{images/screenshot_form_predition.png}
         \caption{Property Details Input Form for Valuation}
         \label{fig:prediction-form}
 \end{figure}
+
 \newpage
 \begin{figure}[htbp]
         \centering
@@ -260,7 +256,7 @@ To ensure a seamless and reliable user experience on the mobile platform, the in
 \newpage
 
 \section{Real Estate Assistant (NLP Chatbot)}
-\subsection{Overview}
+\subsection*{Overview}
 The Real Estate Assistant is an intelligent NLP-powered chatbot designed to provide investors with instant access to real estate legal information and guidance. This AI assistant helps users understand complex legal concepts, property regulations, and investment procedures through natural language conversations.
 
 \subsection{Requirements Analysis}
@@ -360,27 +356,6 @@ The mobile chat interface provides an intuitive way for investors to interact wi
     \label{fig:assistant-mobile-chat}
 \end{figure}
 
-\subsubsection{Conversation Examples}
-Figure \ref{fig:assistant-conversation-examples} demonstrates typical interactions between investors and the AI assistant, showcasing the system's ability to provide relevant legal guidance.
-
-\begin{figure}[htbp]
-    \centering
-    % \includegraphics[width=0.8\textwidth]{images/assistant_conversation_examples.png}
-    \caption{Real Estate Assistant Conversation Examples}
-    \label{fig:assistant-conversation-examples}
-\end{figure}
-
-\subsubsection{Web Interface Integration}
-The assistant is also accessible through the web platform, providing consistent experience across devices. Figure \ref{fig:assistant-web-interface} shows the web chat implementation.
-
-\newpage
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\textwidth]{images/assistant_web_interface.png}
-    \caption{Web Interface for Real Estate Assistant}
-    \label{fig:assistant-web-interface}
-\end{figure}
 
 \subsection{Testing and Validation}
 \subsubsection{Test Scenarios}
@@ -411,8 +386,294 @@ The Real Estate Assistant underwent extensive testing to ensure accurate respons
 
 \newpage
 
-% \section{Role-Based Backoffice Agent}
-% \section{Investor-Focused Recommendation System}
+\section{Role-Based Backoffice Agent}
+\subsection*{Overview}
+The Role-Based Backoffice Agent is an intelligent AI system designed to assist different user roles (Super Admin, Admin, Real Estate Agent) with automated task management, workflow optimization, and decision support. This AI agent adapts its behavior and recommendations based on the specific role and responsibilities of the authenticated user.
+
+\subsection{Requirements Analysis}
+\subsubsection{Use Case Diagram}
+The Role-Based Backoffice Agent serves multiple user types with role-specific functionalities and automated assistance. Figure \ref{fig:backoffice-use-case} illustrates the main use cases for each role.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/backoffice_use_case_diagram.png}
+    \caption{Role-Based Backoffice Agent Use Case Diagram}
+    \label{fig:backoffice-use-case}
+\end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\textbf{Use Case: Automate Task Management}
+\begin{itemize}
+    \item \textbf{Actor}: User (representing Super Admin, Admin, Real Estate Agent)
+    \item \textbf{Precondition}: User is authenticated with specific role permissions
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item User accesses backoffice dashboard
+        \item System identifies user role and permissions
+        \item AI agent analyzes pending tasks and priorities
+        \item System suggests automated actions based on role
+        \item User approves or modifies suggested actions
+        \item System executes approved automated tasks
+    \end{enumerate}
+    \item \textbf{Alternative Flow}: If automation requires approval, system queues for manual review
+    \item \textbf{Postcondition}: Tasks are efficiently managed with minimal manual intervention
+\end{itemize}
+
+\textbf{Use Case: Provide Role-Specific Insights}
+\begin{itemize}
+    \item \textbf{Actor}: AI Agent
+    \item \textbf{Precondition}: User has accessed dashboard with specific role
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item System analyzes user role and current context
+        \item AI generates role-specific insights 
+        \item AI suggests optimization opportunities
+        \item System provides actionable recommendations
+    \end{enumerate}
+    \item \textbf{Postcondition}: User receives personalized insights for their role
+\end{itemize}
+
+\subsection{System Design}
+\subsubsection{Class Diagram}
+The Role-Based Backoffice Agent follows a role-based architecture with specialized services for each user type. Figure \ref{fig:backoffice-class-diagram} shows the main classes and their relationships.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/backoffice_class_diagram.png}
+    \caption{Role-Based Backoffice Agent Class Diagram}
+    \label{fig:backoffice-class-diagram}
+\end{figure}
+
+\subsubsection{Sequence Diagram (MVC)}
+The interaction flow between the web interface, role management services, and AI processing components is illustrated in Figure \ref{fig:backoffice-sequence-mvc}.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/backoffice_sequence_mvc.png}
+    \caption{Role-Based Backoffice Agent MVC Sequence Diagram}
+    \label{fig:backoffice-sequence-mvc}
+\end{figure}
+
+\subsection{Implementation}
+\subsubsection{Role-Based AI Logic}
+The Backoffice Agent utilizes sophisticated role-based AI algorithms to provide personalized assistance:
+
+\begin{itemize}
+    \item \textbf{Super Admin Features}: System monitoring, user management, platform analytics, security oversight
+    \item \textbf{Admin Features}: Property management, user support, content moderation, performance tracking
+    \item \textbf{Real Estate Agent Features}: Client management, property listings, sales tracking, commission calculations
+\end{itemize}
+
+\subsubsection{Automated Workflow Management}
+The system automates routine tasks based on role permissions:
+\begin{itemize}
+    \item Property approval workflows for admins
+    \item User verification processes for super admins
+    \item Client follow-up reminders for agents
+    \item Performance report generation for all roles
+\end{itemize}
+
+\newpage
+\subsubsection{Dashboard Implementation}
+Each role receives a customized dashboard with relevant tools and insights. Figure \ref{fig:backoffice-dashboard} shows the role-specific dashboard implementations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/assistant_web_interface.png}
+    \caption{Web Interface for Real Estate Assistant}
+    \label{fig:assistant-web-interface}
+\end{figure}
+
+
+\subsection{Testing and Validation}
+\subsubsection{Test Scenarios}
+The Role-Based Backoffice Agent underwent comprehensive testing across all user roles. Table \ref{tab:backoffice-test-scenarios} presents the key test scenarios.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|l|l|l|c|}
+        \hline
+        \textbf{Scenario} & \textbf{User Role} & \textbf{Expected Output} & \textbf{Status} \\
+        \hline
+        Role identification & Super Admin & Admin dashboard access & \checkmark \\
+        \hline
+        Task automation & Admin & Property approval workflow & \checkmark \\
+        \hline
+        Performance insights & Real Estate Agent & Sales analytics & \checkmark \\
+        \hline
+        Permission validation & Admin & Restricted super admin features & \checkmark \\
+        \hline
+        AI recommendations & All roles & Role-specific suggestions & \checkmark \\
+        \hline
+        Workflow management & Super Admin & System optimization tips & \checkmark \\
+        \hline
+    \end{tabular}
+    \caption{Role-Based Backoffice Agent Test Scenarios}
+    \label{tab:backoffice-test-scenarios}
+\end{table}
+\newpage
+\section{Investor-Focused Recommendation System}
+\subsection*{Overview}
+The Investor-Focused Recommendation System is an advanced AI model that analyzes investor behavior, preferences, and market conditions to provide personalized property investment recommendations. This system leverages machine learning algorithms to match investors with optimal investment opportunities based on their risk profile, budget, and investment goals.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/collaborative_filtring.png}
+    \caption{Collaborative Filtering Recommendation System Overview}
+    \label{fig:collaborative-filtering-overview}
+\end{figure}
+
+\subsection{Requirements Analysis}
+\subsubsection{Use Case Diagram}
+The Recommendation System serves investors by analyzing their profiles and suggesting suitable investment opportunities. Figure \ref{fig:recommendation-use-case} illustrates the main use cases for the recommendation engine.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/recommendation_use_case_diagram.png}
+    \caption{Investor-Focused Recommendation System Use Case Diagram}
+    \label{fig:recommendation-use-case}
+\end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\textbf{Use Case: Generate Investment Recommendations}
+\begin{itemize}
+    \item \textbf{Actor}: User (Investor)
+    \item \textbf{Precondition}: Investor has completed profile setup and preferences
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item Investor accesses recommendations section
+        \item System analyzes investor profile and preferences
+        \item AI processes available investment opportunities
+        \item System matches properties with investor criteria
+        \item AI ranks recommendations by compatibility score
+        \item System presents personalized investment suggestions
+    \end{enumerate}
+    \item \textbf{Alternative Flow}: If no suitable matches, system suggests expanding criteria
+    \item \textbf{Postcondition}: Investor receives tailored investment recommendations
+\end{itemize}
+
+\textbf{Use Case: Update Investment Preferences}
+\begin{itemize}
+    \item \textbf{Actor}: Investor
+    \item \textbf{Precondition}: Investor is authenticated and has existing profile
+    \item \textbf{Main Flow}: 
+    \begin{enumerate}
+        \item Investor accesses preference settings
+        \item User modifies risk tolerance, budget, or location preferences
+        \item System validates and saves updated preferences
+        \item AI recalculates recommendation algorithms
+        \item System generates new recommendations based on updated profile
+    \end{enumerate}
+    \item \textbf{Postcondition}: Recommendations are updated to reflect new preferences
+\end{itemize}
+
+\subsection{System Design}
+\subsubsection{Class Diagram}
+The Recommendation System uses collaborative filtering and content-based algorithms for personalized suggestions. Figure \ref{fig:recommendation-class-diagram} shows the main classes and their relationships.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{images/recommendation_class_diagram.png}
+    \caption{Investor-Focused Recommendation System Class Diagram}
+    \label{fig:recommendation-class-diagram}
+\end{figure}
+
+\subsubsection{Sequence Diagram (MVC)}
+The interaction flow between the mobile interface, recommendation engine, and machine learning components is illustrated in Figure \ref{fig:recommendation-sequence-mvc}.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=1\textwidth]{images/recommendation_sequence_mvc.png}
+    \caption{Recommendation System MVC Sequence Diagram}
+    \label{fig:recommendation-sequence-mvc}
+\end{figure}
+
+\subsection{Implementation}
+\subsubsection{Machine Learning Algorithms}
+The Recommendation System employs multiple ML techniques for optimal suggestions:
+
+\begin{itemize}
+    \item \textbf{Collaborative Filtering}: Analyzes similar investor behaviors and preferences
+    \item \textbf{Content-Based Filtering}: Matches properties based on investor criteria
+    \item \textbf{Hybrid Approach}: Combines multiple algorithms for enhanced accuracy
+    \item \textbf{Deep Learning}: Neural networks for complex pattern recognition
+\end{itemize}
+
+\subsubsection{Investor Profiling}
+The system creates comprehensive investor profiles including:
+\begin{itemize}
+    \item Risk tolerance assessment
+    \item Investment budget and timeline
+    \item Geographic preferences
+    \item Property type preferences
+    \item Previous investment history
+    \item Market behavior analysis
+\end{itemize}
+
+\subsubsection{Mobile Recommendations Interface}
+The mobile app provides an intuitive interface for viewing personalized recommendations. Figure \ref{fig:recommendation-mobile} shows the mobile recommendation implementation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/recommendation_mobile.png}
+    \caption{Mobile Interface for Investment Recommendations}
+    \label{fig:recommendation-mobile}
+\end{figure}
+
+\subsubsection{Recommendation Algorithm Visualization}
+The system provides transparency in recommendation logic through visual explanations. Figure \ref{fig:recommendation-algorithm} demonstrates how recommendations are generated and explained to users.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{images/recommendation_algorithm.png}
+    \caption{Recommendation Algorithm Visualization}
+    \label{fig:recommendation-algorithm}
+\end{figure}
+
+\subsubsection{Personalized Dashboard}
+Investors receive a personalized dashboard with recommendations and portfolio insights. Figure \ref{fig:recommendation-dashboard} shows the recommendation dashboard design.
+
+
+\subsection{Testing and Validation}
+\subsubsection{Test Scenarios}
+The Recommendation System underwent extensive testing to ensure accuracy and relevance. Table \ref{tab:recommendation-test-scenarios} presents the key test scenarios.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|l|l|l|c|}
+        \hline
+        \textbf{Scenario} & \textbf{Input} & \textbf{Expected Output} & \textbf{Status} \\
+        \hline
+        New investor profile & Basic preferences & Relevant recommendations & \checkmark \\
+        \hline
+        Preference update & Changed risk tolerance & Updated suggestions & \checkmark \\
+        \hline
+        Budget constraint & Limited budget & Affordable options & \checkmark \\
+        \hline
+         Location preference & Specific city & Local properties & \checkmark \\
+        \hline
+        Algorithm accuracy & Historical data & High precision score & \checkmark \\
+        \hline
+        Performance optimization & Large dataset & Fast response time & \checkmark \\
+        \hline
+    \end{tabular}
+    \caption{Recommendation System Test Scenarios}
+    \label{tab:recommendation-test-scenarios}
+\end{table}
+
+
+\subsubsection{Mobile App Testing (Maestro)}
+The mobile recommendation interface underwent thorough testing using Maestro to ensure optimal user experience. Figure \ref{fig:maestro-recommendation} shows the successful test execution.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{images/maestro_recommendation_tests.png}
+    \caption{Maestro Test Results for Recommendation System}
+    \label{fig:maestro-recommendation}
+\end{figure}
+
 
 
 

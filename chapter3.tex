@@ -16,7 +16,7 @@ Our first sprint focused on establishing essential foundational components of th
 \end{itemize}
 
 \section{Sprint 1: Authentication and User Management }
-\subsection{Overview}
+\subsection*{Overview}
 The first sprint focuses on establishing the core authentication system and user management functionality. This foundation is critical for all subsequent features as it defines user roles and access controls.
 
 
@@ -26,11 +26,12 @@ The Authentication and User Management system forms the backbone of Korpor's sec
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file path
-    \includegraphics[width=0.9\textwidth]{images/auth-usermgmt-usecase.png} 
+    % \includegraphics[width=0.9\textwidth]{images/auth-usermgmt-usecase.png} 
     \caption{Global Use Case Diagram for Authentication and User Management}
     \label{fig:auth-usermgmt-usecase}
 \end{figure}
 \newpage
+
 
 \subsubsection{Sign-up Process}
 The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The diagram shows the authentication flow for new users registering in the system.
@@ -193,27 +194,83 @@ The Super Admin dashboard provides comprehensive user management capabilities, i
 \end{figure}
 
 \subsection{Mobile Application Interfaces}
-The mobile application provides a streamlined authentication experience for investors. The login and sign-up interfaces are designed for clarity and ease of use on mobile devices, as shown in Figure \ref{fig:mobile-auth-interfaces}.
+The mobile application provides a streamlined authentication experience for investors. The system includes comprehensive error handling to guide users through common authentication issues, as shown in Figure \ref{fig:mobile-auth-errors}. The complete authentication flow includes login, signup, OTP verification, and password recovery interfaces designed for clarity and ease of use on mobile devices, as shown in Figure \ref{fig:mobile-auth-interfaces}.
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_invalidemailorpass.png}
+        \caption{Invalid Email or Password Error}
+        \label{fig:mobile-invalid-credentials}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_emptyfieldsmessage.png}
+        \caption{Empty Fields Validation Error}
+        \label{fig:mobile-empty-fields}
+    \end{subfigure}
+    \caption{Authentication Validation Messages}
+    \label{fig:mobile-auth-errors}
+\end{figure}
+% \subsubsection{Complete invastor Authentication Flow}
+
 
 \begin{figure}[htbp]
     \centering
-    % Replace with actual image file path
-    % \includegraphics[width=0.9\textwidth]{images/mobile-auth-screens.png} 
-    \caption{Mobile Application Login and Sign-up Interfaces}
+    % First row - 3 screens
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_login.png}
+        \caption{Login Screen}
+        \label{fig:mobile-login}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_signup.png}
+        \caption{Signup Screen}
+        \label{fig:mobile-signup}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_otp.png}
+        \caption{OTP Verification Screen}
+        \label{fig:mobile-otp}
+    \end{subfigure}
+    
+    \vspace{0.5cm} % Add some vertical space between rows
+    
+    % Second row - 2 screens (centered)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_forgetpassword.png}
+        \caption{Forgot Password Screen}
+        \label{fig:mobile-forgot-password}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/mobile-auth-screen_newpassword.png}
+        \caption{New Password Screen}
+        \label{fig:mobile-new-password}
+    \end{subfigure}
+    \caption{Complete Mobile Application Authentication Flow}
     \label{fig:mobile-auth-interfaces}
 \end{figure}
-\newpage % Ensures the next section starts on a new page if needed
+
+\newpage
 
 \subsection{Testing Validation}
 To ensure the reliability and functionality of the authentication and user management system, we implemented comprehensive testing using Playwright, an end-to-end testing framework \cite{PlaywrightDocs2023}.
 
 \subsubsection{Playwright Test Results}
 The authentication system underwent rigorous testing through automated test scripts that verified all key functionality, including sign-up, sign-in, password reset, and user management operations. Figure \ref{fig:playwright-tests} demonstrates the successful execution of these tests.
-% \newpage
 \begin{figure}[htbp]
     \centering
     % Add correct path when available
-    \includegraphics[width=0.75\textwidth]{images/playwright-test-results.png}
+    \includegraphics[width=0.65\textwidth]{images/playwright-test-results.png}
     \caption{Playwright Test Results for Authentication System}
     \label{fig:playwright-tests}
 \end{figure}

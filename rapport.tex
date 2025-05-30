@@ -17,6 +17,7 @@
 \usepackage{lipsum} % For dummy text if needed
 \usepackage{enumitem} % For better list control
 \usepackage{caption} % For caption styling
+\usepackage{subcaption} % For subfigures
 \usepackage{setspace} % For line spacing control
 \usepackage{pifont} % For decorative symbols
 \usepackage{tikz} % For drawing fancy elements
@@ -313,8 +314,8 @@
     ([yshift=-1.5cm]current page.north east);
   % Draw a matching line at bottom of page  
   \draw[color=accent, line width=0.5pt] 
-    ([yshift=1.5cm]current page.south west) -- 
-    ([yshift=1.5cm]current page.south east);
+    ([yshift=0.7cm]current page.south west) -- 
+    ([yshift=0.7cm]current page.south east);
 \end{tikzpicture}
 
 \begin{center}
@@ -349,8 +350,8 @@
     ([yshift=-1.5cm]current page.north east);
   % Draw a matching line at bottom of page  
   \draw[color=accent, line width=0.5pt] 
-    ([yshift=1.5cm]current page.south west) -- 
-    ([yshift=1.5cm]current page.south east);
+    ([yshift=0.7cm]current page.south west) -- 
+    ([yshift=0.7cm]current page.south east);
 \end{tikzpicture}
 
 \begin{center}

@@ -2445,28 +2445,24 @@
     <bcf:citekey order="54" intorder="1">MySQLWebsite</bcf:citekey>
     <bcf:citekey order="55" intorder="1">TailwindWebsite</bcf:citekey>
     <bcf:citekey order="56" intorder="1">PlaywrightDocs2023</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">Nakamoto2008Bitcoin</bcf:citekey>
-    <bcf:citekey order="57" intorder="2">Tapscott2016Blockchain</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">Veuger2018RealEstateBlockchain</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">Buterin2014Ethereum</bcf:citekey>
-    <bcf:citekey order="59" intorder="2">Szabo1997SmartContracts</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Zheng2018BlockchainChallenges</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">Antonopoulos2018MasteringEthereum</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">Bartoletti2017EmpiricalAnalysis</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">Xu2019ArchitectingBlockchainApplications</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">SolidityDocs</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">EthersJSDocs</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">InfuraWeb3</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">MetaMaskDocs</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">Bamakan2020BlockchainPayment</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Szabo1997SmartContracts</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">Wohrer2018SmartContractApplications</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">Dannen2017SoliditySmartContracts</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Wust2018BlockchainNeed</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">Parizi2018SmartContractProgramming</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">Casino2019BlockchainApplications</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">Botha2021BackofficeBlockchain</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">Andoni2019BlockchainOverview</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Tapscott2016Blockchain</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">Nakamoto2008Bitcoin</bcf:citekey>
+    <bcf:citekey order="58" intorder="2">Tapscott2016Blockchain</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Veuger2018RealEstateBlockchain</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Buterin2014Ethereum</bcf:citekey>
+    <bcf:citekey order="60" intorder="2">Szabo1997SmartContracts</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">Zheng2018BlockchainChallenges</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Antonopoulos2018MasteringEthereum</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">Bartoletti2017EmpiricalAnalysis</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">Xu2019ArchitectingBlockchainApplications</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">SolidityDocs</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">EthersJSDocs</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">InfuraWeb3</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">MetaMaskDocs</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Bamakan2020BlockchainPayment</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Szabo1997SmartContracts</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">Wohrer2018SmartContractApplications</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">Dannen2017SoliditySmartContracts</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
