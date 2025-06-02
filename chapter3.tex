@@ -1,36 +1,25 @@
-\chapter{Foundation}
+\chapter{AUTHENTICATION \& USER MANAGEMENT}
 
 \section*{Introduction}
-This chapter details the implementation phase of our project, which follows an agile methodology with four sprints. Each sprint focuses on delivering specific features and functionality according to the project backlog. The implementation utilizes a modern tech stack consisting of React \cite{ReactWebsite} with Vite \cite{ViteJSWebsite} for the frontend, Node.js \cite{NodeJSWebsite} with Express.js \cite{ExpressJSWebsite} for the backend, MySQL \cite{MySQLWebsite} for database management, and Tailwind CSS \cite{TailwindWebsite} for styling.
+\addcontentsline{toc}{section}{Introduction}
+This chapter presents the authentication and user management system, which forms the security foundation of the Korpor platform. The implementation covers user registration, role-based access control, and comprehensive authentication workflows for both web and mobile interfaces.
 
-Our first sprint focused on establishing essential foundational components of the system, with the following key deliverables:
+ 
+\section{Sprint 1: Authentication and User Management}
 
-\subsection{Web Backoffice Authentication}
-\begin{itemize}
-    \item Admin dashboard login and authentication system
-    \item Role-based access control for backoffice users (Super Admin, Admin, Agent)
-    \item User management interface for creating and managing user accounts
-    \item Permission management system for different user roles
-    \item Security logs and audit trails for backoffice activities
-    \item Session management and secure token handling
-\end{itemize}
-
-\section{Sprint 1: Authentication and User Management }
-\subsection*{Overview}
+\subsection*{Introduction}
 The first sprint focuses on establishing the core authentication system and user management functionality. This foundation is critical for all subsequent features as it defines user roles and access controls.
 
-
-\subsection{Authentication and User Management System}
+\subsection{Analysis}
 The Authentication and User Management system forms the backbone of Korpor's security and user interaction model. It encompasses processes for user registration with role assignment, secure login with session and token management, password recovery mechanisms, and session termination. Figure \ref{fig:auth-usermgmt-usecase} illustrates the global use cases for these core functionalities.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file path
-    % \includegraphics[width=0.9\textwidth]{images/auth-usermgmt-usecase.png} 
+    \includegraphics[width=0.9\textwidth]{images/auth-usermgmt-usecase.png} 
     \caption{Global Use Case Diagram for Authentication and User Management}
     \label{fig:auth-usermgmt-usecase}
 \end{figure}
-\newpage
 
 
 \subsubsection{Sign-up Process}
@@ -49,7 +38,6 @@ If the information is invalid, the user is prompted to correct the form. If the 
 
 Upon successful email verification, the system redirects the user to an "email verification code" page or a similar confirmation step. The Super Admin is then involved in a two-step verification process. If the Super Admin accepts the user, their login is enabled. If the Super Admin refuses the user, the user's account is deleted. If the initial email verification step fails (e.g., there's an issue with the verification code), an error message is displayed to the user.
 
-\newpage
 
 \begin{figure}[ht!]
     \centering
@@ -77,10 +65,7 @@ The login process allows existing users to access the system. The table below de
         Precondition & User has an existing, verified account. User is on the login page. \\
         \hline
         Main Scenario & 
-        1. User enters their credentials (e.g., email and password).
-        2. User clicks the login button.
-        3. System verifies the credentials.
-        4. If credentials are valid, the system grants access and redirects the user to their respective dashboard. \\
+        User submits their valid credentials. \\
         \hline
         Postcondition & User is successfully logged into the system and can access features based on their role. \\
         \hline
@@ -98,6 +83,7 @@ The login process allows existing users to access the system. The table below de
 \subsubsection{Manage Users Process}
 The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case.
 
+
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|l|p{0.7\textwidth}|}
@@ -111,11 +97,7 @@ The user management process enables administrators to create, view, update, and 
         Precondition & Actor is logged into the system with appropriate administrative privileges. \\
         \hline
         Main Scenario & 
-        1. Actor navigates to the user management section.
-        2. To create a user: Actor fills in user details (name, email, role, etc.) and submits the form. System creates the new user account.
-        3. To view users: System displays a list of users. Actor can search/filter the list.
-        4. To update a user: Actor selects a user, modifies their details, and saves the changes. System updates the user account.
-        5. To delete a user: Actor selects a user and confirms deletion. System deactivates or deletes the user account. \\
+        Super Admin assigns a role to a user. \\
         \hline
         Postcondition & User account is created, updated, or deleted as per the action taken. The list of users reflects the changes. \\
         \hline
@@ -132,6 +114,8 @@ The user management process enables administrators to create, view, update, and 
 
 
 The sign-up process includes user registration, role assignment, and account verification steps. During registration, users are categorized into one of the three user types: Super Admin, Admin, or Agent, with each type having different permissions and access levels within the system.
+
+\subsection{Modeling}
 
 \newpage    
 
@@ -158,7 +142,7 @@ Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentica
     \item \textbf{BlacklistedToken}: Stores tokens that have been invalidated (e.g., after logout or password change) with attributes like id, token, and expiresAt. It includes methods like isBlacklisted and cleanupExpired. The \textbf{AuthController} uses this to validate tokens, and \textbf{AuthMiddleware} checks against it.
 \end{itemize}
 
-\subsection{Implementation Interfaces}
+\subsection{Implementation}
 The implementation of the authentication and user management system resulted in the following key user interfaces:
 
 \subsubsection{Sign-in Interface}
@@ -193,7 +177,6 @@ The Super Admin dashboard provides comprehensive user management capabilities, i
     \label{fig:user-management}
 \end{figure}
 
-\subsection{Mobile Application Interfaces}
 The mobile application provides a streamlined authentication experience for investors. The system includes comprehensive error handling to guide users through common authentication issues, as shown in Figure \ref{fig:mobile-auth-errors}. The complete authentication flow includes login, signup, OTP verification, and password recovery interfaces designed for clarity and ease of use on mobile devices, as shown in Figure \ref{fig:mobile-auth-interfaces}.
 \begin{figure}[htbp]
     \centering
@@ -214,43 +197,43 @@ The mobile application provides a streamlined authentication experience for inve
     \label{fig:mobile-auth-errors}
 \end{figure}
 % \subsubsection{Complete invastor Authentication Flow}
-
+\newpage 
 
 \begin{figure}[htbp]
     \centering
     % First row - 3 screens
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/mobile-auth-screen_login.png}
         \caption{Login Screen}
         \label{fig:mobile-login}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/mobile-auth-screen_signup.png}
         \caption{Signup Screen}
         \label{fig:mobile-signup}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/mobile-auth-screen_otp.png}
-        \caption{OTP Verification Screen}
+        \caption{OTP Screen}
         \label{fig:mobile-otp}
     \end{subfigure}
     
     \vspace{0.5cm} % Add some vertical space between rows
     
     % Second row - 2 screens (centered)
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.24\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/mobile-auth-screen_forgetpassword.png}
         \caption{Forgot Password Screen}
         \label{fig:mobile-forgot-password}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.24\textwidth}
         \centering
         \includegraphics[width=\textwidth]{images/mobile-auth-screen_newpassword.png}
         \caption{New Password Screen}
@@ -262,7 +245,7 @@ The mobile application provides a streamlined authentication experience for inve
 
 \newpage
 
-\subsection{Testing Validation}
+\subsection{Test}
 To ensure the reliability and functionality of the authentication and user management system, we implemented comprehensive testing using Playwright, an end-to-end testing framework \cite{PlaywrightDocs2023}.
 
 \subsubsection{Playwright Test Results}
@@ -277,6 +260,38 @@ The authentication system underwent rigorous testing through automated test scri
 
 
 All tests passed successfully, confirming the robustness of the implemented authentication system.
+
+\subsection{Retrospective}
+
+The authentication and user management sprint provided valuable insights into system development and team collaboration. Table \ref{tab:auth-retrospective} summarizes the key achievements, challenges, and lessons learned during this sprint.
+\newpage
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Category} & \textbf{Details} \\
+        \hline
+        \textbf{What Went Well} & 
+        \begin{itemize}
+            \item Successfully implemented secure authentication flow
+            \item Role-based access control working as expected
+            \item Mobile interface provides excellent user experience
+            \item All planned test scenarios passed
+            \item Strong team collaboration throughout the sprint
+        \end{itemize} \\
+        \hline
+        \textbf{Challenges} & 
+        \begin{itemize}
+            \item Initial complexity in setting up JWT token management
+            \item Integration testing required more time than estimated
+            \item Email verification system configuration challenges
+            \item Balancing security requirements with user experience
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \caption{Authentication Sprint Retrospective Summary}
+    \label{tab:auth-retrospective}
+\end{table}
 
 \section*{Conclusion}
 

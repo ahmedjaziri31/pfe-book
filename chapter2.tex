@@ -24,7 +24,6 @@ We define actors as a shorthand for the roles played by entities outside the sys
 
 \subsection{Functional Requirements}
 
-\addtocontents{toc}{\protect\newpage}
 After several meetings with our client, the various functional requirements of our application are illustrated as follows:
 
 \subsubsection{For the Super Admin (Korpor)}
@@ -165,6 +164,7 @@ The work was carried out by a laptop computer that is equipped with these detail
     \label{tab:physical-env}
 \end{table}
 
+
 \subsection{Used technologies}
 
 % Define a command for technology icons to make it easier to adjust if needed
@@ -264,6 +264,8 @@ GitHub \cite{GithubWebsite} was utilized for version control, employing a struct
     \label{fig:git-workflow}
 \end{figure}
 
+
+\addtocontents{toc}{\protect\newpage}
 \section{Product backlog}
 
 The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project requirements \cite{SchwarzScrum2019}. It includes the following fields:
@@ -380,27 +382,25 @@ Table \ref{tab:product-backlog} shows the product backlog for our Korpor project
     % AI & Machine Learning Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{AI \& Machine Learning Features}}} \\
     \hline
-    PB029 & AI System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
+    PB029 & Recommendation System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
     \hline
-    PB030 & AI Prediction & As the System, I want to predict property valuations and rental prices & Should \\
+    PB030 & Prediction System & As the System, I want to predict property valuations and rental prices & Should \\
     \hline
-    PB031 & AI Forecasting & As the System, I want to forecast potential investment returns & Should \\
+    PB031 & Chatbot & As the System, I want to provide real estate legal information via NLP & Should \\
     \hline
-    PB032 & NLP Integration & As the System, I want to provide real estate legal information via NLP & Could \\
+    PB032 & administrative chatbot & As the System, I want to provide real time data from database & Could \\
     \hline
     
     % Blockchain & Smart Contract Features section
     \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Blockchain: Smart Contract Features}}} \\
     \hline
-    PB033 & Blockchain & As the System, I want to create and manage virtual contracts for transactions \cite{WangBlockchainRealEstate2023} & Must \\
+    PB033 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
     \hline
-    PB034 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
+    PB034 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
     \hline
-    PB035 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
+    PB035 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
     \hline
-    PB036 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
-    \hline
-    PB037 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
+    PB036 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
     \hline
 \end{longtable}
 
@@ -413,9 +413,60 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
 
 \begin{figure}[htbp]
     \centering
-    % Replace with actual image file once available
-    \includegraphics[width=0.7\textwidth]{images/gantt-chart.png}
-    \caption{GANTT chart with sprint planning}
+    \resizebox{\textwidth}{!}{%
+    \begin{ganttchart}[
+        % Chart style configuration
+        hgrid,
+        vgrid,
+        time slot format=isodate,
+        x unit=4mm,
+        y unit title=8mm,
+        y unit chart=6mm,
+        title height=1,
+        % Colors and styles
+        title/.append style={fill=primary!10, font=\small\bfseries},
+        bar/.append style={fill=primary!70},
+        bar label font=\small\bfseries,
+        milestone/.append style={fill=accent, rounded corners=2pt},
+        group/.append style={fill=primary!30}
+    ]{2025-02-01}{2025-05-31}
+    
+    % Time axis with month increments
+    \gantttitlecalendar{year, month=shortname} \\
+    
+    % Sprint 1 (Feb 1-14, 2 weeks)
+    \ganttbar{Sprint 1}{2025-02-01}{2025-02-14} \\
+    
+    % Sprint 2 (Feb 15-21, 1 week)
+    \ganttbar{Sprint 2}{2025-02-15}{2025-02-21} \\
+    
+    % Sprint 3 (Feb 22-Mar 7, 2 weeks)
+    \ganttbar{Sprint 3}{2025-02-22}{2025-03-07} \\
+    
+    % Sprint 4 (Mar 8-15, 1 week)
+    \ganttbar{Sprint 4}{2025-03-08}{2025-03-15} \\
+    
+    % Sprint 5 (Mar 15-28, 2 weeks)
+    \ganttbar{Sprint 5}{2025-03-15}{2025-03-28} \\
+    
+    % Sprint 6 (Mar 29-Apr 4, 1 week)
+    \ganttbar{Sprint 6}{2025-03-29}{2025-04-04} \\
+    
+    % Sprint 7 (Apr 5-18, 2 weeks)
+    \ganttbar{Sprint 7}{2025-04-05}{2025-04-18} \\
+    
+    % Sprint 8 (Apr 19-May 2, 2 weeks)
+    \ganttbar{Sprint 8}{2025-04-19}{2025-05-02} \\
+    
+    % Sprint 9 (May 3-16, 2 weeks)
+    \ganttbar{Sprint 9}{2025-05-03}{2025-05-16} \\
+    
+    % Sprint 10 (May 17-30, 2 weeks)
+    \ganttbar{Sprint 10}{2025-05-17}{2025-05-30} \\
+    
+    \end{ganttchart}
+    }
+    \caption{GANTT chart with sprint planning (February - May 2025)}
     \label{fig:gantt-chart}
 \end{figure}
 

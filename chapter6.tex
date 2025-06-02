@@ -1,3 +1,330 @@
-\chapter{Investment Features}
+\chapter{Platform Operations}
 
-\section*{Introduction} 
+\chapterquote{The best investment on earth is earth.}{Louis Glickman}
+
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+This chapter presents the core investment features that complement the AI capabilities and blockchain infrastructure of the Korpor platform. These features focus on enhancing the investor experience through comprehensive property management, portfolio tracking, and communication systems. The implementation covers property listing management, investment portfolio analytics, and automated notification systems for both web and mobile interfaces.
+
+\section{Sprint 8: Property Management}
+
+\subsection{Introduction}
+The Property Management sprint focuses on establishing comprehensive property listing and management functionality. This foundation enables real estate agents and administrators to efficiently manage property portfolios, update listings, and maintain property information across the platform.
+
+\subsection{Analysis}
+\subsubsection{Use Case Diagram}
+The property management system serves multiple actors within the Korpor ecosystem, including real estate agents, administrators, and property owners.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/property_management_use_case.png}
+%     \caption{Property Management Use Case Diagram}
+%     \label{fig:property-management-use-case}
+% \end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Manage Property Listings} \\
+        \hline
+        \textbf{Actor} & Real Estate Agent, Administrator \\
+        \hline
+        \textbf{Precondition} & User is authenticated with appropriate permissions \\
+        \hline
+        \textbf{Main Scenario} & User creates, updates, or removes property listings \\
+        \hline
+        \textbf{Postcondition} & Property information is updated and available to investors \\
+        \hline
+    \end{tabular}
+    \caption{Property Management Use Case Description}
+    \label{tab:property-management-use-case}
+\end{table}
+
+\subsection{Modeling}
+\subsubsection{Class Diagram}
+The property management system follows object-oriented design principles with entities for properties, listings, and management operations.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{images/property_management_class_diagram.png}
+%     \caption{Property Management Class Diagram}
+%     \label{fig:property-management-class}
+% \end{figure}
+
+\subsubsection{Sequence Diagram}
+The interaction sequence demonstrates the flow between user interface, backend services, and database operations for property management tasks.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=1\textwidth]{images/property_management_sequence.png}
+%     \caption{Property Management Sequence Diagram}
+%     \label{fig:property-management-sequence}
+% \end{figure}
+
+\subsection{Implementation}
+\subsubsection{Property CRUD Operations}
+The implementation includes comprehensive Create, Read, Update, and Delete operations for property management with advanced filtering and search capabilities.
+
+\subsubsection{Media Management}
+Property images and documents are managed through secure upload and storage systems with thumbnail generation and compression optimization.
+
+\subsubsection{Property Status Tracking}
+Real-time tracking of property availability, investment status, and funding progress with automated status updates.
+
+\subsection{Test}
+\subsubsection{Functional Testing}
+Comprehensive testing of all property management operations including creation, modification, and deletion workflows across different user roles.
+
+\subsubsection{Performance Testing}
+Load testing for property search and filtering operations to ensure optimal performance with large property datasets.
+
+\subsection{Retrospective}
+
+The Property Management sprint successfully delivered comprehensive property administration capabilities. Table \ref{tab:property-management-retrospective} summarizes the key achievements and future improvements.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Category} & \textbf{Details} \\
+        \hline
+        \textbf{What Went Well} & 
+        \begin{itemize}
+            \item Successfully implemented full CRUD operations for properties
+            \item Media management system works efficiently
+            \item Search and filtering provide excellent user experience
+            \item Role-based access control functions properly
+        \end{itemize} \\
+        \hline
+        \textbf{Action Items} & 
+        \begin{itemize}
+            \item Implement advanced property comparison features
+            \item Add bulk property import/export functionality
+            \item Enhance property analytics and reporting
+            \item Integrate with external property databases
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \caption{Property Management Sprint Retrospective Summary}
+    \label{tab:property-management-retrospective}
+\end{table}
+
+\newpage
+
+\section{Sprint 9: Investor Portfolio}
+
+\subsection{Introduction}
+The Investor Portfolio sprint focuses on providing comprehensive investment tracking and portfolio management capabilities. This enables investors to monitor their investments, track performance, and analyze their real estate portfolio across multiple projects and properties.
+
+\subsection{Analysis}
+\subsubsection{Use Case Diagram}
+The portfolio system serves investors by providing detailed analytics, performance tracking, and investment management tools.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/investor_portfolio_use_case.png}
+%     \caption{Investor Portfolio Use Case Diagram}
+%     \label{fig:investor-portfolio-use-case}
+% \end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Track Investment Portfolio} \\
+        \hline
+        \textbf{Actor} & Investor \\
+        \hline
+        \textbf{Precondition} & Investor has active investments in the platform \\
+        \hline
+        \textbf{Main Scenario} & Investor views portfolio performance and investment analytics \\
+        \hline
+        \textbf{Postcondition} & Comprehensive portfolio insights are displayed \\
+        \hline
+    \end{tabular}
+    \caption{Investor Portfolio Use Case Description}
+    \label{tab:investor-portfolio-use-case}
+\end{table}
+
+\subsection{Modeling}
+\subsubsection{Class Diagram}
+The portfolio system architecture includes entities for investments, performance metrics, and analytics calculations.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{images/investor_portfolio_class_diagram.png}
+%     \caption{Investor Portfolio Class Diagram}
+%     \label{fig:investor-portfolio-class}
+% \end{figure}
+
+\subsubsection{Sequence Diagram}
+The interaction flow demonstrates portfolio data retrieval, calculation processes, and visualization generation.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=1\textwidth]{images/investor_portfolio_sequence.png}
+%     \caption{Investor Portfolio Sequence Diagram}
+%     \label{fig:investor-portfolio-sequence}
+% \end{figure}
+
+\subsection{Implementation}
+\subsubsection{Portfolio Analytics Engine}
+Advanced analytics engine calculating ROI, performance metrics, diversification indices, and risk assessments for investor portfolios.
+
+\subsubsection{Investment Tracking}
+Real-time tracking of investment performance, rental income distribution, and capital appreciation across all investor holdings.
+
+\subsubsection{Reporting and Visualization}
+Interactive charts and comprehensive reports providing insights into portfolio performance and investment trends.
+
+\subsection{Test}
+\subsubsection{Analytics Validation}
+Comprehensive testing of portfolio calculations and performance metrics to ensure accuracy and reliability of financial data.
+
+\subsubsection{User Interface Testing}
+Extensive testing of portfolio dashboards and reporting features across web and mobile platforms.
+
+\subsection{Retrospective}
+
+The Investor Portfolio sprint successfully delivered comprehensive investment tracking capabilities. Table \ref{tab:investor-portfolio-retrospective} summarizes the key achievements and future improvements.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Category} & \textbf{Details} \\
+        \hline
+        \textbf{What Went Well} & 
+        \begin{itemize}
+            \item Successfully implemented portfolio analytics engine
+            \item Real-time investment tracking works accurately
+            \item Interactive visualizations provide excellent insights
+            \item Mobile portfolio interface is user-friendly
+        \end{itemize} \\
+        \hline
+        \textbf{Action Items} & 
+        \begin{itemize}
+            \item Add predictive portfolio modeling capabilities
+            \item Implement portfolio rebalancing recommendations
+            \item Enhance tax reporting and documentation
+            \item Integrate with external financial planning tools
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \caption{Investor Portfolio Sprint Retrospective Summary}
+    \label{tab:investor-portfolio-retrospective}
+\end{table}
+
+\newpage
+
+\section{Sprint 10: Notification System}
+
+\subsection{Introduction}
+The Notification System sprint establishes comprehensive communication channels between the platform and users. This includes email notifications, SMS alerts, and push notifications for mobile devices, ensuring investors and administrators stay informed about important platform activities and updates.
+
+\subsection{Analysis}
+\subsubsection{Use Case Diagram}
+The notification system serves all platform users with personalized communication preferences and multi-channel delivery options.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/notification_system_use_case.png}
+%     \caption{Notification System Use Case Diagram}
+%     \label{fig:notification-system-use-case}
+% \end{figure}
+
+\subsubsection{Textual Use Case Descriptions}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Receive Platform Notifications} \\
+        \hline
+        \textbf{Actor} & All Platform Users \\
+        \hline
+        \textbf{Precondition} & User has configured notification preferences \\
+        \hline
+        \textbf{Main Scenario} & User receives timely notifications about platform activities \\
+        \hline
+        \textbf{Postcondition} & User is informed and can take appropriate actions \\
+        \hline
+    \end{tabular}
+    \caption{Notification System Use Case Description}
+    \label{tab:notification-system-use-case}
+\end{table}
+
+\subsection{Modeling}
+\subsubsection{Class Diagram}
+The notification architecture includes templates, delivery channels, user preferences, and tracking mechanisms.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{images/notification_system_class_diagram.png}
+%     \caption{Notification System Class Diagram}
+%     \label{fig:notification-system-class}
+% \end{figure}
+
+\subsubsection{Sequence Diagram}
+The interaction flow shows notification triggering, template processing, and multi-channel delivery mechanisms.
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=1\textwidth]{images/notification_system_sequence.png}
+%     \caption{Notification System Sequence Diagram}
+%     \label{fig:notification-system-sequence}
+% \end{figure}
+
+\subsection{Implementation}
+\subsubsection{Multi-Channel Delivery}
+Implementation of email, SMS, and push notification delivery systems with fallback mechanisms and delivery confirmation tracking.
+
+\subsubsection{Template Management}
+Dynamic notification templates with personalization capabilities and multi-language support for different user segments.
+
+\subsubsection{Preference Management}
+User-configurable notification preferences allowing granular control over notification types, timing, and delivery channels.
+
+\subsection{Test}
+\subsubsection{Delivery Testing}
+Comprehensive testing of all notification channels including delivery success rates, timing accuracy, and failure handling mechanisms.
+
+\subsubsection{Performance Testing}
+Load testing for high-volume notification scenarios and batch processing capabilities.
+
+\subsection{Retrospective}
+
+The Notification System sprint successfully delivered comprehensive communication capabilities. Table \ref{tab:notification-system-retrospective} summarizes the key achievements and future improvements.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Category} & \textbf{Details} \\
+        \hline
+        \textbf{What Went Well} & 
+        \begin{itemize}
+            \item Successfully implemented multi-channel delivery system
+            \item Template management system provides flexibility
+            \item User preference controls work effectively
+            \item Notification tracking and analytics function properly
+        \end{itemize} \\
+        \hline
+        \textbf{Action Items} & 
+        \begin{itemize}
+            \item Implement intelligent notification scheduling
+            \item Add advanced personalization algorithms
+            \item Enhance notification analytics and insights
+            \item Integrate with external communication platforms
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \caption{Notification System Sprint Retrospective Summary}
+    \label{tab:notification-system-retrospective}
+\end{table} 

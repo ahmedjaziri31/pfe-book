@@ -1,16 +1,18 @@
 \chapter{Blockchain}
 
-\chapterquote{Blockchain could change all that. The central idea to blockchain is that the rights to goods can be transacted, whether they be financial, hard assets or ideas. The goal is not merely to record the plot of land but rather to record the rights involved so that the rights holder cannot be violated.}{Don Tapscott \& Alex Tapscott \cite{Tapscott2016Blockchain}}
+\chapterquote{Blockchain is the technology that allows trust without trusting.}{Vitalik Buterin \cite{Buterin2014Ethereum}}
 
 \section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
-In recent years, blockchain technology has emerged as a powerful tool for building trust, enhancing transparency, and decentralizing processes across various industries \cite{Nakamoto2008Bitcoin, Tapscott2016Blockchain}. In the context of Korpor, a platform aimed at facilitating real estate investments, blockchain plays a crucial role in ensuring the reliability and traceability of financial operations.
+The blockchain payment integration represents a crucial component of the Korpor platform, focusing on secure investor payment processing and transparent transaction recording \cite{Nakamoto2008Bitcoin}. This sprint implements a hybrid approach combining traditional payment gateways with blockchain technology to ensure both user convenience and transaction security.
 
-Traditional real estate investment systems often rely on centralized authorities and intermediaries, which may introduce delays, additional costs, or even fraudulent behavior. By integrating blockchain, Korpor addresses these limitations by recording key transactions such as investments, rent distributions, and project creation directly on a decentralized ledger \cite{Veuger2018RealEstateBlockchain}. This ensures that all stakeholders can verify actions in a transparent and immutable manner, without needing to trust a single party.
+The main feature centers on investor payment flows where users can securely invest in real estate projects through Paymee payment gateway, with all transactions automatically recorded on the blockchain for transparency and immutability \cite{Tapscott2016Blockchain}. This integration provides investors with traditional payment convenience while leveraging blockchain's security and transparency benefits.
 
-Moreover, smart contracts enable the automation of operations like rent distribution and investment validation, reducing human error and increasing efficiency \cite{Buterin2014Ethereum, Szabo1997SmartContracts}.
+\section{Sprint 7: Blockchain Payment Integration}
 
-\section{Overview of Use Cases}
+\subsection{Analysis}
+\subsubsection{Use Cases Overview}
 
 The blockchain integration within the \textbf{\textcolor{primary}{Korpor}} platform addresses several core functionalities that benefit from decentralization and transparency. The main use cases implemented include:
 
@@ -44,7 +46,7 @@ The blockchain integration within the \textbf{\textcolor{primary}{Korpor}} platf
     \end{itemize}
 \end{itemize}
 
-\section{Objectives of Blockchain Integration}
+\subsubsection{Objectives of Integration}
 
 The integration of blockchain technology into the \textbf{\textcolor{primary}{Korpor}} platform serves several key objectives aimed at enhancing the system's reliability, transparency, and automation capabilities:
 
@@ -71,7 +73,7 @@ The integration of blockchain technology into the \textbf{\textcolor{primary}{Ko
     \end{itemize}
 \end{itemize}
 
-\section{Technical Architecture}
+\subsection{Modeling}
 
 The blockchain component is designed to integrate seamlessly within the overall architecture of the \textbf{\textcolor{primary}{Korpor}} platform. This section outlines how the blockchain fits into the system and the technologies used for its implementation.
 
@@ -97,32 +99,31 @@ The blockchain component is designed to integrate seamlessly within the overall 
         \end{itemize}
     \end{itemize}
 
-    \item \textbf{Technologies used}
-   \begin{itemize}
-    \item \includegraphics[width=0.05\textwidth]{images/icons/solidity.png} \textbf{Solidity:} A high-level programming language specifically designed for writing secure, efficient, and decentralized smart contracts on the Ethereum blockchain \cite{SolidityDocs}.
-    
-    \item \includegraphics[width=0.05\textwidth]{images/icons/etherscan.png} \textbf{Ethers.js:} A popular JavaScript library used to interact with the Ethereum blockchain, providing functionality to manage accounts, send transactions, and call smart contract functions \cite{EthersJSDocs}.
-    
-    \item \includegraphics[width=0.05\textwidth]{images/icons/sepolia.png} \textbf{Sepolia Testnet:} A test network for Ethereum that allows developers to deploy and test their smart contracts in a safe, controlled environment without spending real cryptocurrency.
-    
-    \item \includegraphics[width=0.05\textwidth]{images/icons/infura.png} \textbf{Infura:} A cloud-based platform that provides access to Ethereum nodes via JSON-RPC, eliminating the need to run a full Ethereum node \cite{InfuraWeb3}.
-    
-    \item \includegraphics[width=0.05\textwidth]{images/icons/metamask.png} \textbf{MetaMask:} A widely-used browser extension and mobile application that serves as a cryptocurrency wallet for interacting with decentralized applications \cite{MetaMaskDocs}.
-   \end{itemize}
 \end{itemize}
 
-\subsection{Third-Party Payment Integration: Paymee}
+\subsection{Implementation}
+\subsubsection{Technologies Used}
+The blockchain implementation utilizes several key technologies:
+
+\begin{itemize}
+    \item \textbf{Solidity:} Smart contract programming language for Ethereum blockchain \cite{SolidityDocs}
+    \item \textbf{Ethers.js:} JavaScript library for blockchain interaction \cite{EthersJSDocs}
+    \item \textbf{Sepolia Testnet:} Ethereum test network for safe development
+    \item \textbf{Infura:} Cloud-based Ethereum node access \cite{InfuraWeb3}
+    \item \textbf{MetaMask:} Cryptocurrency wallet for decentralized applications \cite{MetaMaskDocs}
+\end{itemize}
+
+\subsubsection{Third-Party Payment Integration: Paymee}
 
 In the Korpor platform, secure and reliable payment processing is fundamental to enabling users to invest in real estate projects with confidence. While blockchain handles transparency and decentralization for on-chain interactions, fiat payments from users need to be handled via trusted third-party providers. For this purpose, we chose \textbf{Paymee} as our main payment gateway.
 
 % Placeholder for Paymee Framework diagram
-\begin{figure}[htbp]
-\centering
-% PLACEHOLDER: Insert Paymee Framework diagram here
-\includegraphics[width=0.8\textwidth]{images/paymee_framework.png}
-\caption{Paymee Framework}
-\label{fig:paymee-framework}
-\end{figure}
+% \begin{figure}[htbp]
+% \centering
+% \includegraphics[width=0.8\textwidth]{images/paymee_framework.png}
+% \caption{Paymee Framework}
+% \label{fig:paymee-framework}
+% \end{figure}
 
 \subsubsection{Role of Paymee in the Architecture}
 
@@ -171,15 +172,15 @@ Several third-party payment providers are available in Tunisia, including  \text
 
 Based on these factors, \textbf{Paymee} was selected as the most suitable payment provider for the Korpor platform, playing a pivotal role in bridging traditional finance with our blockchain-based investment infrastructure.
 
-\section{Smart Contract Design}
+\subsubsection{Smart Contract Design}
 
-\subsection{Smart Contracts Overview}
+\paragraph{Smart Contracts Overview}
 
 A smart contract is a self-executing contract with the terms of the agreement directly written into lines of code \cite{Szabo1997SmartContracts}. These contracts run on blockchain platforms, such as Ethereum, and are designed to automatically enforce and execute the terms of an agreement without the need for intermediaries. 
 
 Smart contracts operate on decentralized networks, ensuring transparency, immutability, and security. They allow parties to interact and transact with one another in a trustless environment, where the contract's logic is executed automatically when predefined conditions are met \cite{Wohrer2018SmartContractApplications}.
 
-\subsection{Smart Contract Responsibilities}
+\paragraph{Smart Contract Responsibilities}
 
 The smart contract in the Korpor application is responsible for managing the critical aspects of the platform. The main responsibilities include:
 
@@ -190,7 +191,7 @@ The smart contract in the Korpor application is responsible for managing the cri
     \item \textbf{Transaction Verification:} All actions taken within the contract are securely logged on the blockchain.
 \end{itemize}
 
-\subsection{Data Structures and Functions}
+\paragraph{Data Structures and Functions}
 
 In the smart contract, several data structures and functions are employed to manage and store key information, facilitating efficient interaction with the system \cite{Dannen2017SoliditySmartContracts}.
 
@@ -212,4 +213,42 @@ struct Project {
 \end{verbatim}
 
 \paragraph{Investor Struct:}
-The `
+The investor struct stores individual investment details for tracking purposes.
+
+\subsection{Test}
+\subsubsection{Payment Integration Testing}
+The blockchain payment system underwent comprehensive testing to ensure secure and reliable investor transactions. All payment flows were validated through Paymee integration, confirming successful on-chain recording of investments.
+
+\subsubsection{Smart Contract Validation}
+Smart contract functions were thoroughly tested on the Sepolia testnet, validating investment recording, project registration, and rent distribution mechanisms. All test scenarios passed successfully, confirming the reliability of the blockchain implementation.
+
+\subsection{Retrospective}
+
+The blockchain integration sprint successfully delivered secure payment processing and transparent transaction recording. Table \ref{tab:blockchain-retrospective} summarizes the key achievements and future improvements.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Category} & \textbf{Details} \\
+        \hline
+        \textbf{What Went Well} & 
+        \begin{itemize}
+            \item Successfully integrated Paymee payment gateway with blockchain
+            \item Achieved secure and transparent investment recording
+            \item Smart contracts deployed and tested successfully on Sepolia
+            \item Payment flow validation completed without major issues
+        \end{itemize} \\
+        \hline
+        \textbf{Action Items} & 
+        \begin{itemize}
+            \item Implement gas optimization for smart contract operations
+            \item Add automated monitoring for transaction failures
+            \item Enhance payment reconciliation between Paymee and blockchain
+            \item Plan for mainnet deployment and security audits
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \caption{Blockchain Integration Sprint Retrospective Summary}
+    \label{tab:blockchain-retrospective}
+\end{table}
