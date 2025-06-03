@@ -50,7 +50,8 @@ Upon successful email verification, the system redirects the user to an "email v
 % \vspace{1cm}
 
 \subsubsection{Login Process}
-The login process allows existing users to access the system. The table below details the use case.
+The login process allows existing users to access the system. The table below details the use case, as shown in Table \ref{tab:login_process}.
+\newpage
 
 \begin{table}[htbp]
     \centering
@@ -79,9 +80,8 @@ The login process allows existing users to access the system. The table below de
     \label{tab:login_process}
 \end{table}
 
-\newpage
 \subsubsection{Manage Users Process}
-The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case.
+The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case, as shown in Table \ref{tab:manage_users_process}.
 
 
 \begin{table}[htbp]
@@ -112,12 +112,43 @@ The user management process enables administrators to create, view, update, and 
     \label{tab:manage_users_process}
 \end{table}
 
+\subsubsection{Forget Password Process}
+The password recovery process enables users to securely reset their password when they cannot access their account. The table below details the use case, as shown in Table \ref{tab:forget_password_process}.
+
+\newpage
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|l|p{0.7\textwidth}|}
+        \hline
+        \textbf{Section} & \textbf{Details} \\
+        \hline
+        Use Case & Forget Password \\
+        \hline
+        Actor & User (Super Admin, Admin, Agent, Investor) \\
+        \hline
+        Precondition & User has an existing account with a valid email address \\
+        \hline
+        Main Scenario & 
+        User requests password reset and receives secure reset instructions via email \\
+        \hline
+        Postcondition & User successfully resets password and can access their account with new credentials \\
+        \hline
+        Exception & 
+        - Email not found: System displays error message.
+        - Network error: System displays connectivity error message. \\
+        \hline
+    \end{tabular}
+    \caption{Forget Password Process Details}
+    \label{tab:forget_password_process}
+\end{table}
 
 The sign-up process includes user registration, role assignment, and account verification steps. During registration, users are categorized into one of the three user types: Super Admin, Admin, or Agent, with each type having different permissions and access levels within the system.
+\newpage
 
 \subsection{Modeling}
 
-\newpage    
+Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentication system. It showcases the key components and their relationships involved in user authentication and authorization.
 
 \begin{figure}[htbp]
     \centering
@@ -126,7 +157,6 @@ The sign-up process includes user registration, role assignment, and account ver
     \label{fig:auth-class-diagram}
 \end{figure}
 
-Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentication system. It showcases the key components and their relationships involved in user authentication and authorization.
 
 \newpage
 
