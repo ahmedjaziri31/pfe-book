@@ -412,6 +412,8 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
 
 \begin{figure}[htbp]
     \centering
+    
+    % First part: February - March (Sprints 1-5)
     \resizebox{\textwidth}{!}{%
     \begin{ganttchart}[
         % Chart style configuration
@@ -428,7 +430,7 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
         bar label font=\small\bfseries,
         milestone/.append style={fill=accent, rounded corners=2pt},
         group/.append style={fill=primary!30}
-    ]{2025-02-01}{2025-05-31}
+    ]{2025-02-01}{2025-03-31}
     
     % Time axis with month increments
     \gantttitlecalendar{year, month=shortname} \\
@@ -448,8 +450,35 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
     % Sprint 5 (Mar 15-28, 2 weeks)
     \ganttbar{Sprint 5}{2025-03-15}{2025-03-28} \\
     
-    % Sprint 6 (Mar 29-Apr 4, 1 week)
-    \ganttbar{Sprint 6}{2025-03-29}{2025-04-04} \\
+    \end{ganttchart}
+    }
+    
+    \vspace{1cm} % Space between the two charts
+    
+    % Second part: April - May (Sprints 6-10)
+    \resizebox{\textwidth}{!}{%
+    \begin{ganttchart}[
+        % Chart style configuration
+        hgrid,
+        vgrid,
+        time slot format=isodate,
+        x unit=4mm,
+        y unit title=8mm,
+        y unit chart=6mm,
+        title height=1,
+        % Colors and styles
+        title/.append style={fill=primary!10, font=\small\bfseries},
+        bar/.append style={fill=primary!70},
+        bar label font=\small\bfseries,
+        milestone/.append style={fill=accent, rounded corners=2pt},
+        group/.append style={fill=primary!30}
+    ]{2025-04-01}{2025-05-31}
+    
+    % Time axis with month increments
+    \gantttitlecalendar{year, month=shortname} \\
+    
+    % Sprint 6 (Mar 29-Apr 4, 1 week) - Note: starts in March but extends to April
+    \ganttbar{Sprint 6}{2025-04-01}{2025-04-04} \\
     
     % Sprint 7 (Apr 5-18, 2 weeks)
     \ganttbar{Sprint 7}{2025-04-05}{2025-04-18} \\
@@ -465,6 +494,7 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
     
     \end{ganttchart}
     }
+    
     \caption{GANTT chart with sprint planning (February - May 2025)}
     \label{fig:gantt-chart}
 \end{figure}
