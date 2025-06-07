@@ -373,7 +373,203 @@ The interaction flow between the mobile interface, backend services, and NLP pro
     \label{fig:assistant-sequence-mvc}
 \end{figure}
 
+\subsubsection{Workflow Diagram}
+The Real Estate Assistant follows a structured workflow to process user queries and provide accurate legal information. Figure \ref{fig:assistant-workflow} illustrates the complete workflow from user input to response generation.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/assistant_workflow_diagram.png}
+    \caption{Real Estate Assistant Workflow Diagram}
+    \label{fig:assistant-workflow}
+\end{figure}
+
+\subsubsection{AI Approach Selection: RAG vs Fine-Tuning vs Prompt Engineering}
+
+The development of the Real Estate Assistant required careful consideration of different AI approaches to ensure optimal performance for domain-specific legal and regulatory queries. This section analyzes the three primary approaches and justifies our selection.
+
+\paragraph{Prompt Engineering}
+Prompt engineering is the process of crafting input text (prompts) that guide a pre-trained language model to respond in a specific way. The purpose is to optimize the interaction between users and the model without modifying the underlying model parameters.
+
+\textbf{Example Comparison:}
+\begin{itemize}
+    \item \textbf{Without prompt engineering:} User asks "What is the capital of France?" and receives a simple response: "Paris"
+    \item \textbf{With prompt engineering:} The system uses a crafted prompt: "In a friendly tone, tell me: What is the capital of France?" resulting in: "Oh, that's easy! The capital of France is Paris!"
+\end{itemize}
+
+\paragraph{Fine-Tuning}
+Fine-tuning involves training a pre-trained model using domain-specific datasets. While pre-trained models excel at general conversational abilities, they often struggle with specialized domains and may produce inaccurate responses or hallucinations when addressing intricate domain-specific questions.
+
+\textbf{Characteristics:}
+\begin{itemize}
+    \item Requires substantial computational resources (high-end GPUs, large memory)
+    \item Needs cleaned, labeled datasets specific to the domain
+    \item Demands technical expertise in large language model training
+    \item Suitable for specialized tasks with sufficient training data
+\end{itemize}
+
+\paragraph{Retrieval-Augmented Generation (RAG)}
+RAG combines retrieval and generation components to make large language models context-aware using external data sources. The retriever fetches relevant information from knowledge bases or vector databases, which the generator then uses alongside the original query to produce accurate, contextually relevant responses.
+
+\textbf{Conceptual Explanation:}
+RAG is an AI architecture that enhances the capabilities of large language models by providing them with access to external knowledge sources. Unlike traditional language models that rely solely on their training data, RAG systems can dynamically retrieve and incorporate relevant information from external databases, documents, or knowledge bases to generate more accurate and contextually appropriate responses.
+
+\textbf{Standard RAG Workflow:}
+The RAG process follows a systematic four-step workflow:
+\begin{enumerate}
+    \item \textbf{Embed the user's query:} Convert the user's input into a vector representation that captures its semantic meaning
+    \item \textbf{Retrieve relevant documents:} Search through the knowledge base using the query embedding to find the most relevant documents or passages
+    \item \textbf{Add them into the model's prompt:} Combine the retrieved context with the original user query to create an enhanced prompt
+    \item \textbf{Generate a response:} Use the LLM with this additional context to produce a comprehensive and accurate response
+\end{enumerate}
+
+\textbf{Embedding Concept:}
+Embedding is a method of representing objects such as text, images, and audio as points in a continuous vector space where the locations of those points are semantically meaningful to machine learning algorithms. In the context of RAG, embeddings enable the system to understand and compare the semantic similarity between the user's query and the documents in the knowledge base, ensuring that the most relevant information is retrieved.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/rag_workflow_diagram.png}
+    \caption{RAG Workflow Diagram}
+    \label{fig:rag-workflow}
+\end{figure}
+
+\textbf{Advantages:}
+\begin{itemize}
+    \item Ideal for augmenting models with external, up-to-date, or domain-specific information
+    \item Effective for constantly changing data (legal documents, regulations, FAQs)
+    \item Requires limited resources and expertise compared to fine-tuning
+    \item Can be implemented using established frameworks like LangChain and OpenAI API
+\end{itemize}
+
+\paragraph{Decision Rationale}
+For our Real Estate Assistant, we selected RAG over the other approaches for the following reasons:
+
+\begin{enumerate}
+    \item \textbf{Domain Specificity:} Our model needs to respond using specialized knowledge about Tunisian real estate law and regulations that was not present in the pre-trained model's original training data
+    \item \textbf{Resource Efficiency:} RAG implementation requires significantly fewer computational resources and technical expertise compared to fine-tuning
+    \item \textbf{Data Characteristics:} Legal documents and regulations are constantly evolving, making RAG's ability to retrieve up-to-date information crucial
+    \item \textbf{Development Speed:} RAG allows for rapid prototyping and deployment using existing frameworks and APIs
+\end{enumerate}
+
+Prompt engineering alone was insufficient for our use case, as we required the model to access and utilize domain-specific knowledge that extends beyond general conversational abilities.
+
+\subsubsection{Prompt Engineering Implementation}
+The following pseudo code demonstrates our prompt engineering approach for the Real Estate Assistant:
+
+\begin{verbatim}
+ALGORITHM: ChatPromptTemplate for Real Estate Assistant
+INPUT: context, question, language
+OUTPUT: structured_prompt
+
+BEGIN
+    // Initialize ChatPromptTemplate
+    prompt = ChatPromptTemplate.from_template(
+        "Based on the following context, provide a detailed answer to the user's query.
+        
+        Context: {context}
+        User Query: {question}
+        Response Language: {language}
+        
+        Instructions:
+        1. Extract the relevant answer from the ANSWER section in the context
+        2. Present the information in a clear, structured way
+        3. Use the exact information from the context without adding external knowledge
+        
+        If the query is general conversation (like greetings, how are you, etc.), 
+        respond naturally in the specified language.
+        
+        If the query is about a topic covered in the context but is within general knowledge, 
+        respond with the exact information from context.
+        
+        If the query is not related to real estate, respond with the equivalent of 
+        'I'm specialized in Tunisian real estate law and regulations.'
+        
+        If no relevant information is found and you cannot provide a general answer, 
+        respond with the equivalent of 'I don't have specific information about this topic 
+        in my current knowledge base.'"
+    )
+    
+    // Format the prompt with actual values
+    formatted_prompt = prompt.format(
+        context=context,
+        question=question,
+        language=language
+    )
+    
+    RETURN formatted_prompt
+END
+\end{verbatim}
+
 \subsection{Implementation}
+
+\subsubsection{Large Language Model Selection}
+Choosing an appropriate LLM can be challenging given the numerous companies and different models available in the market. The host organization provided us with a Google Gemini API key, which constrained our selection to the available Gemini offerings.
+
+Among the Gemini model family, we evaluated several options:
+\begin{itemize}
+    \item \textbf{Gemini 2.5 models}: While these represent the latest technology, they are still in experimental release phase, designed primarily to gather feedback and deliver updates quickly to developers
+    \item \textbf{Gemini Flash 2.0}: Selected as the optimal choice based on efficiency and cost considerations
+\end{itemize}
+
+Gemini Flash 2.0 was chosen for the following reasons:
+\begin{itemize}
+    \item Superior efficiency and cost-effectiveness compared to other available models
+    \item Lack of fine-tuning support, which reinforced our decision to implement RAG architecture
+    \item Stable release status ensuring reliable performance for production deployment
+\end{itemize}
+
+\subsubsection{Voice Generation Implementation}
+For voice generation capabilities, we selected ElevenLabs, an advanced AI-powered platform specializing in text-to-speech and voice synthesis technologies. ElevenLabs enables the generation of realistic, human-like voices suitable for various applications including narrations, audiobooks, podcasts, and video content.
+
+The following pseudo code demonstrates our voice generation implementation:
+
+\begin{verbatim}
+ALGORITHM: Voice Generation for Real Estate Assistant
+INPUT: text_response, user_preferences, voice_settings
+OUTPUT: audio_stream
+
+BEGIN
+    // Initialize ElevenLabs API connection
+    api_client = initialize_elevenlabs_client(API_KEY)
+    
+    // Voice configuration
+    voice_id = get_selected_voice_id(user_preferences)
+    voice_settings = {
+        stability: 0.8,
+    }
+    
+    // Text preprocessing
+    cleaned_text = preprocess_text(text_response)
+    chunks = split_text_into_chunks(cleaned_text, MAX_CHUNK_SIZE)
+    
+    // Voice generation process
+    audio_segments = []
+    FOR each chunk in chunks DO
+        try:
+            audio_segment = api_client.generate_voice(
+                text=chunk,
+                voice_id=voice_id,
+                model="eleven_multilingual_v2",
+                voice_settings=voice_settings
+            )
+            audio_segments.append(audio_segment)
+        catch APIException as e:
+            log_error("Voice generation failed: " + e.message)
+            RETURN fallback_response()
+        end try
+    END FOR
+    
+    // Combine audio segments
+    final_audio = concatenate_audio_segments(audio_segments)
+    
+    // Post-processing
+    final_audio = apply_audio_filters(final_audio)
+    final_audio = normalize_volume(final_audio)
+    
+    RETURN final_audio
+END
+\end{verbatim}
+
+
 \subsubsection{NLP Model Architecture}
 The Real Estate Assistant utilizes advanced natural language processing techniques to understand and respond to user queries. The system employs:
 
@@ -396,7 +592,7 @@ The assistant's knowledge base contains comprehensive information about:
 
 \subsubsection{Chat Interface Implementation}
 The mobile chat interface provides an intuitive way for investors to interact with the AI assistant. Figure \ref{fig:assistant-mobile-chat} shows the chat interface design.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.3\textwidth]{images/assistant_mobile_chat.png}
@@ -501,11 +697,11 @@ The Role-Based Backoffice Agent serves multiple user types with role-specific fu
     \caption{Role-Based Backoffice Agent Use Case Description}
     \label{tab:backoffice-use-case}
 \end{table}
+\newpage
 
 \subsection{Modeling}
 \subsubsection{Class Diagram}
 The Role-Based Backoffice Agent follows a role-based architecture with specialized services for each user type. Figure \ref{fig:backoffice-class-diagram} shows the main classes and their relationships.
-\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{images/backoffice_class_diagram.png}
@@ -533,6 +729,201 @@ The Backoffice Agent utilizes sophisticated role-based AI algorithms to provide 
     \item \textbf{Real Estate Agent Features}: Client management, property listings, sales tracking, commission calculations
 \end{itemize}
 
+\subsubsection*{Natural Language to SQL Processing}
+The following pseudo code demonstrates the complete workflow for converting natural language queries to SQL and generating human-readable responses:
+
+\paragraph{Natural Language to SQL Generation}
+\begin{verbatim}
+FUNCTION convert_question_to_sql(user_question, user_id):
+    
+    // Step 1: Get user information
+    user_info = get_user_role_and_store(user_id)
+    role = user_info.role          // 'user', 'admin', or 'super_admin'
+    store_id = user_info.store_id
+    
+    // Step 2: Create database description with permissions
+    database_info = build_database_description(role, store_id)
+    
+    // Step 3: Ask AI to write SQL
+    prompt = "Given this database: {database_info}
+              User asks: {user_question}
+              Write a MySQL query that respects user permissions.
+              Only return the SQL code."
+    
+    sql_query = ask_ai_model(prompt)
+    clean_sql = remove_formatting(sql_query)
+    
+    // Step 4: Check if SQL is safe
+    IF is_sql_safe(clean_sql, role, store_id):
+        RETURN clean_sql
+    ELSE:
+        RETURN "Cannot create safe query"
+
+FUNCTION get_user_role_and_store(user_id):
+    query = "SELECT role, store_id FROM users WHERE id = ?"
+    result = execute_database_query(query, user_id)
+    RETURN result
+
+FUNCTION build_database_description(role, store_id):
+    description = "Tables: users, properties, stores, transactions, clients
+                   
+                   Access Rules:
+                   - user: Can only see their store's data
+                   - admin: Can see all data in their store  
+                   - super_admin: Can see everything"
+    
+    IF role != 'super_admin':
+        description += f"IMPORTANT: Must filter by store_id = {store_id}"
+    
+    RETURN description
+
+FUNCTION is_sql_safe(sql, role, store_id):
+    // Block dangerous operations
+    dangerous_words = ['DELETE', 'DROP', 'UPDATE', 'INSERT']
+    FOR word IN dangerous_words:
+        IF word IN sql.upper():
+            RETURN false
+    
+    // Check role permissions
+    IF role != 'super_admin' AND 'WHERE' NOT IN sql.upper():
+        RETURN false  // Must have WHERE clause
+    
+    RETURN true
+\end{verbatim}
+
+\paragraph{SQL Query Execution}
+\begin{verbatim}
+FUNCTION run_sql_query(sql_query):
+    
+    TRY:
+        // Step 1: Connect to database
+        connection = connect_to_database()
+        
+        // Step 2: Run the query with timeout
+        start_time = current_time()
+        results = execute_query(connection, sql_query, timeout=30)
+        end_time = current_time()
+        
+        // Step 3: Limit results if too many
+        IF length(results) > 1000:
+            results = first_1000_items(results)
+            results.add("... (truncated)")
+        
+        // Step 4: Return success
+        RETURN {
+            'success': true,
+            'data': results,
+            'execution_time': end_time - start_time
+        }
+    
+    CATCH error:
+        // Step 5: Handle errors nicely
+        user_message = make_error_friendly(error)
+        RETURN {
+            'success': false,
+            'error': user_message
+        }
+    
+    FINALLY:
+        close_database_connection(connection)
+
+FUNCTION make_error_friendly(database_error):
+    error_text = string(database_error).lower()
+    
+    IF 'syntax' IN error_text:
+        RETURN "There's a problem with the query format"
+    ELSE IF 'timeout' IN error_text:
+        RETURN "Query took too long to run"
+    ELSE IF 'connection' IN error_text:
+        RETURN "Cannot connect to database"
+    ELSE:
+        RETURN "Database error occurred"
+\end{verbatim}
+
+\paragraph{Database Results to Natural Language}
+\begin{verbatim}
+FUNCTION convert_results_to_answer(query_results, user_role):
+    
+    // Step 1: Check if we have data
+    IF query_results is empty:
+        RETURN "No data found for your request"
+    
+    // Step 2: Choose response style based on user role
+    response_style = get_response_style(user_role)
+    
+    // Step 3: Prepare data for AI
+    simplified_data = simplify_data_for_ai(query_results)
+    
+    // Step 4: Ask AI to write natural response
+    prompt = f"Convert this data to natural language:
+              Data: {simplified_data}
+              Style: {response_style}
+              Keep it short and clear."
+    
+    natural_response = ask_ai_model(prompt)
+    clean_response = clean_ai_response(natural_response)
+    
+    RETURN clean_response
+
+FUNCTION get_response_style(user_role):
+    styles = {
+        'super_admin': "Executive summary with key insights",
+        'admin': "Management report with important numbers", 
+        'user': "Simple explanation in everyday language"
+    }
+    RETURN styles[user_role]
+
+FUNCTION simplify_data_for_ai(results):
+    // If too much data, summarize it
+    IF length(results) > 50:
+        summary = create_data_summary(results)
+        RETURN summary
+    ELSE:
+        RETURN results
+
+FUNCTION create_data_summary(large_dataset):
+    summary = {
+        'total_rows': length(large_dataset),
+        'sample_data': first_10_rows(large_dataset),
+        'key_numbers': extract_important_numbers(large_dataset)
+    }
+    RETURN summary
+\end{verbatim}
+
+\paragraph{Main Processing Flow}
+\begin{verbatim}
+FUNCTION process_user_request(user_question, user_id):
+    
+    // Step 1: Convert question to SQL
+    sql_query = convert_question_to_sql(user_question, user_id)
+    
+    IF sql_query == "Cannot create safe query":
+        RETURN "Sorry, I cannot process that request safely"
+    
+    // Step 2: Run the SQL query
+    query_results = run_sql_query(sql_query)
+    
+    IF query_results.success == false:
+        RETURN f"Database error: {query_results.error}"
+    
+    // Step 3: Convert results to natural language
+    user_info = get_user_role_and_store(user_id)
+    final_answer = convert_results_to_answer(query_results.data, user_info.role)
+    
+    // Step 4: Log the interaction (optional)
+    log_interaction(user_question, sql_query, final_answer, user_id)
+    
+    RETURN final_answer
+
+// Example usage
+FUNCTION main():
+    user_question = "How many properties do we have listed?"
+    user_id = 3
+    
+    answer = process_user_request(user_question, user_id)
+    print(answer)
+\end{verbatim}
+
 \subsubsection{Automated Workflow Management}
 The system automates routine tasks based on role permissions:
 \begin{itemize}
@@ -542,7 +933,6 @@ The system automates routine tasks based on role permissions:
     \item Performance report generation for all roles
 \end{itemize}
 
-\newpage
 \subsubsection{Dashboard Implementation}
 Each role receives a customized dashboard with relevant tools and insights. Figure \ref{fig:backoffice-dashboard} shows the role-specific dashboard implementations.
 
@@ -553,6 +943,7 @@ Each role receives a customized dashboard with relevant tools and insights. Figu
     \label{fig:assistant-web-interface}
 \end{figure}
 
+\newpage
 
 \subsection{Test}
 \subsubsection{Test Scenarios}
@@ -635,6 +1026,7 @@ The Recommendation System serves investors by analyzing their profiles and sugge
     \label{fig:recommendation-use-case}
 \end{figure}
 
+\newpage
 \subsubsection{Textual Use Case Descriptions}
 
 \begin{table}[htbp]
@@ -662,17 +1054,18 @@ The Recommendation System uses collaborative filtering and content-based algorit
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.8\textwidth]{images/recommendation_class_diagram.png}
+    \includegraphics[width=0.8\textwidth]{images/recommendation_class_diagram.png}
     \caption{Investor-Focused Recommendation System Class Diagram}
     \label{fig:recommendation-class-diagram}
 \end{figure}
 
+\newpage
 \subsubsection{Sequence Diagram (MVC)}
 The interaction flow between the mobile interface, recommendation engine, and machine learning components is illustrated in Figure \ref{fig:recommendation-sequence-mvc}.
 
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=1\textwidth]{images/recommendation_sequence_mvc.png}
+    \includegraphics[width=1\textwidth]{images/recommendation_sequence_mvc.png}
     \caption{Recommendation System MVC Sequence Diagram}
     \label{fig:recommendation-sequence-mvc}
 \end{figure}
@@ -687,6 +1080,7 @@ The Recommendation System employs multiple ML techniques for optimal suggestions
     \item \textbf{Hybrid Approach}: Combines multiple algorithms for enhanced accuracy
     \item \textbf{Deep Learning}: Neural networks for complex pattern recognition
 \end{itemize}
+
 
 \subsubsection{Investor Profiling}
 The system creates comprehensive investor profiles including:
@@ -709,15 +1103,77 @@ The mobile app provides an intuitive interface for viewing personalized recommen
     \label{fig:recommendation-mobile}
 \end{figure}
 
-\subsubsection{Recommendation Algorithm Visualization}
-The system provides transparency in recommendation logic through visual explanations. Figure \ref{fig:recommendation-algorithm} demonstrates how recommendations are generated and explained to users.
+\subsubsection{Recommendation Algorithm Implementation}
+The following pseudo code demonstrates our hybrid recommendation algorithm that combines user preferences, collaborative filtering, and popularity scoring:
 
-\begin{figure}[htbp]
-    \centering
-    % \includegraphics[width=0.8\textwidth]{images/recommendation_algorithm.png}
-    \caption{Recommendation Algorithm Visualization}
-    \label{fig:recommendation-algorithm}
-\end{figure}
+\begin{verbatim}
+FUNCTION calculate_property_score(user_id, property_id):
+    user_score = get_user_preference_score(user_id, property_id)
+    similar_score = get_similar_users_score(user_id, property_id)
+    popularity_score = get_popularity_score(property_id)
+    
+    final_score = (user_score * 0.5) + (similar_score * 0.3) + (popularity_score * 0.2)
+    RETURN final_score
+
+FUNCTION get_user_preference_score(user_id, property_id):
+    user = get_user(user_id)
+    property = get_property(property_id)
+    score = 0
+    
+    IF property.type == user.preferred_type: score += 30
+    IF property.location == user.preferred_location: score += 20
+    score += count_matching_amenities(property.amenities, user.preferred_amenities) * 2
+    
+    RETURN score
+
+FUNCTION get_similar_users_score(user_id, property_id):
+    similar_users = find_similar_users(user_id, limit=10)
+    total_score = 0
+    user_count = 0
+    
+    FOR each similar_user IN similar_users:
+        interaction = get_user_interaction(similar_user.id, property_id)
+        IF interaction exists:
+            weighted_score = calculate_interaction_score(interaction) * similar_user.similarity
+            total_score += weighted_score
+            user_count += 1
+    
+    RETURN user_count > 0 ? total_score / user_count : 0
+
+FUNCTION find_similar_users(user_id, limit):
+    target_user = get_user(user_id)
+    similar_users = []
+    
+    FOR each other_user IN get_all_users():
+        IF other_user.id != user_id:
+            similarity = calculate_user_similarity(target_user, other_user)
+            IF similarity > 0.3:
+                similar_users.add({'id': other_user.id, 'similarity': similarity})
+    
+    similar_users.sort_by_similarity_desc()
+    RETURN similar_users.take(limit)
+
+FUNCTION calculate_user_similarity(user1, user2):
+    similarity = 0
+    
+    IF user1.preferred_type == user2.preferred_type: similarity += 0.3
+    IF user1.preferred_location == user2.preferred_location: similarity += 0.3
+    similarity += count_common_amenities(user1.amenities, user2.amenities) * 0.05
+    
+    RETURN min(similarity, 1.0)
+
+FUNCTION calculate_interaction_score(interaction):
+    base_scores = {"view": 10, "favorite": 30, "contact": 50, "invest": 90}
+    score = base_scores[interaction.type]
+    
+    days_ago = days_since(interaction.timestamp)
+    IF days_ago <= 7: score *= 1.2
+    ELSE IF days_ago > 30: score *= 0.8
+    
+    RETURN score
+
+\end{verbatim}
+
 
 \subsubsection{Personalized Dashboard}
 Investors receive a personalized dashboard with recommendations and portfolio insights. Figure \ref{fig:recommendation-dashboard} shows the recommendation dashboard design.
@@ -733,37 +1189,41 @@ The Recommendation System underwent extensive testing to ensure accuracy and rel
         \hline
         \textbf{Scenario} & \textbf{Input} & \textbf{Expected Output} & \textbf{Status} \\
         \hline
-        New investor profile & Basic preferences & Relevant recommendations & \checkmark \\
-        \hline
-        Preference update & Changed risk tolerance & Updated suggestions & \checkmark \\
-        \hline
-        Budget constraint & Limited budget & Affordable options & \checkmark \\
-        \hline
-         Location preference & Specific city & Local properties & \checkmark \\
-        \hline
         Algorithm accuracy & Historical data & High precision score & \checkmark \\
         \hline
-        Performance optimization & Large dataset & Fast response time & \checkmark \\
+        New investor profile & Basic preferences & Relevant recommendations & \checkmark \\
         \hline
     \end{tabular}
     \caption{Recommendation System Test Scenarios}
     \label{tab:recommendation-test-scenarios}
 \end{table}
 
+\subsubsection{Algorithm Visualization Results}
+The recommendation algorithm generates personalized property rankings based on user preferences and collaborative filtering. Figure \ref{fig:recommendation-visualization} demonstrates the algorithm's output for different user profiles, showing both final scores and component breakdowns.
 
-\subsubsection{Mobile App Testing (Maestro)}
-The mobile recommendation interface underwent thorough testing using Maestro to ensure optimal user experience. Figure \ref{fig:maestro-recommendation} shows the successful test execution.
-
+\newpage
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.8\textwidth]{images/maestro_recommendation_tests.png}
-    \caption{Maestro Test Results for Recommendation System}
-    \label{fig:maestro-recommendation}
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/recommendation_user1_rankings.png}
+        \caption*{Property Rankings for User1}
+    \end{minipage}
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/recommendation_user3_rankings.png}
+        \caption*{Property Rankings for User3}
+    \end{minipage}
+    
+    \caption{Recommendation Algorithm Visualization Results}
+    \label{fig:recommendation-visualization}
 \end{figure}
 
 \subsection{Retrospective}
 
 The Investor-Focused Recommendation System sprint successfully delivered personalized investment guidance through advanced machine learning algorithms. Table \ref{tab:recommendation-retrospective} summarizes the key achievements and future improvements.
+
 
 \begin{table}[htbp]
     \centering
@@ -775,16 +1235,12 @@ The Investor-Focused Recommendation System sprint successfully delivered persona
         \begin{itemize}
             \item Successfully implemented collaborative filtering algorithms
             \item Mobile interface provides excellent user experience
-            \item Recommendation accuracy exceeded expectations
             \item Comprehensive testing validated system performance
         \end{itemize} \\
         \hline
         \textbf{Action Items} & 
         \begin{itemize}
-            \item Implement real-time model updates based on user feedback
-            \item Add market trend analysis to recommendations
-            \item Enhance algorithm transparency and explainability
-            \item Integrate social features for investor community building
+            \item Implement real-time model
         \end{itemize} \\
         \hline
     \end{tabular}
