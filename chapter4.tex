@@ -739,10 +739,10 @@ FUNCTION convert_question_to_sql(user_question, user_id):
     // Step 1: Get user information
     user_info = get_user_role_and_store(user_id)
     role = user_info.role          // 'user', 'admin', or 'super_admin'
-    store_id = user_info.store_id
+    agency_id = user_info.agency_id
     
     // Step 2: Create database description with permissions
-    database_info = build_database_description(role, store_id)
+    database_info = build_database_description(role, agency_id)
     
     // Step 3: Ask AI to write SQL
     prompt = "Given this database: {database_info}
@@ -754,7 +754,7 @@ FUNCTION convert_question_to_sql(user_question, user_id):
     clean_sql = remove_formatting(sql_query)
     
     // Step 4: Check if SQL is safe
-    IF is_sql_safe(clean_sql, role, store_id):
+    IF is_sql_safe(clean_sql, role, agency_id):
         RETURN clean_sql
     ELSE:
         RETURN "Cannot create safe query"
@@ -764,16 +764,16 @@ FUNCTION get_user_role_and_store(user_id):
     result = execute_database_query(query, user_id)
     RETURN result
 
-FUNCTION build_database_description(role, store_id):
-    description = "Tables: users, properties, stores, transactions, clients
+FUNCTION build_database_description(role, agency_id):
+    description = "Tables: users, properties, agency, transactions, clients
                    
                    Access Rules:
-                   - user: Can only see their store's data
-                   - admin: Can see all data in their store  
+                   - user: Can only see their agency's data
+                    - admin: Can see all data in their agency  
                    - super_admin: Can see everything"
     
     IF role != 'super_admin':
-        description += f"IMPORTANT: Must filter by store_id = {store_id}"
+        description += f"IMPORTANT: Must filter by agency_id = {agency_id}"
     
     RETURN description
 

@@ -5,7 +5,7 @@
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 
-This chapter presents the core investment features that complement the AI capabilities and blockchain infrastructure of the Korpor platform. These features focus on enhancing the investor experience through comprehensive property management, portfolio tracking, and communication systems. The implementation covers property listing management, investment portfolio analytics, and automated notification systems for both web and mobile interfaces.
+This chapter presents the core investment features that complement the AI capabilities and blockchain infrastructure of the Korpor platform. These features focus on enhancing the investor experience through comprehensive property management and portfolio tracking. The implementation covers property listing management and investment portfolio analytics for both web and mobile interfaces.
 
 \section{Sprint 8: Property Management}
 
@@ -221,110 +221,4 @@ The Investor Portfolio sprint successfully delivered comprehensive investment tr
     \label{tab:investor-portfolio-retrospective}
 \end{table}
 
-\newpage
-
-\section{Sprint 10: Notification System}
-
-\subsection{Introduction}
-The Notification System sprint establishes comprehensive communication channels between the platform and users. This includes email notifications, SMS alerts, and push notifications for mobile devices, ensuring investors and administrators stay informed about important platform activities and updates.
-
-\subsection{Analysis}
-\subsubsection{Use Case Diagram}
-The notification system serves all platform users with personalized communication preferences and multi-channel delivery options.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/notification_system_use_case.png}
-%     \caption{Notification System Use Case Diagram}
-%     \label{fig:notification-system-use-case}
-% \end{figure}
-
-\subsubsection{Textual Use Case Descriptions}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|p{3cm}|p{10cm}|}
-        \hline
-        \textbf{Use Case} & \textbf{Receive Platform Notifications} \\
-        \hline
-        \textbf{Actor} & All Platform Users \\
-        \hline
-        \textbf{Precondition} & User has configured notification preferences \\
-        \hline
-        \textbf{Main Scenario} & User receives timely notifications about platform activities \\
-        \hline
-        \textbf{Postcondition} & User is informed and can take appropriate actions \\
-        \hline
-    \end{tabular}
-    \caption{Notification System Use Case Description}
-    \label{tab:notification-system-use-case}
-\end{table}
-
-\subsection{Modeling}
-\subsubsection{Class Diagram}
-The notification architecture includes templates, delivery channels, user preferences, and tracking mechanisms.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{images/notification_system_class_diagram.png}
-%     \caption{Notification System Class Diagram}
-%     \label{fig:notification-system-class}
-% \end{figure}
-
-\subsubsection{Sequence Diagram}
-The interaction flow shows notification triggering, template processing, and multi-channel delivery mechanisms.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=1\textwidth]{images/notification_system_sequence.png}
-%     \caption{Notification System Sequence Diagram}
-%     \label{fig:notification-system-sequence}
-% \end{figure}
-
-\subsection{Implementation}
-\subsubsection{Multi-Channel Delivery}
-Implementation of email, SMS, and push notification delivery systems with fallback mechanisms and delivery confirmation tracking.
-
-\subsubsection{Template Management}
-Dynamic notification templates with personalization capabilities and multi-language support for different user segments.
-
-\subsubsection{Preference Management}
-User-configurable notification preferences allowing granular control over notification types, timing, and delivery channels.
-
-\subsection{Test}
-\subsubsection{Delivery Testing}
-Comprehensive testing of all notification channels including delivery success rates, timing accuracy, and failure handling mechanisms.
-
-\subsubsection{Performance Testing}
-Load testing for high-volume notification scenarios and batch processing capabilities.
-
-\subsection{Retrospective}
-
-The Notification System sprint successfully delivered comprehensive communication capabilities. Table \ref{tab:notification-system-retrospective} summarizes the key achievements and future improvements.
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|p{3cm}|p{10cm}|}
-        \hline
-        \textbf{Category} & \textbf{Details} \\
-        \hline
-        \textbf{What Went Well} & 
-        \begin{itemize}
-            \item Successfully implemented multi-channel delivery system
-            \item Template management system provides flexibility
-            \item User preference controls work effectively
-            \item Notification tracking and analytics function properly
-        \end{itemize} \\
-        \hline
-        \textbf{Action Items} & 
-        \begin{itemize}
-            \item Implement intelligent notification scheduling
-            \item Add advanced personalization algorithms
-            \item Enhance notification analytics and insights
-            \item Integrate with external communication platforms
-        \end{itemize} \\
-        \hline
-    \end{tabular}
-    \caption{Notification System Sprint Retrospective Summary}
-    \label{tab:notification-system-retrospective}
-\end{table} 
+ 

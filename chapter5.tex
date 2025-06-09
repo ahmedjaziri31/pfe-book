@@ -14,64 +14,99 @@ The main feature centers on investor payment flows where users can securely inve
 \subsection{Analysis}
 \subsubsection{Use Cases Overview}
 
-The blockchain integration within the \textbf{\textcolor{primary}{Korpor}} platform addresses several core functionalities that benefit from decentralization and transparency. The main use cases implemented include:
-
-\begin{itemize}
-    \item \textbf{Investment Recording}
-    \begin{itemize}
-        \item Immutable proof of ownership for the investor.
-        \item Transparent public records of all investment flows.
-        \item Verifiable data for audits or external reviews.
-    \end{itemize}
-
-    \item \textbf{Project Registration}
-    \begin{itemize}
-        \item Proof of project existence on-chain.
-        \item Traceability of project updates and funding status.
-        \item Protection against unauthorized modifications.
-    \end{itemize}
-
-    \item \textbf{Rent Distribution}
-    \begin{itemize}
-        \item Calculate and distribute rental income fairly to investors.
-        \item Automate distribution without manual intervention.
-        \item Log each rent payout on the blockchain for transparency.
-    \end{itemize}
-
-    \item \textbf{Transaction Verification}
-    \begin{itemize}
-        \item Trust in the platform.
-        \item User empowerment to track their funds and participation.
-        \item Regulatory compliance through transparent financial trails.
-    \end{itemize}
-\end{itemize}
+The blockchain integration within the \textbf{\textcolor{primary}{Korpor}} platform addresses four core functionalities: \textbf{Investment Recording} for immutable ownership proof, \textbf{Project Registration} for on-chain project verification, \textbf{Rent Distribution} for automated fair payout calculation, and \textbf{Transaction Verification} for comprehensive audit trails and regulatory compliance.
 
 \subsubsection{Objectives of Integration}
 
-The integration of blockchain technology into the \textbf{\textcolor{primary}{Korpor}} platform serves several key objectives aimed at enhancing the system's reliability, transparency, and automation capabilities:
+The blockchain integration enhances the platform through three key objectives: \textbf{Security and trust} via cryptographically signed transactions \cite{Zheng2018BlockchainChallenges}, \textbf{Decentralization and immutability} ensuring data cannot be altered \cite{Antonopoulos2018MasteringEthereum}, and \textbf{Smart contract automation} for efficient business logic execution \cite{Bartoletti2017EmpiricalAnalysis}.
 
-\begin{itemize}
-    \item \textbf{Security and trust in transactions}
-    \begin{itemize}
-        \item Ensures that each transaction is securely signed and verified.
-        \item Builds trust among users by preventing unauthorized modifications \cite{Zheng2018BlockchainChallenges}.
-        \item Enhances transparency through verifiable on-chain records.
-    \end{itemize}
+\subsubsection{Use Case Diagram}
 
-    \item \textbf{Decentralization and immutability}
-    \begin{itemize}
-        \item Eliminates single points of failure by distributing data across the blockchain.
-        \item Guarantees that data, once written, cannot be altered \cite{Antonopoulos2018MasteringEthereum}.
-        \item Promotes resilience and long-term reliability of the system.
-    \end{itemize}
+The transaction management  system serves as the core component for handling all blockchain-based investment activities within the Korpor platform. Figure \ref{fig:transaction-use-case} illustrates the main use cases for blockchain transaction management, showing how the system automatically saves all transactions as immutable smart contracts.
 
-    \item \textbf{Automation through smart contracts}
-    \begin{itemize}
-        \item Enables automatic execution of business logic (e.g., rent distribution) \cite{Bartoletti2017EmpiricalAnalysis}.
-        \item Reduces manual intervention and human error.
-        \item Increases system efficiency through self-executing contracts.
-    \end{itemize}
-\end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/transaction_use_case_diagram.png}
+    \caption{Blockchain Transaction Management Use Case Diagram}
+    \label{fig:transaction-use-case}
+\end{figure}
+\subsubsection{Textual Use Case Descriptions}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Make an Investment} \\
+        \hline
+        \textbf{Actor} & Investor \\
+        \hline
+        \textbf{Precondition} & Investor is authenticated and has sufficient funds \\
+        \hline
+        \textbf{Main Scenario} & Investor selects a property and initiates investment through secure payment processing \\
+        \hline
+        \textbf{Postcondition} & Investment is recorded on blockchain and investor receives confirmation \\
+        \hline
+    \end{tabular}
+    \caption{Make Investment Transaction Use Case Description}
+    \label{tab:make-investment-use-case}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{View Transactions History} \\
+        \hline
+        \textbf{Actor} & Investor \\
+        \hline
+        \textbf{Precondition} & Investor is authenticated and has previous transactions \\
+        \hline
+        \textbf{Main Scenario} & Investor accesses comprehensive transaction history with blockchain verification \\
+        \hline
+        \textbf{Postcondition} & Complete transaction timeline is displayed with verifiable blockchain records \\
+        \hline
+    \end{tabular}
+    \caption{View Transaction History Use Case Description}
+    \label{tab:view-transactions-use-case}
+\end{table}
+\newpage
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Withdraw Earnings} \\
+        \hline
+        \textbf{Actor} & Investor \\
+        \hline
+        \textbf{Precondition} & Investor has available earnings from property investments \\
+        \hline
+        \textbf{Main Scenario} & Investor requests withdrawal and system processes payment securely \\
+        \hline
+        \textbf{Postcondition} & Earnings are transferred and withdrawal is recorded on blockchain \\
+        \hline
+    \end{tabular}
+    \caption{Withdraw Earnings Transaction Use Case Description}
+    \label{tab:withdraw-earnings-use-case}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|p{3cm}|p{10cm}|}
+        \hline
+        \textbf{Use Case} & \textbf{Save Transactions as Smart Contracts} \\
+        \hline
+        \textbf{Actor} & System \\
+        \hline
+        \textbf{Precondition} & Transaction has been initiated and validated \\
+        \hline
+        \textbf{Main Scenario} & System automatically records transaction details in immutable smart contracts \\
+        \hline
+        \textbf{Postcondition} & Transaction is permanently stored on blockchain for transparency and audit \\
+        \hline
+    \end{tabular}
+    \caption{Save Transactions as Smart Contracts Use Case Description}
+    \label{tab:save-transactions-use-case}
+\end{table}
 
 \subsection{Modeling}
 
@@ -215,13 +250,114 @@ struct Project {
 \paragraph{Investor Struct:}
 The investor struct stores individual investment details for tracking purposes.
 
+\subsubsection*{Mobile Payment Interface}
+
+The mobile application provides a seamless interface for investors to manage their blockchain-based transactions. Figure \ref{fig:mobile-payment-interface} demonstrates the complete mobile payment workflow including investment initiation, payment processing, and withdrawal functionality.
+
+\begin{figure}[htbp]
+    \centering
+    % Top row - three mobile interface images side by side
+    \begin{minipage}{0.32\textwidth}
+        \centering
+        % \includegraphics[width=\linewidth]{images/mobile_invest_interface.png}
+        \caption*{Investment Interface}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\textwidth}
+        \centering
+        % \includegraphics[width=\linewidth]{images/mobile_payment_process.png}
+        \caption*{Payment Process}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\textwidth}
+        \centering
+        % \includegraphics[width=\linewidth]{images/mobile_withdraw_interface.png}
+        \caption*{Withdrawal Interface}
+    \end{minipage}
+    \caption{Mobile Payment Interface: Investment, Payment, and Withdrawal Process}
+    \label{fig:mobile-payment-interface}
+\end{figure}
+
+\subsubsection*{Admin Blockchain Visualization}
+
+The super admin dashboard provides comprehensive visualization and management capabilities for blockchain smart contracts. Figure \ref{fig:admin-blockchain-visualization} shows the administrative interface for monitoring and managing blockchain transactions and smart contract interactions.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{images/admin_blockchain_dashboard.png}
+    \caption{Super Admin Blockchain Smart Contract Visualization Dashboard}
+    \label{fig:admin-blockchain-visualization}
+\end{figure}
+
 \subsection{Test}
-\subsubsection{Payment Integration Testing}
-The blockchain payment system underwent comprehensive testing to ensure secure and reliable investor transactions. All payment flows were validated through Paymee integration, confirming successful on-chain recording of investments.
+\subsubsection{Transaction Flow Testing}
+
+The blockchain payment integration was thoroughly tested through a complete end-to-end transaction flow, demonstrating the seamless integration between Paymee payment gateway and blockchain recording. The following test scenario validates the entire investment process:
+
+\paragraph{ Initiate New Transaction}
+The investor initiates a new investment transaction through the platform interface, selecting the desired property and investment amount.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/new_transaction_init.png}
+    \caption{New Transaction Initiation Interface}
+    \label{fig:new-transaction-init}
+\end{figure}
+
+
+\paragraph{ Database Transaction Recording}
+Upon payment initiation, the transaction information is immediately saved to the database with a "pending" status, ensuring proper tracking of the investment process.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/transaction_pending_status.png}
+    \caption{Transaction Saved with Pending Status}
+    \label{fig:transaction-pending-status}
+\end{figure}
+
+\newpage
+
+\paragraph{Payment Confirmation and Blockchain Recording}
+After successful payment confirmation, the Paymee callback is executed, triggering the blockchain investment recording process. The system generates a transaction hash confirming the successful blockchain entry.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/payment_confirmation_success.png}
+    \caption{Payment Confirmation Success Message}
+    \label{fig:payment-confirmation-success}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/blockchain_hash_generated.png}
+    \caption{Blockchain Transaction Hash Generated}
+    \label{fig:blockchain-hash-generated}
+\end{figure}
+
+\newpage
+\paragraph{Transaction Status Update}
+The investment status is updated to "confirmed" in the database, the current investment amount is adjusted, and the blockchain record hash is permanently stored for future reference and verification.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/transaction_confirmed_status.png}
+    \caption{Transaction Status Updated to Confirmed}
+    \label{fig:transaction-confirmed-status}
+\end{figure}
+
+\paragraph{Blockchain Verification}
+The transaction is successfully recorded on the Ethereum Sepolia testnet, providing immutable proof of the investment that can be independently verified through Etherscan.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/etherscan_blockchain_record.png}
+    \caption{Transaction Record on Etherscan Sepolia Blockchain}
+    \label{fig:etherscan-blockchain-record}
+\end{figure}
 
 \subsubsection{Smart Contract Validation}
-Smart contract functions were thoroughly tested on the Sepolia testnet, validating investment recording, project registration, and rent distribution mechanisms. All test scenarios passed successfully, confirming the reliability of the blockchain implementation.
-
+Smart contract functions were thoroughly tested on the Sepolia testnet, validating investment recording, project registration, and rent distribution mechanisms. All test scenarios passed successfully, confirming the reliability of the blockchain implementation and the seamless integration with the Paymee payment gateway.
+\newpage
 \subsection{Retrospective}
 
 The blockchain integration sprint successfully delivered secure payment processing and transparent transaction recording. Table \ref{tab:blockchain-retrospective} summarizes the key achievements and future improvements.
@@ -244,8 +380,6 @@ The blockchain integration sprint successfully delivered secure payment processi
         \begin{itemize}
             \item Implement gas optimization for smart contract operations
             \item Add automated monitoring for transaction failures
-            \item Enhance payment reconciliation between Paymee and blockchain
-            \item Plan for mainnet deployment and security audits
         \end{itemize} \\
         \hline
     \end{tabular}
