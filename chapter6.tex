@@ -7,21 +7,21 @@
 
 This chapter presents the core investment features that complement the AI capabilities and blockchain infrastructure of the Korpor platform. These features focus on enhancing the investor experience through comprehensive property management and portfolio tracking. The implementation covers property listing management and investment portfolio analytics for both web and mobile interfaces.
 
-\section{Sprint 8: Property Management}
+\section{Sprint 8: Property Management \& Investor Portfolio}
 
-\subsection{Introduction}
-The Property Management sprint focuses on establishing comprehensive property listing and management functionality. This foundation enables real estate agents and administrators to efficiently manage property portfolios, update listings, and maintain property information across the platform.
+\subsection*{Introduction}
+The Property Management \& Investor Portfolio sprint focuses on establishing comprehensive property listing management functionality and providing detailed investment tracking capabilities. This foundation enables real estate agents and administrators to efficiently manage property portfolios while allowing investors to monitor their investments and analyze their real estate portfolio performance.
 
 \subsection{Analysis}
 \subsubsection{Use Case Diagram}
-The property management system serves multiple actors within the Korpor ecosystem, including real estate agents, administrators, and property owners.
+The combined property management and portfolio system serves multiple actors within the Korpor ecosystem, including real estate agents, administrators, property owners, and investors.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/property_management_use_case.png}
-%     \caption{Property Management Use Case Diagram}
-%     \label{fig:property-management-use-case}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{images/property_portfolio_use_case.png}
+    \caption{Property Management \& Investor Portfolio Use Case Diagram}
+    \label{fig:property-portfolio-use-case}
+\end{figure}
 
 \subsubsection{Textual Use Case Descriptions}
 
@@ -44,95 +44,6 @@ The property management system serves multiple actors within the Korpor ecosyste
     \label{tab:property-management-use-case}
 \end{table}
 
-\subsection{Modeling}
-\subsubsection{Class Diagram}
-The property management system follows object-oriented design principles with entities for properties, listings, and management operations.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{images/property_management_class_diagram.png}
-%     \caption{Property Management Class Diagram}
-%     \label{fig:property-management-class}
-% \end{figure}
-
-\subsubsection{Sequence Diagram}
-The interaction sequence demonstrates the flow between user interface, backend services, and database operations for property management tasks.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=1\textwidth]{images/property_management_sequence.png}
-%     \caption{Property Management Sequence Diagram}
-%     \label{fig:property-management-sequence}
-% \end{figure}
-
-\subsection{Implementation}
-\subsubsection{Property CRUD Operations}
-The implementation includes comprehensive Create, Read, Update, and Delete operations for property management with advanced filtering and search capabilities.
-
-\subsubsection{Media Management}
-Property images and documents are managed through secure upload and storage systems with thumbnail generation and compression optimization.
-
-\subsubsection{Property Status Tracking}
-Real-time tracking of property availability, investment status, and funding progress with automated status updates.
-
-\subsection{Test}
-\subsubsection{Functional Testing}
-Comprehensive testing of all property management operations including creation, modification, and deletion workflows across different user roles.
-
-\subsubsection{Performance Testing}
-Load testing for property search and filtering operations to ensure optimal performance with large property datasets.
-
-\subsection{Retrospective}
-
-The Property Management sprint successfully delivered comprehensive property administration capabilities. Table \ref{tab:property-management-retrospective} summarizes the key achievements and future improvements.
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|p{3cm}|p{10cm}|}
-        \hline
-        \textbf{Category} & \textbf{Details} \\
-        \hline
-        \textbf{What Went Well} & 
-        \begin{itemize}
-            \item Successfully implemented full CRUD operations for properties
-            \item Media management system works efficiently
-            \item Search and filtering provide excellent user experience
-            \item Role-based access control functions properly
-        \end{itemize} \\
-        \hline
-        \textbf{Action Items} & 
-        \begin{itemize}
-            \item Implement advanced property comparison features
-            \item Add bulk property import/export functionality
-            \item Enhance property analytics and reporting
-            \item Integrate with external property databases
-        \end{itemize} \\
-        \hline
-    \end{tabular}
-    \caption{Property Management Sprint Retrospective Summary}
-    \label{tab:property-management-retrospective}
-\end{table}
-
-\newpage
-
-\section{Sprint 9: Investor Portfolio}
-
-\subsection{Introduction}
-The Investor Portfolio sprint focuses on providing comprehensive investment tracking and portfolio management capabilities. This enables investors to monitor their investments, track performance, and analyze their real estate portfolio across multiple projects and properties.
-
-\subsection{Analysis}
-\subsubsection{Use Case Diagram}
-The portfolio system serves investors by providing detailed analytics, performance tracking, and investment management tools.
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/investor_portfolio_use_case.png}
-%     \caption{Investor Portfolio Use Case Diagram}
-%     \label{fig:investor-portfolio-use-case}
-% \end{figure}
-
-\subsubsection{Textual Use Case Descriptions}
-
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|p{3cm}|p{10cm}|}
@@ -154,45 +65,51 @@ The portfolio system serves investors by providing detailed analytics, performan
 
 \subsection{Modeling}
 \subsubsection{Class Diagram}
-The portfolio system architecture includes entities for investments, performance metrics, and analytics calculations.
+The property management and portfolio system follows object-oriented design principles with entities for properties, listings, investments, and analytics operations.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{images/investor_portfolio_class_diagram.png}
-%     \caption{Investor Portfolio Class Diagram}
-%     \label{fig:investor-portfolio-class}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{images/property_portfolio_class_diagram.png}
+    \caption{Property Management \& Investor Portfolio Class Diagram}
+    \label{fig:property-portfolio-class}
+\end{figure}
 
 \subsubsection{Sequence Diagram}
-The interaction flow demonstrates portfolio data retrieval, calculation processes, and visualization generation.
+The interaction sequence demonstrates the flow between user interface, backend services, and database operations for both property management and portfolio tracking operations.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=1\textwidth]{images/investor_portfolio_sequence.png}
-%     \caption{Investor Portfolio Sequence Diagram}
-%     \label{fig:investor-portfolio-sequence}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=1\textwidth]{images/property_portfolio_sequence.png}
+    \caption{Property Management \& Investor Portfolio Sequence Diagram}
+    \label{fig:property-portfolio-sequence}
+\end{figure}
 
 \subsection{Implementation}
-\subsubsection{Portfolio Analytics Engine}
-Advanced analytics engine calculating ROI, performance metrics, diversification indices, and risk assessments for investor portfolios.
+\subsubsection{Property CRUD Operations}
+The implementation includes comprehensive Create, Read, Update, and Delete operations for property management with advanced filtering and search capabilities. Property images and documents are managed through secure upload and storage systems with thumbnail generation and compression optimization.
 
-\subsubsection{Investment Tracking}
-Real-time tracking of investment performance, rental income distribution, and capital appreciation across all investor holdings.
+\subsubsection{Portfolio Analytics Engine}
+Advanced analytics engine calculating ROI, performance metrics, diversification indices, and risk assessments for investor portfolios. Real-time tracking of investment performance, rental income distribution, and capital appreciation across all investor holdings.
+
+\subsubsection{Property Status Tracking}
+Real-time tracking of property availability, investment status, and funding progress with automated status updates. Interactive charts and comprehensive reports providing insights into portfolio performance and investment trends.
 
 \subsubsection{Reporting and Visualization}
-Interactive charts and comprehensive reports providing insights into portfolio performance and investment trends.
+Comprehensive dashboard combining property management tools with portfolio analytics, providing both agents and investors with the information they need to make informed decisions.
 
 \subsection{Test}
-\subsubsection{Analytics Validation}
-Comprehensive testing of portfolio calculations and performance metrics to ensure accuracy and reliability of financial data.
+\subsubsection{Functional Testing}
+Comprehensive testing of all property management operations including creation, modification, and deletion workflows across different user roles. Analytics validation for portfolio calculations and performance metrics to ensure accuracy and reliability of financial data.
+
+\subsubsection{Performance Testing}
+Load testing for property search and filtering operations to ensure optimal performance with large property datasets. Extensive testing of portfolio dashboards and reporting features across web and mobile platforms.
 
 \subsubsection{User Interface Testing}
-Extensive testing of portfolio dashboards and reporting features across web and mobile platforms.
+End-to-end testing of the integrated property management and portfolio tracking interfaces to ensure seamless user experience across all functionality areas.
 
 \subsection{Retrospective}
 
-The Investor Portfolio sprint successfully delivered comprehensive investment tracking capabilities. Table \ref{tab:investor-portfolio-retrospective} summarizes the key achievements and future improvements.
+The Property Management \& Investor Portfolio sprint successfully delivered comprehensive property administration and investment tracking capabilities. Table \ref{tab:property-portfolio-retrospective} summarizes the key achievements and future improvements.
 
 \begin{table}[htbp]
     \centering
@@ -202,23 +119,27 @@ The Investor Portfolio sprint successfully delivered comprehensive investment tr
         \hline
         \textbf{What Went Well} & 
         \begin{itemize}
-            \item Successfully implemented portfolio analytics engine
-            \item Real-time investment tracking works accurately
+            \item Successfully implemented full CRUD operations for properties
+            \item Portfolio analytics engine works accurately
+            \item Integrated property and portfolio management interface
+            \item Real-time investment tracking functions properly
             \item Interactive visualizations provide excellent insights
-            \item Mobile portfolio interface is user-friendly
+            \item Role-based access control functions across all features
         \end{itemize} \\
         \hline
         \textbf{Action Items} & 
         \begin{itemize}
+            \item Implement advanced property comparison features
             \item Add predictive portfolio modeling capabilities
+            \item Enhance property analytics and reporting integration
             \item Implement portfolio rebalancing recommendations
-            \item Enhance tax reporting and documentation
+            \item Add bulk property import/export functionality
             \item Integrate with external financial planning tools
         \end{itemize} \\
         \hline
     \end{tabular}
-    \caption{Investor Portfolio Sprint Retrospective Summary}
-    \label{tab:investor-portfolio-retrospective}
+    \caption{Property Management \& Investor Portfolio Sprint Retrospective Summary}
+    \label{tab:property-portfolio-retrospective}
 \end{table}
 
  

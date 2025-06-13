@@ -1,5 +1,5 @@
 \chapter{AUTHENTICATION \& USER MANAGEMENT}
-
+\vspace{-0.5cm}
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 This chapter presents the authentication and user management system, which forms the security foundation of the Korpor platform. The implementation covers user registration, role-based access control, and comprehensive authentication workflows for both web and mobile interfaces.
@@ -11,7 +11,7 @@ This chapter presents the authentication and user management system, which forms
 The first sprint focuses on establishing the core authentication system and user management functionality. This foundation is critical for all subsequent features as it defines user roles and access controls.
 
 \subsection{Analysis}
-The Authentication and User Management system forms the backbone of Korpor's security and user interaction model. It encompasses processes for user registration with role assignment, secure login with session and token management, password recovery mechanisms, and session termination. Figure \ref{fig:auth-usermgmt-usecase} illustrates the global use cases for these core functionalities.
+The Authentication and User Management system underpins Korpor's security and user access. It covers registration with roles, secure login, password recovery, and session management. Figure~\ref{fig:auth-usermgmt-usecase} shows the main use cases.
 \newpage
 \begin{figure}[htbp]
     \centering
@@ -23,133 +23,86 @@ The Authentication and User Management system forms the backbone of Korpor's sec
 
 
 \subsubsection{Sign-up Process}
-The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The diagram shows the authentication flow for new users registering in the system.
+% The sign-up process is illustrated in Figure \ref{fig:signup-diagram} below. The diagram shows the authentication flow for new users registering in the system.
 
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=1.03\textwidth]{images/diagram_de_case_d_utilisation_signup.png}
-    \caption{Authentication Sign-up Use Case Diagram}
-    \label{fig:signup-diagram}
-\end{figure}
-
-Figure \ref{fig:signup-activity-diagram} illustrates the activity flow of the sign-up process. The process begins when a new user navigates to the sign-up page and presses the sign-up button. The system then presents a form for the user to fill out. Upon submission, the system validates the entered information. 
-
-If the information is invalid, the user is prompted to correct the form. If the information is valid, the system saves the user's details in the database and sends a verification email to the user. The user must then check their email. 
-
-Upon successful email verification, the system redirects the user to an "email verification code" page or a similar confirmation step. The Super Admin is then involved in a two-step verification process. If the Super Admin accepts the user, their login is enabled. If the Super Admin refuses the user, the user's account is deleted. If the initial email verification step fails (e.g., there's an issue with the verification code), an error message is displayed to the user.
-
-
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=1\textwidth]{images/signup_activitydiag.png}
-    \caption{Authentication Sign-up Activity Diagram}
-    \label{fig:signup-activity-diagram}
-\end{figure}
-
-
-% \vspace{1cm}
-
-\subsubsection{Login Process}
-The login process allows existing users to access the system. The table below details the use case, as shown in Table \ref{tab:login_process}.
-\newpage
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics[width=1.03\textwidth]{images/diagram_de_case_d_utilisation_signup.png}
+%     \caption{Authentication Sign-up Use Case Diagram}
+%     \label{fig:signup-diagram}
+% \end{figure}
 
 \begin{table}[htbp]
     \centering
-    \begin{tabular}{|l|p{0.7\textwidth}|}
+    \begin{tabular}{|p{4cm}|p{9cm}|}
         \hline
-        \textbf{Section} & \textbf{Details} \\
+        \textbf{Step} & \textbf{Description} \\
         \hline
-        Use Case & User Login \\
+        Start Sign-Up & User navigates to the sign-up page and presses the sign-up button. \\
         \hline
-        Actor & User (Super Admin, Admin, Agent, Investor) \\
+        Fill Form & System presents a form for the user to complete. \\
         \hline
-        Precondition & User has an existing, verified account. User is on the login page. \\
+        Validate Information & Upon submission, the system validates the entered information. \\
         \hline
-        Main Scenario & 
-        User submits their valid credentials. \\
+        Invalid Information & If invalid, user is prompted to correct the form. \\
         \hline
-        Postcondition & User is successfully logged into the system and can access features based on their role. \\
+        Valid Information & If valid, system saves user details and sends a verification email. \\
         \hline
-        Exception & 
-        - Invalid credentials: System displays an error message.
-        - Account locked/disabled: System displays an appropriate message.
-        - System error: System displays a general error message. \\
+        Email Verification & User checks their email and verifies their account. \\
         \hline
-    \end{tabular}
-    \caption{Login Process Details}
-    \label{tab:login_process}
-\end{table}
-
-\subsubsection{Manage Users Process}
-The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case, as shown in Table \ref{tab:manage_users_process}.
-
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|l|p{0.7\textwidth}|}
+        Verification Success & System redirects user to an email verification code page or confirmation step. \\
         \hline
-        \textbf{Section} & \textbf{Details} \\
+        Super Admin Review & Super Admin performs a two-step verification: \\
         \hline
-        Use Case & Assign Role \\
-        \hline
-        Actor & Super Admin \\
-        \hline
-        Precondition & Actor is logged into the system with appropriate administrative privileges. \\
-        \hline
-        Main Scenario & 
-        Super Admin assigns a role to a user. \\
-        \hline
-        Postcondition & User account is created, updated, or deleted as per the action taken. The list of users reflects the changes. \\
-        \hline
-        Exception & 
-        - Invalid input data: System displays validation errors.
-        - Permission denied: System prevents unauthorized actions.
-        - User not found (for update/delete): System displays an error message.
-        - System error: System displays a general error message. \\
+        Verification Failure & If email verification fails, an error message is displayed. \\
         \hline
     \end{tabular}
-    \caption{Manage Users Process Details}
-    \label{tab:manage_users_process}
+    \caption{Sign-Up Activity Flow}
+    \label{tab:signup-activity-flow}
 \end{table}
 
-\subsubsection{Forget Password Process}
-The password recovery process enables users to securely reset their password when they cannot access their account. The table below details the use case, as shown in Table \ref{tab:forget_password_process}.
 
-\newpage
 
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|l|p{0.7\textwidth}|}
-        \hline
-        \textbf{Section} & \textbf{Details} \\
-        \hline
-        Use Case & Forget Password \\
-        \hline
-        Actor & User (Super Admin, Admin, Agent, Investor) \\
-        \hline
-        Precondition & User has an existing account with a valid email address \\
-        \hline
-        Main Scenario & 
-        User requests password reset and receives secure reset instructions via email \\
-        \hline
-        Postcondition & User successfully resets password and can access their account with new credentials \\
-        \hline
-        Exception & 
-        - Email not found: System displays error message.
-        - Network error: System displays connectivity error message. \\
-        \hline
-    \end{tabular}
-    \caption{Forget Password Process Details}
-    \label{tab:forget_password_process}
-\end{table}
 
-The sign-up process includes user registration, role assignment, and account verification steps. During registration, users are categorized into one of the three user types: Super Admin, Admin, or Agent, with each type having different permissions and access levels within the system.
-\newpage
+% \subsubsection{Manage Users Process}
+% The user management process enables administrators to create, view, update, and delete user accounts. The table below details the use case, as shown in Table \ref{tab:manage_users_process}.
+
+
+% \begin{table}[htbp]
+%     \centering
+%     \begin{tabular}{|l|p{0.7\textwidth}|}
+%         \hline
+%         \textbf{Section} & \textbf{Details} \\
+%         \hline
+%         Use Case & Assign Role \\
+%         \hline
+%         Actor & Super Admin \\
+%         \hline
+%         Precondition & Actor is logged into the system with appropriate administrative privileges. \\
+%         \hline
+%         Main Scenario & 
+%         Super Admin assigns a role to a user. \\
+%         \hline
+%         Postcondition & User account is created, updated, or deleted as per the action taken. The list of users reflects the changes. \\
+%         \hline
+%         Exception & 
+%         - Invalid input data: System displays validation errors.
+%         - Permission denied: System prevents unauthorized actions.
+%         - User not found (for update/delete): System displays an error message.
+%         - System error: System displays a general error message. \\
+%         \hline
+%     \end{tabular}
+%     \caption{Manage Users Process Details}
+%     \label{tab:manage_users_process}
+% \end{table}
+
+
+
 
 \subsection{Modeling}
 
 Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentication system. It showcases the key components and their relationships involved in user authentication and authorization.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{images/auth_classdiag.PNG}
@@ -157,8 +110,6 @@ Figure \ref{fig:auth-class-diagram} depicts the class diagram for the authentica
     \label{fig:auth-class-diagram}
 \end{figure}
 
-
-\newpage
 
 \begin{itemize}
     \item \textbf{AuthComponents}: Represents the UI elements for authentication, such as SignInForm, SignUpForm, ForgotPasswordForm, ResetPasswordForm, and OTPVerification. These components are used by \textbf{MobileAuthScreens}.
@@ -231,44 +182,7 @@ The mobile application provides a streamlined authentication experience for inve
 
 \begin{figure}[htbp]
     \centering
-    % First row - 3 screens
-    \begin{subfigure}[b]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/mobile-auth-screen_login.png}
-        \caption{Login Screen}
-        \label{fig:mobile-login}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/mobile-auth-screen_signup.png}
-        \caption{Signup Screen}
-        \label{fig:mobile-signup}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.25\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/mobile-auth-screen_otp.png}
-        \caption{OTP Screen}
-        \label{fig:mobile-otp}
-    \end{subfigure}
-    
-    \vspace{0.5cm} % Add some vertical space between rows
-    
-    % Second row - 2 screens (centered)
-    \begin{subfigure}[b]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/mobile-auth-screen_forgetpassword.png}
-        \caption{Forgot Password Screen}
-        \label{fig:mobile-forgot-password}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.24\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/mobile-auth-screen_newpassword.png}
-        \caption{New Password Screen}
-        \label{fig:mobile-new-password}
-    \end{subfigure}
+    \includegraphics[width=1\textwidth]{images/mobile auth.png}
     \caption{Complete Mobile Application Authentication Flow}
     \label{fig:mobile-auth-interfaces}
 \end{figure}
@@ -276,7 +190,7 @@ The mobile application provides a streamlined authentication experience for inve
 \newpage
 
 \subsection{Test}
-To ensure the reliability and functionality of the authentication and user management system, we implemented comprehensive testing using Playwright, an end-to-end testing framework \cite{PlaywrightDocs2023}.
+To ensure the reliability and functionality of the authentication and user management system, we implemented comprehensive testing using Playwright, an end-to-end testing framework.
 
 \subsubsection{Playwright Test Results}
 The authentication system underwent rigorous testing through automated test scripts that verified all key functionality, including sign-up, sign-in, password reset, and user management operations. Figure \ref{fig:playwright-tests} demonstrates the successful execution of these tests.
@@ -290,11 +204,10 @@ The authentication system underwent rigorous testing through automated test scri
 
 
 All tests passed successfully, confirming the robustness of the implemented authentication system.
-
+\newpage
 \subsection{Retrospective}
 
 The authentication and user management sprint provided valuable insights into system development and team collaboration. Table \ref{tab:auth-retrospective} summarizes the key achievements, challenges, and lessons learned during this sprint.
-\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|p{3cm}|p{10cm}|}

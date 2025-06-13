@@ -287,12 +287,14 @@
 % \vfill % Balance vertical space
 % \newpage
 
-% Start Arabic page numbering
-\pagenumbering{arabic}
+
 
 % Summary and Abstract
 \input{summary_abstract.tex}
 \cleardoublepage
+
+% Start Arabic page numbering
+\pagenumbering{arabic}
 
 % Dedication
 \input{dedication.tex}
@@ -426,11 +428,10 @@
 
 % Bibliography with two columns and smaller font size
 \begingroup
+\pagestyle{empty} % Remove page numbers from bibliography
 \small % Reduce font size for bibliography
 \setlength{\bibitemsep}{0.5\baselineskip} % Reduce space between entries
-\begin{multicols}{2} % Two-column layout
 \printbibliography % Print the bibliography
-\end{multicols}
 \endgroup
 
 

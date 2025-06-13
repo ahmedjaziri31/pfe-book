@@ -10,7 +10,7 @@ In this section, we will define the actors of our application and the functional
 
 \subsection{Identifying Actors}
 
-We define actors as a shorthand for the roles played by entities outside the system that interact directly with them \cite{CockburnUML2002, CockburnWritingEffectiveUseCases2000}. In our system, we identify four types of actors:
+We define actors as a shorthand for the roles played by entities outside the system that interact directly with them \cite{CockburnUML2002}. In our system, we identify four types of actors:
 
 \begin{itemize}
     \item \textbf{\textcolor{primary}{Super Admin}}: Responsible for the global configuration of the platform, they have extended privileges to manage administrators, oversee security, and ensure compliance. They can also configure advanced features and control all system resources.
@@ -70,19 +70,14 @@ After several meetings with our client, the various functional requirements of o
 
 \subsection{Non-functional Requirements}
 
-In order to ensure the proper functioning of the decision-making system and to avoid any kind of anomaly, the implemented solution must meet a set of non-functional requirements such as:
-
+To ensure reliable decision-making and prevent anomalies, the solution must meet these non-functional requirements:
 \begin{itemize}
-    \item \textbf{Maintainability}: The system must be designed for simplicity so that tasks, updates, and bug fixes can be executed with minimal complexity \cite{DevOpsFoundation2023, FowlerRefactoring2018}.
-    
-    \item \textbf{Evolution}: Platform administration must remain attentive to user needs and feedback, continuously enhancing the services offered while preserving the application's utility and efficiency \cite{PoppendieckLean2012, KnibergLeanStartup2013}.
-    
-    \item \textbf{Security}: Robust security measures are essential. The platform must enforce strong authentication protocols, access privileges, and comprehensive data encryption (both at rest and in transit) \cite{ClerkAuthenticationDocs, OWASPSecurityPrinciples2021}. The integration of blockchain technology further ensures the immutability and integrity of sensitive information \cite{WangBlockchainRealEstate2023, McKinseyBlockchainRE2023}.
-    
-    \item \textbf{Efficiency}: The application must be effective in all circumstances, delivering prompt and reliable functionality regardless of external conditions \cite{KimDevOpsMethods2018, BassArchitecture2021}.
-    
-    \item \textbf{Performance}: The system must operate optimally across diverse environments. It should consistently provide a responsive and reliable experience, even under high transaction volumes or varying network conditions \cite{DockerArchitecture2023, ForsgreniDevOpsMetrics2023}.
-\end{itemize} 
+    \item \textbf{Maintainability}: The system should be simple to update and fix \cite{DevOpsFoundation2023, FowlerRefactoring2018}.
+    \item \textbf{Evolution}: The platform must adapt to user needs, improving services while maintaining efficiency \cite{PoppendieckLean2012, KnibergLeanStartup2013}.
+    \item \textbf{Security}: Strong authentication, access control, and data encryption are required. Blockchain integration ensures data integrity \cite{WangBlockchainRealEstate2023}.
+    \item \textbf{Efficiency}: The application must remain effective and reliable in all situations \cite{KimDevOpsMethods2018, BassArchitecture2021}.
+    \item \textbf{Performance}: The system should be responsive and stable, even under heavy load or varying network conditions.
+\end{itemize}
 
 % \section*{Requirements Analysis}
 
@@ -90,9 +85,8 @@ In order to ensure the proper functioning of the decision-making system and to a
 
 \subsection*{General use case diagram}
 
-Below, we present the various actors of the application and the actions they are authorized to perform.
-The overall diagram is illustrated in Figure \ref{fig:use-case-diagram}:
-\newpage
+Below, we present the various actors of the application and the actions they are authorized to perform \ref{fig:use-case-diagram}.
+% \newpage
 \begin{figure}[htbp]
     \centering
     % Replace with actual image file once available
@@ -107,7 +101,7 @@ Before starting the design and development of any computerized system, it is ess
 
 \subsection{Physical architecture}
 
-Korpor's physical architecture, depicted in Figure \ref{fig:physical-architecture}, is a distributed system. Users interact via **Mobile Devices** (React Native app) and **Web Browsers** (React components), communicating via HTTP/JSON with backend services primarily on **Google Cloud Platform (GCP)**. GCP handles core logic and data, featuring a **Cloud Run JS Server** for the main backend, a **Cloud Run Flask Server** for AI models (prediction, recommendation, chatbots), **Cloud SQL** for database storage, and a **Google Cloud VPS** for data scraping models. Blockchain operations leverage **Infura** for Solidity code and the **Sepolia Testnet** for contracts, using RPC and HTTP/JSON. An administrative **Web Panel** is hosted on a **Hosting.com server**. 
+Korpor's physical architecture, depicted in Figure \ref{fig:physical-architecture}, is a distributed system. Users interact via \textbf{\textcolor{primary}{Mobile Devices}} (React Native app) and \textbf{\textcolor{primary}{Web Browsers}} (React components), communicating via HTTP/JSON with backend services primarily on \textbf{\textcolor{primary}{Google Cloud Platform}} (GCP). GCP handles core logic and data, featuring a \textbf{\textcolor{primary}{Cloud Run JS Server}} for the main backend, a \textbf{\textcolor{primary}{Cloud Run Flask Server}} for AI models (prediction, recommendation, chatbots), \textbf{\textcolor{primary}{ Cloud SQL}} for database storage, and a \textbf{\textcolor{primary}{Google Cloud VPS}} for data scraping models. Blockchain operations leverage \textbf{\textcolor{primary}{Infura}} for Solidity code and the \textbf{\textcolor{primary}{Sepolia Testnet}} for contracts, using RPC and HTTP/JSON. An administrative \textbf{\textcolor{primary}{Web Panel}} is hosted on a \textbf{\textcolor{primary}{Hosting.com server}}. 
 
 \begin{figure}[htbp]
     \centering
@@ -120,7 +114,7 @@ Korpor's physical architecture, depicted in Figure \ref{fig:physical-architectur
 
 \subsection{Logical architecture}
 
-Korpor's logical architecture follows the MVC (Model-View-Controller) pattern \cite{SunardiMVC2019, GammaPatterns1994} for maintainability.
+Korpor's logical architecture follows the MVC (Model-View-Controller) pattern \cite{SunardiMVC2019, GammaPatterns1994} for maintainability, with microservices principles applied for scalable system design \cite{NewmanMicroservices2021}.
 \begin{itemize}
     \item \textbf{Model}: Manages application data and business logic, interacting with the backend database.
     \item \textbf{View}: The frontend (React, TypeScript, TanStack) presents data to users and handles interactions.
@@ -178,19 +172,19 @@ Expo is an open-source platform for making universal native apps for Android, iO
 
 \subsubsection*{\protect\techicon{typescript} TypeScript}
                                                                 
-TypeScript (abbreviated as TS) is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript \cite{TypeScriptDocs2023}. It is designed for the development of large applications and transpiles to JavaScript.
+TypeScript (abbreviated as TS) is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. It is designed for the development of large applications and transpiles to JavaScript.
 
 \subsubsection*{\protect\techicon{tanstack} Tanstack}
                                                                       
-High-quality open-source software for web developers \cite{TanstackWebsite}. Headless, type-safe, \& powerful utilities for Web Applications, Routing, State Management, Data Visualization, Datagrids/Tables, and more.
+High-quality open-source software for web developers. Headless, type-safe, \& powerful utilities for Web Applications, Routing, State Management, Data Visualization, Datagrids/Tables, and more.
 
 \subsubsection*{\protect\techicon{clerk}}
                                                                         
-Clerk \cite{ClerkAuthenticationDocs} is a complete suite of embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage your users.
+Clerk is a complete suite of embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage your users.
 
 \subsubsection*{\protect\techicon{maestro} Maestro}
                                                                         
-Maestro \cite{MaestroDocs2022} is the simplest, most powerful, and most trusted end-to-end testing platform for mobile and web apps.
+Maestro is the simplest, most powerful, and most trusted end-to-end testing platform for mobile and web apps.
 
 \subsubsection*{\protect\techicon{azure} Google cloud platform}
 
@@ -198,47 +192,47 @@ Google cloud platform, or just GCP, is the cloud computing platform developed by
 
 \subsubsection*{\protect\techicon{github} GitHub}
 
-GitHub \cite{GithubWebsite} is a cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
+GitHub is a cloud-based service that helps developers store and manage their code, as well as track and control changes to their code.
 
 \subsubsection*{\protect\techicon{express} Express.js}
 
-Express.js \cite{ExpressJSWebsite} is a minimal and flexible Node.js \cite{NodeJSWebsite} web application framework that provides a list of features for building web and mobile applications easily.
+Express.js is a minimal and flexible Node.js web application framework that provides a list of features for building web and mobile applications easily.
 
 \subsubsection*{\protect\techicon{postman} Postman}
 
-Postman \cite{PostmanWebsite} is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
+Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 
 \subsubsection*{\protect\techicon{vite} Vite}
 
-Vite \cite{ViteJSWebsite} is a modern build tool that provides a fast and optimized development experience for React 17 applications. It leverages native ES modules and offers a highly efficient development server with hot module replacement (HMR).
+Vite is a modern build tool that provides a fast and optimized development experience for React 17 applications. It leverages native ES modules and offers a highly efficient development server with hot module replacement (HMR).
 
 \subsubsection*{\protect\techicon{react} React}
 
-React \cite{ReactWebsite}, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
 
 \subsubsection*{\protect\techicon{mysql} MySQL}
 
-MySQL \cite{MySQLWebsite} is an open-source relational database management system. It is based on structured query language (SQL), which is used to add, access and manage content in a database.
+MySQL is an open-source relational database management system. It is based on structured query language (SQL), which is used to add, access and manage content in a database.
 
 \subsubsection*{\protect\techicon{docker} Docker}
 
-Docker is an open platform for developing, shipping, and running applications \cite{DockerArchitecture2023}. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.
 
 \subsubsection*{\protect\techicon{playwright} Playright}
 
-Playwright \cite{PlaywrightDocs2023} is an open-source testing and automation framework that can automate web browser interactions. To put it simply, you can write code that can open a browser \cite{DevOpsFoundation2023}.
+Playwright is an open-source testing and automation framework that can automate web browser interactions. To put it simply, you can write code that can open a browser.
 
 \subsubsection*{\protect\techicon{storybook} Storybook}
 
-Storybook is a frontend workshop for building UI components and pages in isolation. It helps you develop and share hard-to-reach states and edge cases without needing to run your whole app \cite{MarcotteResponsiveWebDesign2023}.
+Storybook is a frontend workshop for building UI components and pages in isolation. It helps you develop and share hard-to-reach states and edge cases without needing to run your whole app.
 
 \subsubsection*{\protect\techicon{staruml} StarUML}
 
-StarUML \cite{StarUMLWebsite} is a sophisticated software modeler aimed to support agile and concise modeling. It provides eleven different types of diagrams and it accepts UML 2.x standards.
+StarUML is a sophisticated software modeler aimed to support agile and concise modeling. It provides eleven different types of diagrams and it accepts UML 2.x standards.
 
 \subsubsection*{\protect\techicon{node} Node.js}
 
-Node.js \cite{NodeJSWebsite} is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser, allowing developers to use JavaScript for server-side scripting.
+Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser, allowing developers to use JavaScript for server-side scripting.
 
 
 \subsection{Tools used for the report}
@@ -255,7 +249,7 @@ Canva is a global company that empowers people to design anything and publish an
 
 
 \subsection{Source code management with Git and GitHub}
-GitHub \cite{GithubWebsite} was utilized for version control, employing a structured branching strategy for organized development. The `main` branch holds official release history, while `develop` serves as an integration branch for new features. Feature branches are created from `develop` for new tasks or bug fixes. Upon completion and testing, these are merged back into `develop` via pull requests, ensuring code review and quality control. Merging `develop` into `main` creates a new stable application version. This workflow is illustrated in Figure \ref{fig:git-workflow}.
+GitHub was utilized for version control, employing a structured branching strategy for organized development. The `main` branch holds official release history, while `develop` serves as an integration branch for new features. Feature branches are created from `develop` for new tasks or bug fixes. Upon completion and testing, these are merged back into `develop` via pull requests, ensuring code review and quality control. Merging `develop` into `main` creates a new stable application version. This workflow is illustrated in Figure \ref{fig:git-workflow}.
 
 \begin{figure}[ht!]
     \centering
@@ -265,150 +259,40 @@ GitHub \cite{GithubWebsite} was utilized for version control, employing a struct
 \end{figure}
 
 
-\section{Product backlog}
+\section{Sprint Overview}
 
-The backlog was created before the sprints to plan the milestones and determine the content of each sprint based on project requirements \cite{SchwarzScrum2019}. It includes the following fields:
-\begin{itemize}
-    \item \textbf{Code:} The unique identifier of the task.
-    \item \textbf{Theme:} The subject of a user story.
-    \item \textbf{User Story:} A short description of the functionality requested by the client.
-    \item \textbf{Priority:} A value indicating the importance of the functionality \cite{MoscowMethodology2021, CleggCaseMethod2004}.
-    \begin{itemize}
-        \item \textbf{Must:} The feature is essential and must be implemented.
-        \item \textbf{Should:} The feature should be implemented if possible.
-        \item \textbf{Could:} The feature is optional and may be deprioritized.
-   
-    \end{itemize}
-\end{itemize}
+The project was organized into 8 focused sprints, each targeting specific functionality areas to deliver incremental value. The sprint planning ensured systematic development from core authentication to advanced AI and blockchain features Table \ref{tab:sprint-overview}.
 
-Table \ref{tab:product-backlog} shows the product backlog for our Korpor project:
-
-\begin{longtable}{|c|l|p{8cm}|c|}
-    \caption{Korpor Product Backlog\label{tab:product-backlog}} \\
-        \hline
-        \textbf{Code} & \textbf{Theme} & \textbf{User story} & \textbf{Priority} \\
-        \hline
-    \endfirsthead
-    
-    \hline
-    \endhead
-    
-    \hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
-    \endfoot
-    
-    \hline
-    \endlastfoot
-    
-    % Authentication & User Management section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Authentication \& User Management}}} \\
-    \hline
-    PB001 & Authentication & As a user, I want to create an account and authenticate securely & Must \\
-    \hline
-    PB002 & User Management & As a user, I want to manage my profile & Must \\
-    \hline
-    PB003 & Authentication & As a user, I want to securely reset my password & Must \\
-    \hline
-    PB004 & Admin Management & As a Super Admin, I want to manage admin accounts for different real estate companies & Should \\
-    \hline
-    
-    
-    % Super Admin Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Super Admin Features}}} \\
-    \hline
-    PB005 & Security & As a Super Admin, I want to monitor security and compliance across the platform & Could \\
-    \hline
-    PB006 & Analytics & As a Super Admin, I want to generate and analyze global performance reports & Could \\
-    \hline
-    PB007 & AI Integration & As a Super Admin, I want to chat with an AI assistant that can securely access database & Could \\
-    \hline
-    
-
-
-    % Admin Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Admin Features}}} \\
-    \hline
-    PB008 & Listing Management & As an Admin, I want to manage real estate listings in my company & Must \\
-    \hline
-    PB009 & Agent Management & As an Admin, I want to oversee real estate agents and their permissions & Should \\
-    \hline
-    PB010 & Transaction Management & As an Admin, I want to track transactions and calculate agent commissions & Should \\
-    \hline
-    PB011 & Customer Service & As an Admin, I want to address investor inquiries and issues & Could \\
-    \hline
-    PB012 & Analytics & As an Admin, I want to access a comprehensive agency dashboard & Could \\
-    \hline
-    PB013 & AI Integration & As an Admin, I want to input property details and receive AI-powered valuation & Should \\
-    \hline
-    
-    % Real Estate Agent Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Real Estate Agent Features}}} \\
-    \hline
-    PB014 & Listing Management & As an Agent, I want to create and manage property listings & Must \\
-    \hline
-    PB015 & Investment Management & As an Agent, I want to handle investment and purchase requests & Could \\
-    \hline
-    PB016 & Data Management & As an Agent, I want to contribute data for AI-driven estimates & Could \\
-    \hline
-    PB017 & Customer Relations & As an Agent, I want to maintain client relationships and communications & Could \\
-    \hline
-    PB018 & Finance & As an Agent, I want to view my commissions on sales and rentals & Should \\
-    \hline
-    
-    % Investor Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Investor Features}}} \\
-    \hline
-    PB019 & Property Discovery & As an Investor, I want to browse available property listings & Must \\
-    \hline
-    PB020 & Search Functionality & As an Investor, I want to filter properties based on my preferences & Could \\
-    \hline
-    PB021 & Investment Process & As an Investor, I want to invest in properties through a simple process & Could \\
-    \hline
-    PB022 & Portfolio Management & As an Investor, I want to track my investment portfolio in real-time & Must \\
-    \hline
-    PB023 & Payment Processing & As an Investor, I want to make secure payments & Should \\
-    \hline
-    PB024 & AI Recommendations & As an Investor, I want to receive personalized property recommendations & Must \\
-    \hline
-    PB025 & AI Assistance & As an Investor, I want to consult an AI assistant for real estate legal questions & Could \\
-    \hline
-    PB026 & Financial Prediction & As an Investor, I want to see predictions of potential earnings & Could \\
-    \hline
-    PB027 & Finance Management & As an Investor, I want to manage my earnings and withdrawals & Could \\
-    \hline
-    
-    PB028 & Notifications & As an Investor, I want to receive push notifications about my investments & Should \\
-    \hline
-    % AI & Machine Learning Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{AI \& Machine Learning Features}}} \\
-    \hline
-    PB029 & Recommendation System & As the System, I want to analyze user interactions for personalized recommendations & Must \\
-    \hline
-    PB030 & Prediction System & As the System, I want to predict property valuations and rental prices & Should \\
-    \hline
-    PB031 & Chatbot & As the System, I want to provide real estate legal information via NLP & Should \\
-    \hline
-    PB032 & administrative chatbot & As the System, I want to provide real time data from database & Could \\
-    \hline
-    
-    % Blockchain & Smart Contract Features section
-    \multicolumn{4}{|c|}{\cellcolor{primary!15}\textbf{\textcolor{primary}{Blockchain: Smart Contract Features}}} \\
-    \hline
-    PB033 & Blockchain & As an Investor, I want my property investments to be secured via blockchain \cite{McKinseyBlockchainRE2023} & Must \\
-    \hline
-    PB034 & Blockchain Management & As an Admin, I want to verify and validate blockchain transactions & Should \\
-    \hline
-    PB035 & Data Integrity & As the System, I want to store transaction records immutably on blockchain & Must \\
-    \hline
-    PB036 & System Monitoring & As a Super Admin, I want to monitor blockchain health and performance & Should \\
-    \hline
-\end{longtable}
+\newpage
+\begin{table}[ht!]
+\centering
+\caption{Korpor Project Sprint Overview\label{tab:sprint-overview}}
+\begin{tabular}{|c|l|p{6cm}|c|}
+\hline
+\textbf{Sprint} & \textbf{Focus Area} & \textbf{Key Deliverables} & \textbf{Duration} \\
+\hline
+1 & Authentication \& User Management & Secure login, role-based access & 2 weeks \\
+\hline
+2 & Data Collection \& Scraping & Data collection, web scraping systems & 1 week \\
+\hline
+3 & Property Valuation Model & AI-powered property valuation and prediction & 2 weeks \\
+\hline
+4 & Real Estate Assistant & NLP chatbot for real estate legal assistance & 1 week \\
+\hline
+5 & Role-Based Backoffice & Agent management systems & 2 weeks \\
+\hline
+6 & Recommendation System & AI-powered investment recommendations & 1 week \\
+\hline
+7 & Blockchain Integration & Payment processing with blockchain & 2 weeks \\
+\hline
+8 & Property Management \& Portfolio & Listing management, investment tracking & 4 weeks \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Sprint planning}
 
-In order to complete the project within the deadlines set by the internship agreement, planning is an important step in the process \cite{SutherlandScrum2020, RubinEssentialScrum2012}. It was therefore necessary to define the essential steps and estimate the time to be devoted to the completion of the various tasks. To do this, we made a GANTT chart.
-
-In our project management, we opted for the proportional distribution method in order to estimate the costs \cite{CohnAgileEstimating2005, GreningPlanningPoker2002}.
-Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress of our project:
+To meet internship deadlines, we carefully planned key tasks, estimated timelines, and visualized the project with a GANTT chart. We also considered cost estimation and agile scaling for enterprise development (see Figure~\ref{fig:gantt-chart}).
 
 \begin{figure}[htbp]
     \centering
@@ -484,10 +368,8 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
     \ganttbar{Sprint 7}{2025-04-05}{2025-04-18} \\
     
     % Sprint 8 (Apr 19-May 2, 2 weeks)
-    \ganttbar{Sprint 8}{2025-04-19}{2025-05-02} \\
+    \ganttbar{Sprint 8}{2025-04-19}{2025-05-16} \\
     
-    % Sprint 9 (May 3-16, 2 weeks)
-    \ganttbar{Sprint 9}{2025-05-03}{2025-05-16} \\
     
     
     
@@ -500,6 +382,6 @@ Figure \ref{fig:gantt-chart} shows the Gantt chart that describes the progress o
 
 \section*{Conclusion}
 
-Our Sprint 0 marked the exciting start of our KORPOR project \cite{ScaledAgileFramework2024, SutherlandScrum2020}. We defined global and specific objectives, developed a solid architecture, and configured an optimal working environment. With a clear vision of the initial product backlog and preliminary planning for upcoming sprints, we are ready to achieve our vision and achieve our goals successfully \cite{SchwarzScrum2019, RubinEssentialScrum2012}.
+This chapter established the project's foundation, outlining our planning, architecture, and methodology for successful delivery.
 
 \addtocontents{toc}{\protect\newpage}
