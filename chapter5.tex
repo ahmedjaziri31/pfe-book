@@ -19,7 +19,7 @@ The blockchain integration within the \textbf{\textcolor{primary}{Korpor}} platf
 
 \subsubsection{Objectives of Integration}
 
-The blockchain integration enhances the platform through three key objectives: \textbf{Security and trust} via cryptographically signed transactions \cite{Zheng2018BlockchainChallenges}, \textbf{Decentralization and immutability} ensuring data cannot be altered \cite{Antonopoulos2018MasteringEthereum}, and \textbf{Smart contract automation} for efficient business logic execution \cite{Bartoletti2017EmpiricalAnalysis, ZhangBlockchainPropertyRights2023}.
+The blockchain integration enhances the platform through three key objectives: \textbf{Security and trust} via cryptographically signed transactions, \textbf{Decentralization and immutability} ensuring data cannot be altered \cite{Antonopoulos2018MasteringEthereum}, and \textbf{Smart contract automation} for efficient business logic execution \cite{Bartoletti2017EmpiricalAnalysis, ZhangBlockchainPropertyRights2023}.
 
 \subsubsection{Use Case Diagram}
 
@@ -110,6 +110,53 @@ The transaction management  system serves as the core component for handling all
 \end{table}
 
 \subsection{Modeling}
+
+\subsubsection{Class Diagram}
+
+The blockchain transaction management system is built around several key classes that handle different aspects of the payment and blockchain integration. Figure \ref{fig:blockchain-class-diagram} illustrates the main classes and their relationships within the blockchain module.
+\newpage
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/blockchain_class_diagram.png}
+    \caption{Blockchain Transaction Management Class Diagram}
+    \label{fig:blockchain-class-diagram}
+\end{figure}
+
+
+The class diagram shows the core components:
+
+\begin{itemize}
+    \item \textbf{TransactionManager:} Orchestrates the entire transaction process
+    \item \textbf{BlockchainService:}  Smart contract interactions
+    \item \textbf{SmartContract:} Represents the on-chain contract logic
+    \item \textbf{Investment:} Entity representing user investments
+    \item \textbf{Transaction:} Entity for tracking payment transactions
+\end{itemize}
+
+\subsubsection{Sequence Diagram}
+
+The sequence diagram in Figure \ref{fig:blockchain-sequence-diagram} demonstrates the complete flow of a blockchain investment transaction, from initial user request to final blockchain confirmation.
+\newpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/blockchain_sequence_diagram.png}
+    \caption{Blockchain Investment Transaction Sequence Diagram}
+    \label{fig:blockchain-sequence-diagram}
+\end{figure}
+
+The sequence shows the interaction between:
+\begin{enumerate}
+    \item \textbf{Investor} initiates investment request
+    \item \textbf{Frontend} processes user input and validation
+    \item \textbf{Backend API} coordinates transaction workflow
+    \item \textbf{Database} stores transaction records
+    \item \textbf{Paymee Gateway} processes payment
+    \item \textbf{Blockchain Service} records transaction on-chain
+    \item \textbf{Smart Contract} executes investment logic
+\end{enumerate}
+
+\subsubsection{System Architecture}
 
 The blockchain component is designed to integrate seamlessly within the overall architecture of the \textbf{\textcolor{primary}{Korpor}} platform. This section outlines how the blockchain fits into the system and the technologies used for its implementation.
 
@@ -282,7 +329,7 @@ The blockchain payment integration was thoroughly tested through a complete end-
 
 \paragraph{ Initiate New Transaction}
 The investor initiates a new investment transaction through the platform interface, selecting the desired property and investment amount.
-
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{images/new_transaction_init.png}
@@ -301,7 +348,6 @@ Upon payment initiation, the transaction information is immediately saved to the
     \label{fig:transaction-pending-status}
 \end{figure}
 
-\newpage
 
 \paragraph{Payment Confirmation and Blockchain Recording}
 After successful payment confirmation, the Paymee callback is executed, triggering the blockchain investment recording process. The system generates a transaction hash confirming the successful blockchain entry.
@@ -312,6 +358,7 @@ After successful payment confirmation, the Paymee callback is executed, triggeri
     \caption{Payment Confirmation Success Message}
     \label{fig:payment-confirmation-success}
 \end{figure}
+\newpage
 
 \begin{figure}[htbp]
     \centering
@@ -320,7 +367,6 @@ After successful payment confirmation, the Paymee callback is executed, triggeri
     \label{fig:blockchain-hash-generated}
 \end{figure}
 
-\newpage
 \paragraph{Transaction Status Update}
 The investment status is updated to "confirmed" in the database, the current investment amount is adjusted, and the blockchain record hash is permanently stored for future reference and verification.
 
@@ -333,7 +379,10 @@ The investment status is updated to "confirmed" in the database, the current inv
 
 \paragraph{Blockchain Verification}
 The transaction is successfully recorded on the Ethereum Sepolia testnet, providing immutable proof of the investment that can be independently verified through Etherscan.
+\subsubsection{Smart Contract Validation}
+Smart contract functions were thoroughly tested on the Sepolia testnet, validating investment recording, project registration, and rent distribution mechanisms. All test scenarios passed successfully, confirming the reliability of the blockchain implementation and the seamless integration with the Paymee payment gateway.
 
+\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{images/etherscan_blockchain_record.png}
@@ -341,9 +390,7 @@ The transaction is successfully recorded on the Ethereum Sepolia testnet, provid
     \label{fig:etherscan-blockchain-record}
 \end{figure}
 
-\subsubsection{Smart Contract Validation}
-Smart contract functions were thoroughly tested on the Sepolia testnet, validating investment recording, project registration, and rent distribution mechanisms. All test scenarios passed successfully, confirming the reliability of the blockchain implementation and the seamless integration with the Paymee payment gateway.
-\newpage
+
 \subsection{Retrospective}
 
 The blockchain integration sprint successfully delivered secure payment processing and transparent transaction recording. Table \ref{tab:blockchain-retrospective} summarizes the key achievements and future improvements.
@@ -365,7 +412,6 @@ The blockchain integration sprint successfully delivered secure payment processi
         \textbf{Action Items} & 
         \begin{itemize}
             \item Implement gas optimization for smart contract operations
-            \item Add automated monitoring for transaction failures
         \end{itemize} \\
         \hline
     \end{tabular}

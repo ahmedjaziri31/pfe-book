@@ -4,20 +4,22 @@
 % Reset page style for appendices
 \pagestyle{plain}
 
-% Remove appendices from Table of Contents
+% Add main Appendix title
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
 
-% Ensure "Appendix" appears in TOC
-\renewcommand{\appendixname}{Appendix}
+% Customize appendix section format
+\titleformat{\section}[display]
+  {\normalfont\large\bfseries\color{primary}}
+  {Appendix \Alph{section}}
+  {15pt}
+  {\Large\textcolor{primary}}
 
+% Reset section counter for appendix lettering
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
 
-% Customize appendix chapter format
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries\color{primary}}
-  {\appendixname\ \thechapter}
-  {20pt}
-  {\Huge\textcolor{primary}}
-
-\chapter*{ChatPromptTemplate for Real Estate Assistant}
+\section{ChatPromptTemplate for Real Estate Assistant}
 \label{app:A}
 
 The following pseudo code demonstrates the prompt engineering approach for the Real Estate Assistant:
@@ -66,7 +68,7 @@ BEGIN
 END
 \end{verbatim}
 
-\chapter*{Voice Generation for Real Estate Assistant}
+\section{Voice Generation for Real Estate Assistant}
 \label{app:B}
 
 The following pseudo code demonstrates the voice generation implementation using ElevenLabs:
@@ -118,7 +120,7 @@ BEGIN
 END
 \end{verbatim}
 
-\chapter*{Natural Language to SQL Processing}
+\section{Natural Language to SQL Processing}
 \label{app:C}
 
 The following pseudo code demonstrates the complete workflow for converting natural language queries to SQL and generating human-readable responses for the Role-Based Backoffice Agent:
@@ -319,7 +321,7 @@ FUNCTION main():
     print(answer)
 \end{verbatim}
 
-\chapter*{Hybrid Recommendation Algorithm}
+\section{Hybrid Recommendation Algorithm}
 \label{app:D}
 
 The following pseudo code demonstrates the hybrid recommendation algorithm that combines user preferences, collaborative filtering, and popularity scoring:
@@ -391,7 +393,7 @@ FUNCTION calculate_interaction_score(interaction):
     RETURN score
 \end{verbatim}
 
-\chapter*{AI Approach Selection: RAG vs Fine-Tuning vs Prompt Engineering}
+\section{AI Approach Selection: RAG vs Fine-Tuning vs Prompt Engineering}
 \label{app:E}
 
 The development of the Real Estate Assistant required careful consideration of different AI approaches to ensure optimal performance for domain-specific legal and regulatory queries. This section analyzes the three primary approaches and justifies our selection.
@@ -418,9 +420,7 @@ Fine-tuning involves training a pre-trained model using domain-specific datasets
     \item Suitable for specialized tasks with sufficient training data
 \end{itemize}
 
-\section*{RAG (Retrieval-Augmented Generation)}
-
-RAG combines the strengths of retrieval-based and generation-based approaches by retrieving relevant information from a knowledge base and using it to generate contextually appropriate responses.
+\section*{RAG\\(Retrieval-Augmented Generation)}
 
 \textbf{Selected Approach:} For the Korpor Real Estate Assistant, we implemented a RAG-based solution due to its optimal balance of accuracy, cost-effectiveness, and maintainability for domain-specific legal and regulatory queries.
 

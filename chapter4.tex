@@ -138,12 +138,11 @@ The property valuation model serves multiple actors within the Korpor ecosystem.
     \caption{Property Valuation Use Case Description}
     \label{tab:property-valuation-use-case}
 \end{table}
-
+\newpage
 \subsection{Modeling}
 \subsubsection{Class Diagram}
 The property valuation system follows object-oriented design principles. Figure \ref{fig:valuation-class-diagram} shows the main classes and their relationships.
 
-\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{images/valuation_class_diagram.png}
@@ -154,6 +153,10 @@ The property valuation system follows object-oriented design principles. Figure 
 
 The interaction sequence for the AI property valuation prediction model demonstrates the flow between different system components. Figure \ref{fig:ai-prediction-sequence-model} illustrates the sequence of operations from user request to prediction result delivery.
 
+To provide a clearer understanding of the property valuation process, Figure \ref{fig:valuation-workflow} presents a simplified workflow diagram that illustrates the step-by-step flow from user input to prediction results.
+
+\newpage
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1.1\textwidth]{images/sequence_AI_prediction_model.png}
@@ -161,8 +164,6 @@ The interaction sequence for the AI property valuation prediction model demonstr
     \label{fig:ai-prediction-sequence-model}
 \end{figure}
 
-To provide a clearer understanding of the property valuation process, Figure \ref{fig:valuation-workflow} presents a simplified workflow diagram that illustrates the step-by-step flow from user input to prediction results.
-\newpage
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{images/valuation_workflow_diagram.png}
@@ -173,13 +174,6 @@ To provide a clearer understanding of the property valuation process, Figure \re
 \subsection{Implementation}
 \subsubsection{Data Features for Valuation}
 The accuracy of the property valuation model heavily relies on the quality and comprehensiveness of the input data \cite{PatelAIRealEstate2024}. Figure \ref{fig:geo-propriety-data} outlines the key geo-property data features utilized by the model. These features capture essential characteristics of a property and its location, enabling the model to learn complex relationships and predict market values and rental incomes effectively.
-\newpage
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.4\textwidth]{images/geo-propriety-data.png} % Replace with your actual image path
-    \caption{Geo-propriety Data Features for AI Models}
-    \label{fig:geo-propriety-data}
-\end{figure}
 
 \subsubsection{Model Selection}
 To develop an accurate property valuation prediction model, several regression algorithms were evaluated. The following models were selected for training and comparison due to their distinct characteristics and common effectiveness in similar predictive tasks:
@@ -190,13 +184,19 @@ To develop an accurate property valuation prediction model, several regression a
 \end{itemize}
 These models were trained on the prepared dataset, and their performances were evaluated to select the most suitable one for deployment in the Korpor platform.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.35\textwidth]{images/geo-propriety-data.png} % Replace with your actual image path
+    \caption{Geo-propriety Data Features for AI Models}
+    \label{fig:geo-propriety-data}
+\end{figure}
+\newpage
 \subsubsection{Feature Importance Analysis}
 Understanding which features contribute most to the model's predictions is crucial for model interpretability and refinement. After training the selected model, a feature importance analysis was conducted. Figure \ref{fig:feature-importance} displays the top 15 most important features identified by the model. This analysis helps in validating the model's logic.
-\newpage
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/top_15_feature_importance.png} % Assuming image is in 'images' directory
+    \includegraphics[width=0.6\textwidth]{images/top_15_feature_importance.png} % Assuming image is in 'images' directory
     \caption{Top 15 Feature Importance for Property Valuation Model}
     \label{fig:feature-importance}
 \end{figure}
@@ -243,24 +243,24 @@ Figure \ref{fig:prediction-form} shows the input form, and Figure \ref{fig:predi
 
 \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{images/screenshot_form_predition.png}
+        \includegraphics[width=0.8\textwidth]{images/screenshot_form_predition.png}
         \caption{Property Details Input Form for Valuation}
         \label{fig:prediction-form}
 \end{figure}
 
 \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{images/screenshot_predctionscreen.png}
+        \includegraphics[width=0.8\textwidth]{images/screenshot_predctionscreen.png}
         \caption{Valuation Prediction Results Screen}
         \label{fig:prediction-results}
 \end{figure}
+\newpage
 
 \subsubsection{Mobile Investment Insights}
 The Korpor mobile application provides investors with direct access to AI-powered property valuations, including future evaluation insights generated by the prediction model. This feature empowers users to make data-driven investment decisions by visualizing potential growth and returns. Figure \ref{fig:mobile-future-evaluation} showcases the mobile interface where these future evaluations are presented to the investor.
-\newpage
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.3\textwidth]{images/mobile_future_evaluation.png} % Replace with your actual image path
+    \includegraphics[width=0.45\textwidth]{images/mobile_future_evaluation.png} % Replace with your actual image path
     \caption{Mobile Interface for Future Property Evaluation Insights}
     \label{fig:mobile-future-evaluation}
 \end{figure}
@@ -269,7 +269,7 @@ The Korpor mobile application provides investors with direct access to AI-powere
 \subsection{Test}
 \subsubsection{User Acceptance Testing (UAT)}
 To ensure the property valuation prediction model meets end-user requirements and expectations, comprehensive User Acceptance Testing was conducted. The UAT involved real estate professionals, potential investors, and system administrators testing the valuation features under realistic scenarios. Key testing areas included prediction accuracy validation, user interface usability, and integration with existing workflows. The UAT results confirmed that the model provides reliable and actionable insights for investment decision-making.
-
+\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|p{4cm}|p{3cm}|p{6cm}|}
@@ -293,7 +293,6 @@ The property valuation model underwent comprehensive testing to ensure accuracy 
 \subsection{Retrospective}
 
 The property valuation prediction model sprint provided valuable insights into AI model development and deployment. Table \ref{tab:valuation-retrospective} summarizes the key achievements, challenges, and lessons learned during this sprint.
-\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|p{3cm}|p{10cm}|}
@@ -475,16 +474,16 @@ The assistant's knowledge base contains comprehensive information about:
 The mobile chat interface provides an intuitive way for investors to interact with the AI assistant. Figure \ref{fig:assistant-mobile-chat} shows the chat interface design.
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.2\textwidth]{images/assistant_mobile_chat.png}
+    \includegraphics[width=0.4\textwidth]{images/assistant_mobile_chat.png}
     \caption{Mobile Chat Interface for Real Estate Assistant}
     \label{fig:assistant-mobile-chat}
 \end{figure}
 
+\newpage
 
 \subsection{Test}
 \subsubsection{Test Scenarios}
 The Real Estate Assistant underwent extensive testing to ensure accurate responses and reliable performance. Table \ref{tab:assistant-test-scenarios} presents the key test scenarios.
-\newpage
 \begin{table}[htbp]
     \centering
     \begin{tabular}{|c|l|l|l|c|}
